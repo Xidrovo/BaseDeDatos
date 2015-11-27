@@ -1,0 +1,11 @@
+c:\users\usuarios\documents\visual studio 2015\Projects\PracticaGui1\PracticaGui1\bin\Debug\PracticaGui1.exe.config
+c:\users\usuarios\documents\visual studio 2015\Projects\PracticaGui1\PracticaGui1\bin\Debug\PracticaGui1.exe
+c:\users\usuarios\documents\visual studio 2015\Projects\PracticaGui1\PracticaGui1\bin\Debug\PracticaGui1.pdb
+c:\users\usuarios\documents\visual studio 2015\Projects\PracticaGui1\PracticaGui1\obj\Debug\PracticaGui1.csprojResolveAssemblyReference.cache
+c:\users\usuarios\documents\visual studio 2015\Projects\PracticaGui1\PracticaGui1\obj\Debug\PracticaGui1.Properties.Resources.resources
+c:\users\usuarios\documents\visual studio 2015\Projects\PracticaGui1\PracticaGui1\obj\Debug\PracticaGui1.csproj.GenerateResource.Cache
+c:\users\usuarios\documents\visual studio 2015\Projects\PracticaGui1\PracticaGui1\obj\Debug\PracticaGui1.exe
+c:\users\usuarios\documents\visual studio 2015\Projects\PracticaGui1\PracticaGui1\obj\Debug\PracticaGui1.pdb
+c:\users\usuarios\documents\visual studio 2015\Projects\PracticaGui1\PracticaGui1\obj\Debug\PracticaGui1.Title1.resources
+c:\users\usuarios\documents\visual studio 2015\Projects\PracticaGui1\PracticaGui1\obj\Debug\PracticaGui1.SplashImage.resources
+C:\Users\usuarios\documents\visual studio 2015\Projects\PracticaGui1\PracticaGui1\obj\Debug\PracticaGui1.Colaboradores.resources
