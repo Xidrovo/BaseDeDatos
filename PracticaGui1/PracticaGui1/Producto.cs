@@ -16,5 +16,20 @@ namespace PracticaGui1
         {
             InitializeComponent();
         }
+
+        private void Producto_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void AddProduct_Click(object sender, EventArgs e)
+        {
+            if (this.NameTextBox.Text != "" && this.TypeTextBox.Text != "" && this.DescriptionTextBox.Text != "" && this.QuantityTextBox.Text != "")
+            {
+                Inventario inv = new Inventario();
+                inv.Show();
+                this.Dispose();
+            }
+        }
     }
 }

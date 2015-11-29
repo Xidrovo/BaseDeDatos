@@ -63,9 +63,69 @@ namespace PracticaGui1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _1446752389_9__IJXJ_Logo {
+        internal static System.Drawing.Bitmap Buton_Exit {
             get {
-                object obj = ResourceManager.GetObject("1446752389_9__IJXJ-Logo", resourceCulture);
+                object obj = ResourceManager.GetObject("Buton Exit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Ingresar {
+            get {
+                object obj = ResourceManager.GetObject("Ingresar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LittleInmortal {
+            get {
+                object obj = ResourceManager.GetObject("LittleInmortal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LogInScreenOptm {
+            get {
+                object obj = ResourceManager.GetObject("LogInScreenOptm", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LogInScreenOptm2 {
+            get {
+                object obj = ResourceManager.GetObject("LogInScreenOptm2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo_empresa {
+            get {
+                object obj = ResourceManager.GetObject("logo_empresa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rlly_nigga {
+            get {
+                object obj = ResourceManager.GetObject("rlly nigga", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

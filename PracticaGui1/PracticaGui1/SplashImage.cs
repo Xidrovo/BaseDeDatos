@@ -27,7 +27,7 @@ namespace PracticaGui1
         {
             if (progressBar1.Value < 100)
             {
-                progressBar1.Value = progressBar1.Value + 5;
+                progressBar1.Value = progressBar1.Value + 25;
             }
             else
             {

@@ -19,7 +19,7 @@ namespace PracticaGui1
             SplashImage Splash = new SplashImage();
             if (Splash.ShowDialog() == DialogResult.OK)
             { 
-                Application.Run(new Title1());
+                Application.Run(new LogIn());
             }
         }
     }
