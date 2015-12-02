@@ -31,5 +31,14 @@ namespace PracticaGui1
                 this.Dispose();
             }
         }
+
+        private void DescriptionTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar) || e.KeyChar == (char)8))
+            {
+                e.Handled = true;
+                System.Media.SystemSounds.Beep.Play();
+            }
+        }
     }
 }

@@ -46,11 +46,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgregarColaborador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarColaborador.Designer.cs">
+      <DependentUpon>AgregarColaborador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarProveedor.Designer.cs">
+      <DependentUpon>AgregarProveedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Colaboradores.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Colaboradores.Designer.cs">
       <DependentUpon>Colaboradores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Descripciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Descripciones.Designer.cs">
+      <DependentUpon>Descripciones.cs</DependentUpon>
     </Compile>
     <Compile Include="Egresos.cs">
       <SubType>Form</SubType>
@@ -69,6 +87,18 @@
     </Compile>
     <Compile Include="Inventario.Designer.cs">
       <DependentUpon>Inventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrdenDeTrabajo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrdenDeTrabajo.Designer.cs">
+      <DependentUpon>OrdenDeTrabajo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pass.Designer.cs">
+      <DependentUpon>Pass.cs</DependentUpon>
     </Compile>
     <Compile Include="Producto.cs">
       <SubType>Form</SubType>
@@ -95,8 +125,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AgregarColaborador.resx">
+      <DependentUpon>AgregarColaborador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarProveedor.resx">
+      <DependentUpon>AgregarProveedor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Colaboradores.resx">
       <DependentUpon>Colaboradores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Descripciones.resx">
+      <DependentUpon>Descripciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Egresos.resx">
       <DependentUpon>Egresos.cs</DependentUpon>
@@ -106,6 +145,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Inventario.resx">
       <DependentUpon>Inventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrdenDeTrabajo.resx">
+      <DependentUpon>OrdenDeTrabajo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pass.resx">
+      <DependentUpon>Pass.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Producto.resx">
       <DependentUpon>Producto.cs</DependentUpon>

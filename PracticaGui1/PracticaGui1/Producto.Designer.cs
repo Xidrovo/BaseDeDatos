@@ -125,6 +125,7 @@
             this.DescriptionTextBox.Name = "DescriptionTextBox";
             this.DescriptionTextBox.Size = new System.Drawing.Size(36, 29);
             this.DescriptionTextBox.TabIndex = 8;
+            this.DescriptionTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DescriptionTextBox_KeyPress);
             // 
             // AddProduct
             // 

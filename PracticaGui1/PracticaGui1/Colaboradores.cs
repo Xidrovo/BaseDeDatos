@@ -12,6 +12,7 @@ namespace PracticaGui1
 {
     public partial class Colaboradores : Form
     {
+        public static bool GoColaborador = false;
         public Colaboradores()
         {
             InitializeComponent();
@@ -74,6 +75,22 @@ namespace PracticaGui1
         private void button2_Click_1(object sender, EventArgs e)
         {
             Application.Restart();
+        }
+
+        private void IngresarColaborador_Click(object sender, EventArgs e)
+        {
+            Pass pass = new Pass();
+            GoColaborador = true;
+            pass.Show();
+            this.Dispose();
+        }
+
+        private void IngresarNuevo_Click(object sender, EventArgs e)
+        {
+            Pass pass = new Pass();
+            GoColaborador = false;
+            pass.Show();
+            this.Dispose();
         }
     }
 }
