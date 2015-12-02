@@ -92,5 +92,11 @@ namespace PracticaGui1
             pass.Show();
             this.Dispose();
         }
+
+        private void IngresarTransacc_Click(object sender, EventArgs e)
+        {
+            OrdenDeTrabajo Orden = new OrdenDeTrabajo();
+            Orden.Show();
+        }
     }
 }

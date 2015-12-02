@@ -91,6 +91,7 @@
             this.IngresarTransacc.TabIndex = 0;
             this.IngresarTransacc.Text = "Ingresar";
             this.IngresarTransacc.UseVisualStyleBackColor = true;
+            this.IngresarTransacc.Click += new System.EventHandler(this.IngresarTransacc_Click);
             // 
             // MostrarTransac
             // 

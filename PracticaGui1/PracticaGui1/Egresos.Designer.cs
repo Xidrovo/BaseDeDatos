@@ -43,6 +43,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.Desc1 = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -59,7 +63,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(32, 95);
+            this.label2.Location = new System.Drawing.Point(483, 32);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(228, 29);
             this.label2.TabIndex = 1;
@@ -87,7 +91,7 @@
             // 
             // Dia
             // 
-            this.Dia.Location = new System.Drawing.Point(381, 102);
+            this.Dia.Location = new System.Drawing.Point(832, 39);
             this.Dia.MaxLength = 2;
             this.Dia.Name = "Dia";
             this.Dia.Size = new System.Drawing.Size(54, 22);
@@ -97,7 +101,7 @@
             // 
             // Mes
             // 
-            this.Mes.Location = new System.Drawing.Point(441, 102);
+            this.Mes.Location = new System.Drawing.Point(892, 39);
             this.Mes.MaxLength = 2;
             this.Mes.Name = "Mes";
             this.Mes.Size = new System.Drawing.Size(48, 22);
@@ -107,7 +111,7 @@
             // 
             // Anio
             // 
-            this.Anio.Location = new System.Drawing.Point(495, 102);
+            this.Anio.Location = new System.Drawing.Point(946, 39);
             this.Anio.MaxLength = 4;
             this.Anio.Name = "Anio";
             this.Anio.Size = new System.Drawing.Size(104, 22);
@@ -140,7 +144,7 @@
             this.Valor.Location = new System.Drawing.Point(381, 39);
             this.Valor.MaxLength = 4;
             this.Valor.Name = "Valor";
-            this.Valor.Size = new System.Drawing.Size(218, 22);
+            this.Valor.Size = new System.Drawing.Size(54, 22);
             this.Valor.TabIndex = 4;
             this.Valor.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Valor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
@@ -197,11 +201,53 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(32, 96);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(101, 29);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Nombre";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(483, 96);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(102, 29);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "Apellido";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(167, 103);
+            this.textBox1.MaxLength = 4;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(268, 22);
+            this.textBox1.TabIndex = 17;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(618, 103);
+            this.textBox2.MaxLength = 4;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(268, 22);
+            this.textBox2.TabIndex = 18;
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // Egresos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1103, 658);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.Desc1);
             this.Controls.Add(this.label5);
@@ -243,5 +289,9 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox Desc1;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }

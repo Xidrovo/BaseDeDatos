@@ -32,3 +32,4 @@ C:\Users\usuarios\Documents\ESPOL\2do Termino 2015 - 2016\Base de Datos\Proyecto
 C:\Users\usuarios\Documents\ESPOL\2do Termino 2015 - 2016\Base de Datos\Proyecto\BaseDeDatos\PracticaGui1\PracticaGui1\obj\Debug\PracticaGui1.Descripciones.resources
 C:\Users\usuarios\Documents\ESPOL\2do Termino 2015 - 2016\Base de Datos\Proyecto\BaseDeDatos\PracticaGui1\PracticaGui1\obj\Debug\PracticaGui1.AgregarColaborador.resources
 C:\Users\usuarios\Documents\ESPOL\2do Termino 2015 - 2016\Base de Datos\Proyecto\BaseDeDatos\PracticaGui1\PracticaGui1\obj\Debug\PracticaGui1.AgregarProveedor.resources
+C:\Users\usuarios\Documents\ESPOL\2do Termino 2015 - 2016\Base de Datos\Proyecto\BaseDeDatos\PracticaGui1\PracticaGui1\obj\Debug\PracticaGui1.OrdenDeTrabajo.resources
