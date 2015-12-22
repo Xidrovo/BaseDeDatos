@@ -16,6 +16,14 @@ namespace PracticaGui1
         public Colaboradores()
         {
             InitializeComponent();
+            if (LogIn.Admin)
+            {
+                MostrarTransac.Visible = true;
+            }
+            else
+            {
+                MostrarTransac.Visible = false;
+            }
             this.ImprentaIsabelita.Size = new Size(700,303);
             //Esto centra la imagen ( El logo de Imprenta Isabelita ).
             this.ImprentaIsabelita.Left = (this.Width - this.ImprentaIsabelita.Width) / 2;
@@ -97,6 +105,13 @@ namespace PracticaGui1
         {
             OrdenDeTrabajo Orden = new OrdenDeTrabajo();
             Orden.Show();
+        }
+
+        private void MostrarTransac_Click(object sender, EventArgs e)
+        {
+            Reporte rep = new Reporte();
+            rep.Show();
+            this.Dispose();
         }
     }
 }

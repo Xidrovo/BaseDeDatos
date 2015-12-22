@@ -14,9 +14,11 @@ namespace PracticaGui1
     public partial class LogIn : Form
     {
         public const int LogIntSize = 635;
+        public static bool Admin;
         SplashImage Splash = new SplashImage();
         public LogIn()
         {
+            Admin = false;
             InitializeComponent();
             this.Size = new Size(675, 304);
             this.ExButton.Size = new Size(32, 28);
@@ -34,12 +36,15 @@ namespace PracticaGui1
         private void IngresarButton_Click(object sender, EventArgs e)
         {
             //Esto es solo para poder mostrar las ventanas (No se hará así en el proyecto final)
-            if (this.Username.Text.Equals("admin"))
+            if (this.Contrasena.Text.Equals("admin"))
             {
                 //Se abre shona del administrador.
-                Console.WriteLine("Hola");
+                Admin = true;
+                Colaboradores col = new Colaboradores();
+                col.Show();
+                this.Hide();
             }
-            else if (this.Username.Text.Equals("Jaminson"))
+            else if (this.Contrasena.Text.Equals("Jaminson"))
             {
                 //Show the 'really nigga' meme.
                 Jaminson JamyTafy = new Jaminson();
@@ -63,6 +68,12 @@ namespace PracticaGui1
 
         private void Username_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if (!(char.IsNumber(e.KeyChar) || e.KeyChar == (char)8))
+            {
+                e.Handled = true;
+                System.Media.SystemSounds.Beep.Play();
+            }
+
             if (e.KeyChar == (char)13)
             {
                 this.IngresarButton_Click(null, null);

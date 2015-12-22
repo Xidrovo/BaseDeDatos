@@ -30,7 +30,6 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
-            this.ImprentaIsabelita = new System.Windows.Forms.Label();
             this.MostrarProd = new System.Windows.Forms.Button();
             this.IngresarTransacc = new System.Windows.Forms.Button();
             this.MostrarTransac = new System.Windows.Forms.Button();
@@ -38,6 +37,7 @@
             this.IngresarColaborador = new System.Windows.Forms.Button();
             this.TansactionBox = new System.Windows.Forms.TextBox();
             this.IngresarNuevo = new System.Windows.Forms.Button();
+            this.ImprentaIsabelita = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,17 +59,6 @@
             this.button2.Text = "Log Out";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
-            // 
-            // ImprentaIsabelita
-            // 
-            this.ImprentaIsabelita.AutoSize = true;
-            this.ImprentaIsabelita.Image = global::PracticaGui1.Properties.Resources.logo_empresa;
-            this.ImprentaIsabelita.Location = new System.Drawing.Point(303, -3);
-            this.ImprentaIsabelita.MinimumSize = new System.Drawing.Size(700, 303);
-            this.ImprentaIsabelita.Name = "ImprentaIsabelita";
-            this.ImprentaIsabelita.Size = new System.Drawing.Size(700, 303);
-            this.ImprentaIsabelita.TabIndex = 0;
-            this.ImprentaIsabelita.Click += new System.EventHandler(this.label1_Click);
             // 
             // MostrarProd
             // 
@@ -96,12 +85,13 @@
             // MostrarTransac
             // 
             this.MostrarTransac.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MostrarTransac.Location = new System.Drawing.Point(620, 463);
+            this.MostrarTransac.Location = new System.Drawing.Point(620, 442);
             this.MostrarTransac.Name = "MostrarTransac";
             this.MostrarTransac.Size = new System.Drawing.Size(484, 55);
             this.MostrarTransac.TabIndex = 1;
-            this.MostrarTransac.Text = "Mostrar";
+            this.MostrarTransac.Text = "Reporte";
             this.MostrarTransac.UseVisualStyleBackColor = true;
+            this.MostrarTransac.Click += new System.EventHandler(this.MostrarTransac_Click);
             // 
             // button1
             // 
@@ -146,6 +136,17 @@
             this.IngresarNuevo.Text = "Ingresar nuevo proveedor";
             this.IngresarNuevo.UseVisualStyleBackColor = true;
             this.IngresarNuevo.Click += new System.EventHandler(this.IngresarNuevo_Click);
+            // 
+            // ImprentaIsabelita
+            // 
+            this.ImprentaIsabelita.AutoSize = true;
+            this.ImprentaIsabelita.Image = global::PracticaGui1.Properties.Resources.logo_empresa;
+            this.ImprentaIsabelita.Location = new System.Drawing.Point(303, -3);
+            this.ImprentaIsabelita.MinimumSize = new System.Drawing.Size(700, 303);
+            this.ImprentaIsabelita.Name = "ImprentaIsabelita";
+            this.ImprentaIsabelita.Size = new System.Drawing.Size(700, 303);
+            this.ImprentaIsabelita.TabIndex = 0;
+            this.ImprentaIsabelita.Click += new System.EventHandler(this.label1_Click);
             // 
             // Colaboradores
             // 
