@@ -68,7 +68,14 @@ namespace PROYECTOBBDD
         private void button2_Click(object sender, EventArgs e)
         {
             if (textTelefono.TextLength == 8)
+            {
                 MessageBox.Show("Debe escribir un telefono valido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (!(Principal.VerificaRucPersonaNatural(truc.Text)
+                                            || Principal.VerificaRucEmpresas(truc.Text)))
+            {
+                MessageBox.Show("Debe escribir un RUC valido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             else
             {
                 this.Close();
