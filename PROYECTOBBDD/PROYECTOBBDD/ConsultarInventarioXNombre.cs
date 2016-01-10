@@ -43,5 +43,10 @@ namespace PROYECTOBBDD
             var bl = !string.IsNullOrEmpty(textBox1.Text);
             button2.Enabled = bl;
         }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
