@@ -36,10 +36,10 @@
             this.bAgregar = new System.Windows.Forms.Button();
             this.BGuardar = new System.Windows.Forms.Button();
             this.bcancelar = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tdireccion = new System.Windows.Forms.TextBox();
+            this.tcedula = new System.Windows.Forms.TextBox();
+            this.tapellido = new System.Windows.Forms.TextBox();
+            this.tnombres = new System.Windows.Forms.TextBox();
             this.ldirección = new System.Windows.Forms.Label();
             this.lcedula = new System.Windows.Forms.Label();
             this.lapellido = new System.Windows.Forms.Label();
@@ -56,10 +56,10 @@
             this.panel1.Controls.Add(this.bAgregar);
             this.panel1.Controls.Add(this.BGuardar);
             this.panel1.Controls.Add(this.bcancelar);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.tdireccion);
+            this.panel1.Controls.Add(this.tcedula);
+            this.panel1.Controls.Add(this.tapellido);
+            this.panel1.Controls.Add(this.tnombres);
             this.panel1.Controls.Add(this.ldirección);
             this.panel1.Controls.Add(this.lcedula);
             this.panel1.Controls.Add(this.lapellido);
@@ -145,46 +145,46 @@
             this.bcancelar.UseVisualStyleBackColor = true;
             this.bcancelar.Click += new System.EventHandler(this.bcancelar_Click);
             // 
-            // textBox4
+            // tdireccion
             // 
-            this.textBox4.Location = new System.Drawing.Point(127, 214);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox4.MaxLength = 50;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(279, 22);
-            this.textBox4.TabIndex = 3;
-            this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
+            this.tdireccion.Location = new System.Drawing.Point(127, 214);
+            this.tdireccion.Margin = new System.Windows.Forms.Padding(4);
+            this.tdireccion.MaxLength = 50;
+            this.tdireccion.Name = "tdireccion";
+            this.tdireccion.Size = new System.Drawing.Size(279, 22);
+            this.tdireccion.TabIndex = 3;
+            this.tdireccion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
             // 
-            // textBox3
+            // tcedula
             // 
-            this.textBox3.Location = new System.Drawing.Point(127, 153);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.MaxLength = 10;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(279, 22);
-            this.textBox3.TabIndex = 2;
-            this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
+            this.tcedula.Location = new System.Drawing.Point(127, 153);
+            this.tcedula.Margin = new System.Windows.Forms.Padding(4);
+            this.tcedula.MaxLength = 10;
+            this.tcedula.Name = "tcedula";
+            this.tcedula.Size = new System.Drawing.Size(279, 22);
+            this.tcedula.TabIndex = 2;
+            this.tcedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
             // 
-            // textBox2
+            // tapellido
             // 
-            this.textBox2.Location = new System.Drawing.Point(127, 81);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.MaxLength = 20;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(279, 22);
-            this.textBox2.TabIndex = 1;
-            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
+            this.tapellido.Location = new System.Drawing.Point(127, 81);
+            this.tapellido.Margin = new System.Windows.Forms.Padding(4);
+            this.tapellido.MaxLength = 20;
+            this.tapellido.Name = "tapellido";
+            this.tapellido.Size = new System.Drawing.Size(279, 22);
+            this.tapellido.TabIndex = 1;
+            this.tapellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
-            // textBox1
+            // tnombres
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(127, 36);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.MaxLength = 20;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(279, 22);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            this.tnombres.BackColor = System.Drawing.Color.White;
+            this.tnombres.Location = new System.Drawing.Point(127, 36);
+            this.tnombres.Margin = new System.Windows.Forms.Padding(4);
+            this.tnombres.MaxLength = 20;
+            this.tnombres.Name = "tnombres";
+            this.tnombres.Size = new System.Drawing.Size(279, 22);
+            this.tnombres.TabIndex = 0;
+            this.tnombres.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // ldirección
             // 
@@ -248,10 +248,10 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lnombre;
         private System.Windows.Forms.TextBox textTelefono;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tdireccion;
+        private System.Windows.Forms.TextBox tcedula;
+        private System.Windows.Forms.TextBox tapellido;
+        private System.Windows.Forms.TextBox tnombres;
         private System.Windows.Forms.Label lTelefono;
         private System.Windows.Forms.Label ldirección;
         private System.Windows.Forms.Label lcedula;

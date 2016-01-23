@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace PROYECTOBBDD
 {
@@ -76,19 +77,35 @@ namespace PROYECTOBBDD
                 MessageBox.Show("Debe escribir un telefono valido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            if (!Principal.VerificaCedula(textBox3.Text))
+            if (!Principal.VerificaCedula(tcedula.Text))
             {
-                textBox3.BackColor = Color.PaleVioletRed;
+                tcedula.BackColor = Color.PaleVioletRed;
                 MessageBox.Show("Cedula ingresada no válida", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 desicion = false;
             }
             else
-                textBox3.BackColor = Color.White;
+                tcedula.BackColor = Color.White;
 
             if (desicion)
             {
                 //Comunicarme con el sql
                 this.Close();
+                Colaborador conexion = new Colaborador();
+                using (SqlConnection con = new SqlConnection("Data Source=172.18.115.243,49170;Integrated Security=False;User ID=sa;Password=imprentaisabelita;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
+                {
+                    using (SqlCommand cmd = new SqlCommand("spAgregarClienteNatural", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.Add("@Direccion", SqlDbType.VarChar, 50).Value = tdireccion.Text;
+                        cmd.Parameters.Add("@NCedula", SqlDbType.Char, 10).Value = tcedula.Text;
+                        cmd.Parameters.Add("@Nombre", SqlDbType.VarChar, 40).Value = tnombres.Text;
+                        cmd.Parameters.Add("@Apellido", SqlDbType.VarChar, 40).Value = tapellido.Text;
+                        //cmd.Parameters.Add("@textTelefono", SqlDbType.VarChar, 40).Value = tapellido.Text;
+
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                    }
+                }
             }
         }
 
@@ -183,10 +200,10 @@ namespace PROYECTOBBDD
 
         private void BloquearBoton()
         {
-            var bl = !string.IsNullOrEmpty(textBox1.Text) &&
-                    !string.IsNullOrEmpty(textBox2.Text) &&
-                    !string.IsNullOrEmpty(textBox3.Text) &&
-                    !string.IsNullOrEmpty(textBox4.Text);
+            var bl = !string.IsNullOrEmpty(tnombres.Text) &&
+                    !string.IsNullOrEmpty(tapellido.Text) &&
+                    !string.IsNullOrEmpty(tcedula.Text) &&
+                    !string.IsNullOrEmpty(tdireccion.Text);
 
             foreach (TextBox var in lista)
             {
