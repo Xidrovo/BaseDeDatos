@@ -12,9 +12,38 @@ namespace PROYECTOBBDD
 {
     public partial class ActualizarProducto : Form
     {
+        Validacion Val = new Validacion();
         public ActualizarProducto()
         {
             InitializeComponent();
+            rAgregar.Checked = true;
+            groupBox1.Controls.Add(rAgregar);
+            groupBox1.Controls.Add(rQuitar);
+            bActualizar.Enabled = false;
+        }
+
+        private void Ingresar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Val.soloNumeros(e);
+        }
+
+        private void Ingresar_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                int Value = Int32.Parse(Ingresar.Text);
+
+                if (Value > 0)
+                {
+                    bActualizar.Enabled = true;
+                }
+                else
+                    bActualizar.Enabled = false;
+            }
+            catch (Exception exc)
+            {
+                bActualizar.Enabled = false;
+            }
         }
     }
 }

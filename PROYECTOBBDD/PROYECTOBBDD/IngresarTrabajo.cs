@@ -137,16 +137,62 @@ namespace PROYECTOBBDD
 
         private void Guardar_Click(object sender, EventArgs e)
         {
-            if (tidcliente.Text == "" || tabono.Text == "" ||
-                !HasDetails())
+            bool desicion = true;
+            float abono = 0, total;
+
+            if (!Principal.VerificaCedula(tidcliente.Text))
             {
-                //No hay nada rellenado
+                tidcliente.BackColor = Color.PaleVioletRed;
+                desicion = false;
+                MessageBox.Show("Cedula ingresada no válida", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                //Realizar los queries
+                tidcliente.BackColor = Color.White;
+            }
+
+            try
+            {
+                abono = float.Parse(tabono.Text);
+            }
+            catch
+            {
+            }
+
+            total = sumaValores(listaVal);
+            if (!(abono >= (total * 0.5) && abono < total))
+            {
+                desicion = false;
+                tabono.BackColor = Color.PaleVioletRed;
+                MessageBox.Show("Abono no supera el 50% ó supera el total", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                tabono.BackColor = Color.White;
+            }
+            
+            if (desicion)
+            {
+                //Comunicarme con sql
                 this.Close();
             }
+        }
+    
+        private float sumaValores(List<TextBox> lista)
+        {
+            float resultado = 0;
+            float contenedor;
+            foreach (TextBox val in lista)
+            {
+                try
+                {
+                    contenedor = float.Parse(val.Text);
+                    resultado = resultado + contenedor;
+                }
+                catch { }
+            }
+
+            return resultado;
         }
 
         private bool HasDetails()
@@ -281,6 +327,11 @@ namespace PROYECTOBBDD
 
         private void dfechaEntrega_KeyPress(object sender, KeyPressEventArgs e)
         {
+        }
+
+        private void lIdcliente_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

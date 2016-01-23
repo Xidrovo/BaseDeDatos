@@ -53,7 +53,7 @@ namespace PracticaGui1
             }
             else
             {
-                MessageBox.Show("what did you do!!", "Oh god!",
+                MessageBox.Show("Por favor ingresar los campos", "Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 

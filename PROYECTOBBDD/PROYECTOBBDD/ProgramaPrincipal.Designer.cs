@@ -56,6 +56,7 @@
             this.ingresarColaboradoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarEgresoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.desconectarseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.actualizarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -207,7 +208,8 @@
             // 
             this.inventarioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ingresarProductoToolStripMenuItem,
-            this.consultarPorNombreToolStripMenuItem});
+            this.consultarPorNombreToolStripMenuItem,
+            this.actualizarToolStripMenuItem});
             this.inventarioToolStripMenuItem.Name = "inventarioToolStripMenuItem";
             this.inventarioToolStripMenuItem.Size = new System.Drawing.Size(87, 24);
             this.inventarioToolStripMenuItem.Text = "Inventario";
@@ -289,6 +291,13 @@
             this.desconectarseToolStripMenuItem.Text = "Desconectarse";
             this.desconectarseToolStripMenuItem.Click += new System.EventHandler(this.desconectarseToolStripMenuItem_Click);
             // 
+            // actualizarToolStripMenuItem
+            // 
+            this.actualizarToolStripMenuItem.Name = "actualizarToolStripMenuItem";
+            this.actualizarToolStripMenuItem.Size = new System.Drawing.Size(201, 26);
+            this.actualizarToolStripMenuItem.Text = "Actualizar";
+            this.actualizarToolStripMenuItem.Click += new System.EventHandler(this.actualizarToolStripMenuItem_Click);
+            // 
             // Principal
             // 
             this.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
@@ -299,7 +308,7 @@
             this.ClientSize = new System.Drawing.Size(720, 336);
             this.Controls.Add(this.menuStrip2);
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Principal";
             this.Text = "Principal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -341,6 +350,7 @@
         private System.Windows.Forms.ToolStripMenuItem colaboradoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ingresarColaboradoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registrarEgresoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem actualizarToolStripMenuItem;
     }
 }
 

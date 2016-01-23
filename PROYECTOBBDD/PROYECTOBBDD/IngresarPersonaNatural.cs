@@ -58,12 +58,36 @@ namespace PROYECTOBBDD
 
         private void BGuardar_Click(object sender, EventArgs e)
         {
-            if (textTelefono.TextLength == 8)
-                MessageBox.Show("Debe escribir un telefono valido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            else if (!Principal.VerificaCedula(textBox3.Text))
-                MessageBox.Show("Cedula ingresada no válida", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            else
+            bool desicion = true;
+            foreach (TextBox val in lista)
             {
+                if (val.TextLength == 8)
+                {
+                    desicion = false;
+                    val.BackColor = Color.PaleVioletRed;
+                }
+                else
+                {
+                    val.BackColor = Color.White;
+                }
+            }
+            if (!desicion)
+            {
+                MessageBox.Show("Debe escribir un telefono valido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            if (!Principal.VerificaCedula(textBox3.Text))
+            {
+                textBox3.BackColor = Color.PaleVioletRed;
+                MessageBox.Show("Cedula ingresada no válida", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                desicion = false;
+            }
+            else
+                textBox3.BackColor = Color.White;
+
+            if (desicion)
+            {
+                //Comunicarme con el sql
                 this.Close();
             }
         }
@@ -106,6 +130,7 @@ namespace PROYECTOBBDD
 
             tTelefono.KeyPress += textBox5_KeyPress;
             tTelefono.TextChanged += textTelefono_TextChanged;
+            tTelefono.TabIndex = this.lista.Last<TextBox>().TabIndex + 1;
             tTelefono.MaxLength = 10;
             panel2.Controls.Add(tTelefono);
             panel2.Controls.Add(Telefono);
@@ -173,6 +198,12 @@ namespace PROYECTOBBDD
 
             }
             BGuardar.Enabled = bl;
+
+        }
+
+        private void textTelefono_TextChanged_1(object sender, EventArgs e)
+        {
+            BloquearBoton();
         }
     }
 }

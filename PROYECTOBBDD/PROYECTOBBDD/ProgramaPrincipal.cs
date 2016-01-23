@@ -235,5 +235,11 @@ namespace PROYECTOBBDD
             return false;
         }
 
+        private void actualizarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ActualizarProducto actProd = new ActualizarProducto();
+            actProd.MdiParent = this;
+            actProd.Show();
+        }
     }
 }

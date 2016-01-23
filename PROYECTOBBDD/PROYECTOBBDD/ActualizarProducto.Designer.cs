@@ -30,26 +30,26 @@
         {
             this.Tid = new System.Windows.Forms.TextBox();
             this.rAgregar = new System.Windows.Forms.RadioButton();
-            this.rQuitar = new System.Windows.Forms.RadioButton();
             this.Ingresar = new System.Windows.Forms.TextBox();
             this.Lid = new System.Windows.Forms.Label();
             this.bActualizar = new System.Windows.Forms.Button();
             this.bCancelar = new System.Windows.Forms.Button();
+            this.rQuitar = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Tid
             // 
-            this.Tid.Location = new System.Drawing.Point(126, 39);
+            this.Tid.Location = new System.Drawing.Point(108, 37);
             this.Tid.Name = "Tid";
-            this.Tid.Size = new System.Drawing.Size(100, 22);
+            this.Tid.Size = new System.Drawing.Size(180, 22);
             this.Tid.TabIndex = 0;
             // 
             // rAgregar
             // 
             this.rAgregar.AutoSize = true;
-            this.rAgregar.Location = new System.Drawing.Point(472, 67);
+            this.rAgregar.Location = new System.Drawing.Point(24, 22);
             this.rAgregar.Name = "rAgregar";
             this.rAgregar.Size = new System.Drawing.Size(80, 21);
             this.rAgregar.TabIndex = 1;
@@ -57,28 +57,19 @@
             this.rAgregar.Text = "Agregar";
             this.rAgregar.UseVisualStyleBackColor = true;
             // 
-            // rQuitar
-            // 
-            this.rQuitar.AutoSize = true;
-            this.rQuitar.Location = new System.Drawing.Point(132, 9);
-            this.rQuitar.Name = "rQuitar";
-            this.rQuitar.Size = new System.Drawing.Size(68, 21);
-            this.rQuitar.TabIndex = 2;
-            this.rQuitar.TabStop = true;
-            this.rQuitar.Text = "Quitar";
-            this.rQuitar.UseVisualStyleBackColor = true;
-            // 
             // Ingresar
             // 
             this.Ingresar.Location = new System.Drawing.Point(362, 39);
             this.Ingresar.Name = "Ingresar";
             this.Ingresar.Size = new System.Drawing.Size(264, 22);
             this.Ingresar.TabIndex = 3;
+            this.Ingresar.TextChanged += new System.EventHandler(this.Ingresar_TextChanged);
+            this.Ingresar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Ingresar_KeyPress);
             // 
             // Lid
             // 
             this.Lid.AutoSize = true;
-            this.Lid.Location = new System.Drawing.Point(13, 43);
+            this.Lid.Location = new System.Drawing.Point(12, 42);
             this.Lid.Name = "Lid";
             this.Lid.Size = new System.Drawing.Size(80, 17);
             this.Lid.TabIndex = 4;
@@ -102,15 +93,26 @@
             this.bCancelar.Text = "Cancelar";
             this.bCancelar.UseVisualStyleBackColor = true;
             // 
+            // rQuitar
+            // 
+            this.rQuitar.AutoSize = true;
+            this.rQuitar.Location = new System.Drawing.Point(126, 22);
+            this.rQuitar.Name = "rQuitar";
+            this.rQuitar.Size = new System.Drawing.Size(68, 21);
+            this.rQuitar.TabIndex = 2;
+            this.rQuitar.TabStop = true;
+            this.rQuitar.Text = "Quitar";
+            this.rQuitar.UseVisualStyleBackColor = true;
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.rQuitar);
+            this.groupBox1.Controls.Add(this.rAgregar);
             this.groupBox1.Location = new System.Drawing.Point(442, 67);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 49);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
             // 
             // ActualizarProducto
             // 
@@ -121,7 +123,6 @@
             this.Controls.Add(this.bActualizar);
             this.Controls.Add(this.Lid);
             this.Controls.Add(this.Ingresar);
-            this.Controls.Add(this.rAgregar);
             this.Controls.Add(this.Tid);
             this.Controls.Add(this.groupBox1);
             this.Name = "ActualizarProducto";
@@ -137,11 +138,11 @@
 
         private System.Windows.Forms.TextBox Tid;
         private System.Windows.Forms.RadioButton rAgregar;
-        private System.Windows.Forms.RadioButton rQuitar;
         private System.Windows.Forms.TextBox Ingresar;
         private System.Windows.Forms.Label Lid;
         private System.Windows.Forms.Button bActualizar;
         private System.Windows.Forms.Button bCancelar;
+        private System.Windows.Forms.RadioButton rQuitar;
         private System.Windows.Forms.GroupBox groupBox1;
     }
 }

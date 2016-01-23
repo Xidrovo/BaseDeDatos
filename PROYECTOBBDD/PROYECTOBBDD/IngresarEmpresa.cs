@@ -67,17 +67,38 @@ namespace PROYECTOBBDD
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (textTelefono.TextLength == 8)
+            bool desicion = true;
+
+            foreach (TextBox val in lista)
+            {
+                if (val.TextLength == 8)
+                {
+                    desicion = false;
+                    val.BackColor = Color.PaleVioletRed;
+                }
+                else
+                    val.BackColor = Color.White;
+            }
+            if (!desicion)
             {
                 MessageBox.Show("Debe escribir un telefono valido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (!(Principal.VerificaRucPersonaNatural(truc.Text)
+
+            if (!(Principal.VerificaRucPersonaNatural(truc.Text)
                                             || Principal.VerificaRucEmpresas(truc.Text)))
             {
+                truc.BackColor = Color.PaleVioletRed;
+                desicion = false;
                 MessageBox.Show("Debe escribir un RUC valido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
+                truc.BackColor = Color.White;
+            }
+
+            if (desicion)
+            {
+                //sql stuff
                 this.Close();
             }
         }

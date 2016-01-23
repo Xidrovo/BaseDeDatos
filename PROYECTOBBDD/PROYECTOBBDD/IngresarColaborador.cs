@@ -106,12 +106,31 @@ namespace PROYECTOBBDD
         private void button1_Click(object sender, EventArgs e)
         {
             //algoritmo cedula
+            bool desicion = true;
             if (textBox5.TextLength == 8)
+            {
+                textBox5.BackColor = Color.PaleVioletRed;
+                desicion = false;
                 MessageBox.Show("Debe escribir un telefono valido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            else if (!Principal.VerificaCedula(textBox3.Text))
-                MessageBox.Show("Cedula ingresada no válida", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             else
-            this.Close();
+            {
+                textBox5.BackColor = Color.White;
+            }
+
+            if (!Principal.VerificaCedula(textBox3.Text))
+            {
+                textBox3.BackColor = Color.PaleVioletRed;
+                desicion = false;
+                MessageBox.Show("Cedula ingresada no válida", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+                textBox3.BackColor = Color.White;
+
+            if (desicion)
+            {
+                this.Close();
+            }
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
