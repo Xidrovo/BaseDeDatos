@@ -41,17 +41,19 @@
             // 
             // Tid
             // 
-            this.Tid.Location = new System.Drawing.Point(108, 37);
+            this.Tid.Location = new System.Drawing.Point(81, 30);
+            this.Tid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Tid.Name = "Tid";
-            this.Tid.Size = new System.Drawing.Size(180, 22);
+            this.Tid.Size = new System.Drawing.Size(136, 20);
             this.Tid.TabIndex = 0;
             // 
             // rAgregar
             // 
             this.rAgregar.AutoSize = true;
-            this.rAgregar.Location = new System.Drawing.Point(24, 22);
+            this.rAgregar.Location = new System.Drawing.Point(18, 18);
+            this.rAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rAgregar.Name = "rAgregar";
-            this.rAgregar.Size = new System.Drawing.Size(80, 21);
+            this.rAgregar.Size = new System.Drawing.Size(62, 17);
             this.rAgregar.TabIndex = 1;
             this.rAgregar.TabStop = true;
             this.rAgregar.Text = "Agregar";
@@ -59,9 +61,10 @@
             // 
             // Ingresar
             // 
-            this.Ingresar.Location = new System.Drawing.Point(362, 39);
+            this.Ingresar.Location = new System.Drawing.Point(295, 31);
+            this.Ingresar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Ingresar.Name = "Ingresar";
-            this.Ingresar.Size = new System.Drawing.Size(264, 22);
+            this.Ingresar.Size = new System.Drawing.Size(199, 20);
             this.Ingresar.TabIndex = 3;
             this.Ingresar.TextChanged += new System.EventHandler(this.Ingresar_TextChanged);
             this.Ingresar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Ingresar_KeyPress);
@@ -69,26 +72,29 @@
             // Lid
             // 
             this.Lid.AutoSize = true;
-            this.Lid.Location = new System.Drawing.Point(12, 42);
+            this.Lid.Location = new System.Drawing.Point(9, 34);
+            this.Lid.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lid.Name = "Lid";
-            this.Lid.Size = new System.Drawing.Size(80, 17);
+            this.Lid.Size = new System.Drawing.Size(62, 13);
             this.Lid.TabIndex = 4;
             this.Lid.Text = "Id Producto";
             // 
             // bActualizar
             // 
-            this.bActualizar.Location = new System.Drawing.Point(362, 122);
+            this.bActualizar.Location = new System.Drawing.Point(272, 99);
+            this.bActualizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bActualizar.Name = "bActualizar";
-            this.bActualizar.Size = new System.Drawing.Size(91, 23);
+            this.bActualizar.Size = new System.Drawing.Size(68, 19);
             this.bActualizar.TabIndex = 5;
             this.bActualizar.Text = "Actualizar";
             this.bActualizar.UseVisualStyleBackColor = true;
             // 
             // bCancelar
             // 
-            this.bCancelar.Location = new System.Drawing.Point(151, 122);
+            this.bCancelar.Location = new System.Drawing.Point(113, 99);
+            this.bCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bCancelar.Name = "bCancelar";
-            this.bCancelar.Size = new System.Drawing.Size(75, 23);
+            this.bCancelar.Size = new System.Drawing.Size(56, 19);
             this.bCancelar.TabIndex = 6;
             this.bCancelar.Text = "Cancelar";
             this.bCancelar.UseVisualStyleBackColor = true;
@@ -96,9 +102,10 @@
             // rQuitar
             // 
             this.rQuitar.AutoSize = true;
-            this.rQuitar.Location = new System.Drawing.Point(126, 22);
+            this.rQuitar.Location = new System.Drawing.Point(94, 18);
+            this.rQuitar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rQuitar.Name = "rQuitar";
-            this.rQuitar.Size = new System.Drawing.Size(68, 21);
+            this.rQuitar.Size = new System.Drawing.Size(53, 17);
             this.rQuitar.TabIndex = 2;
             this.rQuitar.TabStop = true;
             this.rQuitar.Text = "Quitar";
@@ -108,25 +115,29 @@
             // 
             this.groupBox1.Controls.Add(this.rQuitar);
             this.groupBox1.Controls.Add(this.rAgregar);
-            this.groupBox1.Location = new System.Drawing.Point(442, 67);
+            this.groupBox1.Location = new System.Drawing.Point(332, 54);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 49);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(150, 40);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             // 
             // ActualizarProducto
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(700, 157);
+            this.ClientSize = new System.Drawing.Size(525, 128);
             this.Controls.Add(this.bCancelar);
             this.Controls.Add(this.bActualizar);
             this.Controls.Add(this.Lid);
             this.Controls.Add(this.Ingresar);
             this.Controls.Add(this.Tid);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ActualizarProducto";
             this.Text = "ActualizarProducto";
+            this.Load += new System.EventHandler(this.ActualizarProducto_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

@@ -45,5 +45,10 @@ namespace PROYECTOBBDD
                 bActualizar.Enabled = false;
             }
         }
+
+        private void ActualizarProducto_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -107,12 +107,6 @@
     <Compile Include="IngresarProveedor.Designer.cs">
       <DependentUpon>IngresarProveedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="MostrarNunTablas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MostrarNunTablas.Designer.cs">
-      <DependentUpon>MostrarNunTablas.cs</DependentUpon>
-    </Compile>
     <Compile Include="ProgramaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,9 +187,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="IngresarProveedor.resx">
       <DependentUpon>IngresarProveedor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MostrarNunTablas.resx">
-      <DependentUpon>MostrarNunTablas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProgramaPrincipal.resx">
       <DependentUpon>ProgramaPrincipal.cs</DependentUpon>
