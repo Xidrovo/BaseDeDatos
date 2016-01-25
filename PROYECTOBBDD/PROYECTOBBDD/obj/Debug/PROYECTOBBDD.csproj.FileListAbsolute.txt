@@ -1,7 +1,6 @@
 C:\Users\usuarios\Documents\ESPOL\2do Termino 2015 - 2016\Base de Datos\Proyecto\BaseDeDatos\PROYECTOBBDD\PROYECTOBBDD\bin\Debug\PROYECTOBBDD.exe.config
 C:\Users\usuarios\Documents\ESPOL\2do Termino 2015 - 2016\Base de Datos\Proyecto\BaseDeDatos\PROYECTOBBDD\PROYECTOBBDD\bin\Debug\PROYECTOBBDD.exe
 C:\Users\usuarios\Documents\ESPOL\2do Termino 2015 - 2016\Base de Datos\Proyecto\BaseDeDatos\PROYECTOBBDD\PROYECTOBBDD\bin\Debug\PROYECTOBBDD.pdb
-C:\Users\usuarios\Documents\ESPOL\2do Termino 2015 - 2016\Base de Datos\Proyecto\BaseDeDatos\PROYECTOBBDD\PROYECTOBBDD\obj\Debug\PROYECTOBBDD.csprojResolveAssemblyReference.cache
 C:\Users\usuarios\Documents\ESPOL\2do Termino 2015 - 2016\Base de Datos\Proyecto\BaseDeDatos\PROYECTOBBDD\PROYECTOBBDD\obj\Debug\PROYECTOBBDD.ActualizarProducto.resources
 C:\Users\usuarios\Documents\ESPOL\2do Termino 2015 - 2016\Base de Datos\Proyecto\BaseDeDatos\PROYECTOBBDD\PROYECTOBBDD\obj\Debug\PROYECTOBBDD.ConsultaClientesXRUC.resources
 C:\Users\usuarios\Documents\ESPOL\2do Termino 2015 - 2016\Base de Datos\Proyecto\BaseDeDatos\PROYECTOBBDD\PROYECTOBBDD\obj\Debug\PROYECTOBBDD.ConsultarInventarioXNombre.resources
@@ -12,7 +11,6 @@ C:\Users\usuarios\Documents\ESPOL\2do Termino 2015 - 2016\Base de Datos\Proyecto
 C:\Users\usuarios\Documents\ESPOL\2do Termino 2015 - 2016\Base de Datos\Proyecto\BaseDeDatos\PROYECTOBBDD\PROYECTOBBDD\obj\Debug\PROYECTOBBDD.IngresarPersonaNatural.resources
 C:\Users\usuarios\Documents\ESPOL\2do Termino 2015 - 2016\Base de Datos\Proyecto\BaseDeDatos\PROYECTOBBDD\PROYECTOBBDD\obj\Debug\PROYECTOBBDD.IngresarProducto.resources
 C:\Users\usuarios\Documents\ESPOL\2do Termino 2015 - 2016\Base de Datos\Proyecto\BaseDeDatos\PROYECTOBBDD\PROYECTOBBDD\obj\Debug\PROYECTOBBDD.IngresarProveedor.resources
-C:\Users\usuarios\Documents\ESPOL\2do Termino 2015 - 2016\Base de Datos\Proyecto\BaseDeDatos\PROYECTOBBDD\PROYECTOBBDD\obj\Debug\PROYECTOBBDD.MostrarNunTablas.resources
 C:\Users\usuarios\Documents\ESPOL\2do Termino 2015 - 2016\Base de Datos\Proyecto\BaseDeDatos\PROYECTOBBDD\PROYECTOBBDD\obj\Debug\PROYECTOBBDD.Principal.resources
 C:\Users\usuarios\Documents\ESPOL\2do Termino 2015 - 2016\Base de Datos\Proyecto\BaseDeDatos\PROYECTOBBDD\PROYECTOBBDD\obj\Debug\PROYECTOBBDD.IngresarTrabajo.resources
 C:\Users\usuarios\Documents\ESPOL\2do Termino 2015 - 2016\Base de Datos\Proyecto\BaseDeDatos\PROYECTOBBDD\PROYECTOBBDD\obj\Debug\PROYECTOBBDD.Properties.Resources.resources

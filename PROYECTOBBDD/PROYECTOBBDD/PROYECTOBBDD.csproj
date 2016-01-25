@@ -59,6 +59,12 @@
     <Compile Include="ConsultaClientesXRUC.Designer.cs">
       <DependentUpon>ConsultaClientesXRUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConsultarColaborador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarColaborador.Designer.cs">
+      <DependentUpon>ConsultarColaborador.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConsultarInventarioXNombre.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,12 +112,6 @@
     </Compile>
     <Compile Include="IngresarProveedor.Designer.cs">
       <DependentUpon>IngresarProveedor.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MostrarNunTablas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MostrarNunTablas.Designer.cs">
-      <DependentUpon>MostrarNunTablas.cs</DependentUpon>
     </Compile>
     <Compile Include="ProgramaPrincipal.cs">
       <SubType>Form</SubType>
@@ -170,6 +170,9 @@
     <EmbeddedResource Include="ConsultaClientesXRUC.resx">
       <DependentUpon>ConsultaClientesXRUC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarColaborador.resx">
+      <DependentUpon>ConsultarColaborador.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConsultarInventarioXNombre.resx">
       <DependentUpon>ConsultarInventarioXNombre.cs</DependentUpon>
     </EmbeddedResource>
@@ -193,9 +196,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="IngresarProveedor.resx">
       <DependentUpon>IngresarProveedor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MostrarNunTablas.resx">
-      <DependentUpon>MostrarNunTablas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProgramaPrincipal.resx">
       <DependentUpon>ProgramaPrincipal.cs</DependentUpon>
