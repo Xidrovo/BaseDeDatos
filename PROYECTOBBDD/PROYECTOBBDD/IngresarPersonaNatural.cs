@@ -89,24 +89,58 @@ namespace PROYECTOBBDD
             if (desicion)
             {
                 //Comunicarme con el sql
+                guardarDatos(tnombres.Text, tapellido.Text, tcedula.Text, tdireccion.Text);
                 this.Close();
-                Colaborador conexion = new Colaborador();
-                using (SqlConnection con = new SqlConnection("Data Source=172.18.115.243,49170;Integrated Security=False;User ID=sa;Password=imprentaisabelita;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
-                {
-                    using (SqlCommand cmd = new SqlCommand("spAgregarClienteNatural", con))
-                    {
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.Add("@Direccion", SqlDbType.VarChar, 50).Value = tdireccion.Text;
-                        cmd.Parameters.Add("@NCedula", SqlDbType.Char, 10).Value = tcedula.Text;
-                        cmd.Parameters.Add("@Nombre", SqlDbType.VarChar, 40).Value = tnombres.Text;
-                        cmd.Parameters.Add("@Apellido", SqlDbType.VarChar, 40).Value = tapellido.Text;
-                        //cmd.Parameters.Add("@textTelefono", SqlDbType.VarChar, 40).Value = tapellido.Text;
 
-                        con.Open();
-                        cmd.ExecuteNonQuery();
-                    }
+            }
+        }
+
+        public void guardarDatos(String Nombre, String Apellido, String Cedula, String Direccion)
+        {
+            Colaborador conexion = new Colaborador();
+            using (SqlConnection con = new SqlConnection("Data Source=25.22.77.136,49170;Database=imp_isabelita;Integrated Security=False;User ID=sa;Password=imprentaisabelita;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
+            {
+                using (SqlCommand cmd = new SqlCommand("spAgregarClienteNatural", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@Direccion", Direccion);
+                    cmd.Parameters.AddWithValue("@NCedula", Cedula);
+                    cmd.Parameters.AddWithValue("@Nombre", Nombre);
+                    cmd.Parameters.AddWithValue("@Apellido", Apellido);
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    con.Close();
                 }
             }
+
+            using (SqlConnection con2 = new SqlConnection("Data Source=25.22.77.136,49170;Database=imp_isabelita;Integrated Security=False;User ID=sa;Password=imprentaisabelita;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
+            {
+
+                SqlConnection sqlConnection1 = new SqlConnection("Data Source=25.22.77.136,49170;Database=imp_isabelita;Integrated Security=False;User ID=sa;Password=imprentaisabelita;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+                SqlCommand cmd3 = new SqlCommand();
+                SqlDataReader reader;
+                cmd3.CommandText = "SELECT Id_Cliente FROM Persona_Natural where Ncedula='" + Cedula + "'";
+                cmd3.CommandType = CommandType.Text;
+                cmd3.Connection = sqlConnection1;
+                sqlConnection1.Open();
+                reader = cmd3.ExecuteReader();
+                reader.Read();
+                int id = reader.GetInt32(0);
+                for (int i = 0; i < lista.Count(); i++)
+                {
+                    using (SqlCommand cmd2 = new SqlCommand("spAgregarTelefono", con2))
+                    {
+                        cmd2.CommandType = CommandType.StoredProcedure;
+                        cmd2.Parameters.AddWithValue("@Id_Cliente", id);
+                        cmd2.Parameters.AddWithValue("@Telefono", lista.ElementAt(i).Text);
+                        con2.Open();
+                        cmd2.ExecuteNonQuery();
+                        con2.Close();
+                    }
+                }
+                sqlConnection1.Close();
+            }
+
         }
 
         public static bool HasSomething(List<TextBox> lista)
@@ -124,8 +158,6 @@ namespace PROYECTOBBDD
 
         private void bAgregar_Click(object sender, EventArgs e)
         {
-            //lTelefono
-            //textTelefono    
 
             Label Telefono = new Label();
             TextBox tTelefono = new TextBox();
@@ -155,6 +187,7 @@ namespace PROYECTOBBDD
             bQuitar.Enabled = true;
             BloquearBoton();
         }
+
 
         private void bQuitar_Click(object sender, EventArgs e)
         {
