@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace PROYECTOBBDD
 {
@@ -129,6 +130,7 @@ namespace PROYECTOBBDD
 
             if (desicion)
             {
+                guardarDatos(textBox1.Text, textBox2.Text, textBox3.Text, comboBox1.Text, textBox5.Text, textBox6.Text, tContrasena.Text);
                 this.Close();
             }
         }
@@ -187,6 +189,29 @@ namespace PROYECTOBBDD
         private void textBox2_TextChanged_1(object sender, EventArgs e)
         {
             bloquearBoton();
+        }
+        public void guardarDatos(String Nombre, String Apellido, String Cedula, String Cargo, String Telefono, String Usuario, String Contrasena)
+        {
+            Colaborador conexion = new Colaborador();
+            using (SqlConnection con = new SqlConnection("Data Source=25.22.77.136,49170;Database=imp_isabelita;Integrated Security=False;User ID=sa;Password=imprentaisabelita;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
+            {
+                using (SqlCommand cmd = new SqlCommand("spAñadirColaborador", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@Nombre", Nombre);
+                    cmd.Parameters.AddWithValue("@Apellido", Apellido);
+                    cmd.Parameters.AddWithValue("@NCedula", Cedula);
+                    cmd.Parameters.AddWithValue("@Cargo", Cargo);
+                    cmd.Parameters.AddWithValue("@Telefono", Telefono);
+                    cmd.Parameters.AddWithValue("@Usuario", Usuario);
+                    cmd.Parameters.AddWithValue("@Contraseña", Contrasena);
+                    
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                }
+            }
+
         }
     }
 }
