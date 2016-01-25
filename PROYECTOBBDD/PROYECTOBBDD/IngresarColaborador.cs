@@ -130,7 +130,7 @@ namespace PROYECTOBBDD
 
             if (desicion)
             {
-                guardarDatos(textBox1.Text, textBox2.Text, textBox3.Text, comboBox1.Text, textBox5.Text, textBox6.Text, tContrasena);
+                guardarDatos(textBox1.Text, textBox2.Text, textBox3.Text, comboBox1.Text, textBox5.Text, textBox6.Text, tContrasena.Text);
                 this.Close();
             }
         }
