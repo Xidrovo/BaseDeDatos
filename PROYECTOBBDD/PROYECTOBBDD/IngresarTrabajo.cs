@@ -294,8 +294,12 @@ namespace PROYECTOBBDD
         private void tvalor_KeyPress(object sender, KeyPressEventArgs e)
         {
             char ch = e.KeyChar;
+            var algo = sender as TextBox;
+            string temporal = algo.Text;
 
-            if (ch == 46 && tvalor.Text.IndexOf('.') != -1) //Un solo punto decimal
+            temporal = algo.Text + ch.ToString();
+
+            if (ch == 46 && algo.Text.IndexOf('.') != -1) //Un solo punto decimal
             {
                 e.Handled = true;
                 return;
@@ -306,7 +310,7 @@ namespace PROYECTOBBDD
                 return;
             }
 
-            if (Regex.IsMatch(tvalor.Text, @"\.\d\d") && !Char.IsControl(ch)) // Controla que solo exista dos digitos desupués del punto decimal
+            if (Regex.IsMatch(algo.Text, @"\.\d\d") && !Char.IsControl(ch)) // Controla que solo exista dos digitos desupués del punto decimal
             {
                 e.Handled = true;
                 return;
@@ -330,6 +334,11 @@ namespace PROYECTOBBDD
         }
 
         private void lIdcliente_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tvalor_KeyUp(object sender, KeyEventArgs e)
         {
 
         }

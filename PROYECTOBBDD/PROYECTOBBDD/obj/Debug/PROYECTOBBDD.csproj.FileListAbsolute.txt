@@ -23,3 +23,5 @@ C:\Users\usuarios\Documents\ESPOL\2do Termino 2015 - 2016\Base de Datos\Proyecto
 C:\Users\usuarios\Documents\ESPOL\2do Termino 2015 - 2016\Base de Datos\Proyecto\BaseDeDatos\PROYECTOBBDD\PROYECTOBBDD\obj\Debug\PROYECTOBBDD.csproj.GenerateResource.Cache
 C:\Users\usuarios\Documents\ESPOL\2do Termino 2015 - 2016\Base de Datos\Proyecto\BaseDeDatos\PROYECTOBBDD\PROYECTOBBDD\obj\Debug\PROYECTOBBDD.exe
 C:\Users\usuarios\Documents\ESPOL\2do Termino 2015 - 2016\Base de Datos\Proyecto\BaseDeDatos\PROYECTOBBDD\PROYECTOBBDD\obj\Debug\PROYECTOBBDD.pdb
+C:\Users\usuarios\Documents\ESPOL\2do Termino 2015 - 2016\Base de Datos\Proyecto\BaseDeDatos\PROYECTOBBDD\PROYECTOBBDD\obj\Debug\PROYECTOBBDD.csprojResolveAssemblyReference.cache
+C:\Users\usuarios\Documents\ESPOL\2do Termino 2015 - 2016\Base de Datos\Proyecto\BaseDeDatos\PROYECTOBBDD\PROYECTOBBDD\obj\Debug\PROYECTOBBDD.ConsultarColaborador.resources

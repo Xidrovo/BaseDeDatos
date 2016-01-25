@@ -69,7 +69,7 @@
             this.contIngTra.Controls.Add(this.EtiquetaDatos);
             this.contIngTra.Controls.Add(this.panel1);
             this.contIngTra.Location = new System.Drawing.Point(16, 15);
-            this.contIngTra.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.contIngTra.Margin = new System.Windows.Forms.Padding(4);
             this.contIngTra.Name = "contIngTra";
             this.contIngTra.Size = new System.Drawing.Size(692, 603);
             this.contIngTra.TabIndex = 0;
@@ -89,7 +89,7 @@
             // Guardar
             // 
             this.Guardar.Location = new System.Drawing.Point(453, 548);
-            this.Guardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Guardar.Margin = new System.Windows.Forms.Padding(4);
             this.Guardar.Name = "Guardar";
             this.Guardar.Size = new System.Drawing.Size(100, 28);
             this.Guardar.TabIndex = 10;
@@ -100,7 +100,7 @@
             // bCancelar
             // 
             this.bCancelar.Location = new System.Drawing.Point(132, 548);
-            this.bCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.bCancelar.Name = "bCancelar";
             this.bCancelar.Size = new System.Drawing.Size(100, 28);
             this.bCancelar.TabIndex = 9;
@@ -130,7 +130,7 @@
             this.panel2.Controls.Add(this.lvalor);
             this.panel2.Controls.Add(this.lcantidad);
             this.panel2.Location = new System.Drawing.Point(27, 194);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(633, 245);
             this.panel2.TabIndex = 7;
@@ -138,13 +138,14 @@
             // tvalor
             // 
             this.tvalor.Location = new System.Drawing.Point(459, 36);
-            this.tvalor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tvalor.Margin = new System.Windows.Forms.Padding(4);
             this.tvalor.MaxLength = 7;
             this.tvalor.Name = "tvalor";
             this.tvalor.Size = new System.Drawing.Size(132, 22);
             this.tvalor.TabIndex = 3;
             this.tvalor.TextChanged += new System.EventHandler(this.tvalor_TextChanged);
             this.tvalor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tvalor_KeyPress);
+            this.tvalor.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tvalor_KeyUp);
             // 
             // flowLayoutPanel1
             // 
@@ -168,7 +169,7 @@
             // tDescripcion
             // 
             this.tDescripcion.Location = new System.Drawing.Point(196, 94);
-            this.tDescripcion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tDescripcion.Margin = new System.Windows.Forms.Padding(4);
             this.tDescripcion.MaxLength = 50;
             this.tDescripcion.Multiline = true;
             this.tDescripcion.Name = "tDescripcion";
@@ -180,7 +181,7 @@
             // tcantidad
             // 
             this.tcantidad.Location = new System.Drawing.Point(123, 37);
-            this.tcantidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tcantidad.Margin = new System.Windows.Forms.Padding(4);
             this.tcantidad.MaxLength = 7;
             this.tcantidad.Name = "tcantidad";
             this.tcantidad.Size = new System.Drawing.Size(132, 22);
@@ -229,7 +230,7 @@
             this.panel1.Controls.Add(this.lFecPed);
             this.panel1.Controls.Add(this.dfechaPedido);
             this.panel1.Location = new System.Drawing.Point(27, 26);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(633, 139);
             this.panel1.TabIndex = 5;
@@ -237,7 +238,7 @@
             // tabono
             // 
             this.tabono.Location = new System.Drawing.Point(459, 87);
-            this.tabono.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabono.Margin = new System.Windows.Forms.Padding(4);
             this.tabono.MaxLength = 6;
             this.tabono.Name = "tabono";
             this.tabono.Size = new System.Drawing.Size(132, 22);
@@ -248,7 +249,7 @@
             // tidcliente
             // 
             this.tidcliente.Location = new System.Drawing.Point(151, 87);
-            this.tidcliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tidcliente.Margin = new System.Windows.Forms.Padding(4);
             this.tidcliente.MaxLength = 10;
             this.tidcliente.Name = "tidcliente";
             this.tidcliente.Size = new System.Drawing.Size(132, 22);
@@ -293,7 +294,7 @@
             this.dfechaEntrega.CustomFormat = "dd-MM-yyyy";
             this.dfechaEntrega.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dfechaEntrega.Location = new System.Drawing.Point(459, 41);
-            this.dfechaEntrega.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dfechaEntrega.Margin = new System.Windows.Forms.Padding(4);
             this.dfechaEntrega.Name = "dfechaEntrega";
             this.dfechaEntrega.Size = new System.Drawing.Size(132, 22);
             this.dfechaEntrega.TabIndex = 4;
@@ -317,7 +318,7 @@
             this.dfechaPedido.Enabled = false;
             this.dfechaPedido.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dfechaPedido.Location = new System.Drawing.Point(151, 37);
-            this.dfechaPedido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dfechaPedido.Margin = new System.Windows.Forms.Padding(4);
             this.dfechaPedido.Name = "dfechaPedido";
             this.dfechaPedido.Size = new System.Drawing.Size(132, 22);
             this.dfechaPedido.TabIndex = 3;
@@ -330,7 +331,7 @@
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(725, 634);
             this.Controls.Add(this.contIngTra);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "IngresarTrabajo";
             this.Text = "Ingresar Trabajo";
             this.contIngTra.ResumeLayout(false);
