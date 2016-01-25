@@ -14,7 +14,7 @@ namespace PROYECTOBBDD
         public void Conectar()
         {
             //MiConexion = new SqlConnection("Data Source=DANIEL-PC\\SQLEXPRESS;Initial Catalog=imp_isabelita;Persist Security Info=True;User ID=sa;Password=123456");
-            MiConexion = new SqlConnection("Data Source = 192.168.1.129,49170; Integrated Security = False; User ID = sa; Password = ********; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = False; ApplicationIntent = ReadWrite; MultiSubnetFailover = False; User ID = sa; Password = imprentaisabelita");
+            MiConexion = new SqlConnection("Data Source = 190.131.39.21,49170; Integrated Security = False; User ID = sa; Password = ********; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = False; ApplicationIntent = ReadWrite; MultiSubnetFailover = False; User ID = sa; Password = imprentaisabelita");
             MiConexion.Open();
         }
 

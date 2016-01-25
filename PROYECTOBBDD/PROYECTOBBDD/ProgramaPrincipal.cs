@@ -63,12 +63,6 @@ namespace PROYECTOBBDD
             inTrabajo.Show();    
         }
 
-        private void mostrarNumeroTablasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MostrarNunTablas numTablas = new MostrarNunTablas();
-            numTablas.MdiParent = this; //PAra que se ejecute ingresarTrabajo dentro de la pantalla de principal 
-            numTablas.Show();
-        }
 
         private void colaboradoresToolStripMenuItem_Click(object sender, EventArgs e)
         {

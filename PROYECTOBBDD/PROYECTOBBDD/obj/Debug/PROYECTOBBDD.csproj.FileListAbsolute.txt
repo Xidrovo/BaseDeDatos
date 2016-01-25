@@ -41,7 +41,6 @@ C:\Users\JORGE\Documents\GitHub\BaseDeDatos\PROYECTOBBDD\PROYECTOBBDD\obj\Debug\
 C:\Users\JORGE\Documents\GitHub\BaseDeDatos\PROYECTOBBDD\PROYECTOBBDD\obj\Debug\PROYECTOBBDD.IngresarPersonaNatural.resources
 C:\Users\JORGE\Documents\GitHub\BaseDeDatos\PROYECTOBBDD\PROYECTOBBDD\obj\Debug\PROYECTOBBDD.IngresarProducto.resources
 C:\Users\JORGE\Documents\GitHub\BaseDeDatos\PROYECTOBBDD\PROYECTOBBDD\obj\Debug\PROYECTOBBDD.IngresarProveedor.resources
-C:\Users\JORGE\Documents\GitHub\BaseDeDatos\PROYECTOBBDD\PROYECTOBBDD\obj\Debug\PROYECTOBBDD.MostrarNunTablas.resources
 C:\Users\JORGE\Documents\GitHub\BaseDeDatos\PROYECTOBBDD\PROYECTOBBDD\obj\Debug\PROYECTOBBDD.Principal.resources
 C:\Users\JORGE\Documents\GitHub\BaseDeDatos\PROYECTOBBDD\PROYECTOBBDD\obj\Debug\PROYECTOBBDD.IngresarTrabajo.resources
 C:\Users\JORGE\Documents\GitHub\BaseDeDatos\PROYECTOBBDD\PROYECTOBBDD\obj\Debug\PROYECTOBBDD.Properties.Resources.resources
