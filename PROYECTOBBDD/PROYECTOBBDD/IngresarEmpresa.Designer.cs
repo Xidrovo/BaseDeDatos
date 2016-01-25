@@ -102,12 +102,12 @@
             // 
             // bagregar
             // 
-            this.bagregar.Location = new System.Drawing.Point(187, 335);
+            this.bagregar.Location = new System.Drawing.Point(161, 335);
             this.bagregar.Margin = new System.Windows.Forms.Padding(4);
             this.bagregar.Name = "bagregar";
-            this.bagregar.Size = new System.Drawing.Size(100, 28);
+            this.bagregar.Size = new System.Drawing.Size(130, 28);
             this.bagregar.TabIndex = 8;
-            this.bagregar.Text = "Agregar";
+            this.bagregar.Text = "Agregar Teléfono";
             this.bagregar.UseVisualStyleBackColor = true;
             this.bagregar.Click += new System.EventHandler(this.bagregar_Click);
             // 

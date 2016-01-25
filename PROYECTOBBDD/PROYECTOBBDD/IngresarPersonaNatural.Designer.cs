@@ -114,12 +114,12 @@
             // 
             // bAgregar
             // 
-            this.bAgregar.Location = new System.Drawing.Point(168, 388);
+            this.bAgregar.Location = new System.Drawing.Point(161, 389);
             this.bAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.bAgregar.Name = "bAgregar";
-            this.bAgregar.Size = new System.Drawing.Size(100, 28);
+            this.bAgregar.Size = new System.Drawing.Size(130, 28);
             this.bAgregar.TabIndex = 4;
-            this.bAgregar.Text = "Agregar";
+            this.bAgregar.Text = "Agregar Teléfono";
             this.bAgregar.UseVisualStyleBackColor = true;
             this.bAgregar.Click += new System.EventHandler(this.bAgregar_Click);
             // 
