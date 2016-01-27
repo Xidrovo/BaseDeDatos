@@ -68,7 +68,7 @@ namespace PROYECTOBBDD
         {
 
             guardarDatos(dateTimePicker1.Value.Date, float.Parse(tValor.Text), tNumFactura.Text, 
-                                    tCedulaColab.Text, tIdProveedor.Text, tDescripcion.Text);
+                                    tCedulaColab.Text, tDescripcion.Text);
             this.Close();
         }
 
@@ -143,10 +143,18 @@ namespace PROYECTOBBDD
             var bl = !string.IsNullOrEmpty(tDescripcion.Text) &&
                      !string.IsNullOrEmpty(tNumFactura.Text) &&
                      !string.IsNullOrEmpty(tCedulaColab.Text) &&
-                     !string.IsNullOrEmpty(tIdProveedor.Text) &&
                      !string.IsNullOrEmpty(tValor.Text);
 
             button2.Enabled = bl;
+        }
+
+        private void RegistrarEgreso_Load(object sender, EventArgs e)
+        {
+            comboBox1.DataSource = Productos_Inventario.ObtenerProveedores();
+            string texto;
+            comboBox1.ValueMember = "RUC";
+            texto = comboBox1.DisplayMember;
+            comboBox1.DisplayMember = "Nombre_empresa";
         }
     }
 }
