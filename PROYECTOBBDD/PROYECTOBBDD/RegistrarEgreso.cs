@@ -68,7 +68,7 @@ namespace PROYECTOBBDD
         {
 
             guardarDatos(dateTimePicker1.Value.Date, float.Parse(tValor.Text), tNumFactura.Text, 
-                                    tCedulaColab.Text, tDescripcion.Text);
+                                    tCedulaColab.Text, comboBox1.Text, tDescripcion.Text);
             this.Close();
         }
 
@@ -98,7 +98,6 @@ namespace PROYECTOBBDD
                     cmd.Parameters.AddWithValue("@Valor", Valor);
                     cmd.Parameters.AddWithValue("@NumFactura", NumFactura);
                     cmd.Parameters.AddWithValue("@CedulaColab", CedulaColab);
-                    cmd.Parameters.AddWithValue("@Id_proveedor", Id_Proveedor);
                     cmd.Parameters.AddWithValue("@Descripcion", Descripcion);
 
                     con.Open();
