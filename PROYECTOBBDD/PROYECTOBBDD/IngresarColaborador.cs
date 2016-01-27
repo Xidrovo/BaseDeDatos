@@ -19,6 +19,7 @@ namespace PROYECTOBBDD
             InitializeComponent();
             button1.Enabled = false;
             InstanciarCombobox();
+            tCargo.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         private void InstanciarCombobox()
@@ -130,8 +131,15 @@ namespace PROYECTOBBDD
 
             if (desicion)
             {
-                guardarDatos(tNombre.Text, tApellido.Text, tCedula.Text, tCargo.Text, tTelefono.Text, tContrasena.Text);
-                this.Close();
+                try
+                {
+                    guardarDatos(tNombre.Text, tApellido.Text, tCedula.Text, tCargo.Text, tTelefono.Text, tContrasena.Text);
+                    this.Close();
+                }
+                catch
+                {
+                    MessageBox.Show("Colaborador ya existe en la base de datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
