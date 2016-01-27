@@ -67,7 +67,8 @@ namespace PROYECTOBBDD
         private void button2_Click(object sender, EventArgs e)
         {
 
-            guardarDatos(dateTimePicker1.Value.Date, float.Parse(tValor.Text), tNumFactura.Text, tCedulaColab.Text, tIdProveedor.Text, tDescripcion.Text);
+            guardarDatos(dateTimePicker1.Value.Date, float.Parse(tValor.Text), tNumFactura.Text, 
+                                    tCedulaColab.Text, tIdProveedor.Text, tDescripcion.Text);
             this.Close();
         }
 
