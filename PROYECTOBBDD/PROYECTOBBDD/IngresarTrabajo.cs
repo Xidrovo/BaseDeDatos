@@ -31,7 +31,7 @@ namespace PROYECTOBBDD
             listaCant.Add(tcantidad);
             listaVal.Add(tvalor);
 
-
+            bQuitar.Enabled = false;
 
         }
 
@@ -290,6 +290,8 @@ namespace PROYECTOBBDD
             listaVal.Add(textValor);
                 listaLabelVal.Add(valor);
 
+            bQuitar.Enabled = true;
+
         }
 
         private void tabono_TextChanged(object sender, EventArgs e)
@@ -431,6 +433,7 @@ namespace PROYECTOBBDD
 
         private void bQuitar_Click(object sender, EventArgs e)
         {
+            //Lista de cantidad
             this.Controls.Remove(listaCant[listaCant.Count - 1]);
             listaCant[listaCant.Count - 1].Dispose();
             listaCant.RemoveAt(listaCant.Count - 1);
@@ -438,6 +441,24 @@ namespace PROYECTOBBDD
             this.Controls.Remove(listaLabelCant[listaLabelCant.Count - 1]);
             listaLabelCant[listaLabelCant.Count - 1].Dispose();
             listaLabelCant.RemoveAt(listaLabelCant.Count - 1);
+
+            //Lista de descripción
+            this.Controls.Remove(listaDesc[listaDesc.Count - 1]);
+            listaDesc[listaDesc.Count - 1].Dispose();
+            listaDesc.RemoveAt(listaDesc.Count - 1);
+
+            this.Controls.Remove(listaLabelDesc[listaLabelDesc.Count - 1]);
+            listaLabelDesc[listaLabelDesc.Count - 1].Dispose();
+            listaLabelDesc.RemoveAt(listaLabelDesc.Count - 1);
+
+            //Lista de Valor
+            this.Controls.Remove(listaVal[listaVal.Count - 1]);
+            listaVal[listaVal.Count - 1].Dispose();
+            listaVal.RemoveAt(listaVal.Count - 1);
+
+            this.Controls.Remove(listaLabelVal[listaLabelVal.Count - 1]);
+            listaLabelVal[listaLabelVal.Count - 1].Dispose();
+            listaLabelVal.RemoveAt(listaLabelVal.Count - 1);
 
             if (listaCant.Count == 1)
             {

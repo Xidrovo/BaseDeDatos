@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.contIngTra = new System.Windows.Forms.Panel();
+            this.bQuitar = new System.Windows.Forms.Button();
             this.Agregar = new System.Windows.Forms.Button();
             this.Guardar = new System.Windows.Forms.Button();
             this.bCancelar = new System.Windows.Forms.Button();
@@ -51,7 +52,6 @@
             this.dfechaEntrega = new System.Windows.Forms.DateTimePicker();
             this.lFecPed = new System.Windows.Forms.Label();
             this.dfechaPedido = new System.Windows.Forms.DateTimePicker();
-            this.bQuitar = new System.Windows.Forms.Button();
             this.contIngTra.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -77,12 +77,22 @@
             this.contIngTra.TabIndex = 0;
             this.contIngTra.Paint += new System.Windows.Forms.PaintEventHandler(this.contIngTra_Paint);
             // 
+            // bQuitar
+            // 
+            this.bQuitar.Location = new System.Drawing.Point(584, 462);
+            this.bQuitar.Name = "bQuitar";
+            this.bQuitar.Size = new System.Drawing.Size(75, 33);
+            this.bQuitar.TabIndex = 12;
+            this.bQuitar.Text = "Quitar";
+            this.bQuitar.UseVisualStyleBackColor = true;
+            this.bQuitar.Click += new System.EventHandler(this.bQuitar_Click);
+            // 
             // Agregar
             // 
             this.Agregar.Location = new System.Drawing.Point(36, 463);
             this.Agregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Agregar.Name = "Agregar";
-            this.Agregar.Size = new System.Drawing.Size(75, 23);
+            this.Agregar.Size = new System.Drawing.Size(133, 32);
             this.Agregar.TabIndex = 11;
             this.Agregar.Text = "Agregar trabajo";
             this.Agregar.UseVisualStyleBackColor = true;
@@ -325,16 +335,6 @@
             this.dfechaPedido.Size = new System.Drawing.Size(132, 22);
             this.dfechaPedido.TabIndex = 3;
             this.dfechaPedido.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
-            // 
-            // bQuitar
-            // 
-            this.bQuitar.Location = new System.Drawing.Point(584, 462);
-            this.bQuitar.Name = "bQuitar";
-            this.bQuitar.Size = new System.Drawing.Size(75, 23);
-            this.bQuitar.TabIndex = 12;
-            this.bQuitar.Text = "Quitar";
-            this.bQuitar.UseVisualStyleBackColor = true;
-            this.bQuitar.Click += new System.EventHandler(this.bQuitar_Click);
             // 
             // IngresarTrabajo
             // 
