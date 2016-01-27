@@ -139,7 +139,7 @@
             this.ClientSize = new System.Drawing.Size(417, 418);
             this.Controls.Add(this.panel1);
             this.Name = "ConsultarProveedorPorNombre";
-            this.Text = "ConsultarProveedorPorNombre";
+            this.Text = "Consultar Proveedor Por Nombre";
             this.Load += new System.EventHandler(this.ConsultarProveedorPorNombre_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

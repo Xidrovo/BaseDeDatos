@@ -32,14 +32,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tCedula = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.bsalir = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.celdaResultados = new System.Windows.Forms.DataGridView();
             this.bConsulta = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.celdaResultados)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -50,7 +50,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.bsalir);
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.celdaResultados);
             this.panel1.Controls.Add(this.bConsulta);
             this.panel1.Location = new System.Drawing.Point(12, 1);
             this.panel1.Name = "panel1";
@@ -78,20 +78,20 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.tCedula);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(34, 29);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(277, 57);
             this.panel2.TabIndex = 5;
             // 
-            // textBox1
+            // tCedula
             // 
-            this.textBox1.Location = new System.Drawing.Point(135, 20);
-            this.textBox1.MaxLength = 13;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
+            this.tCedula.Location = new System.Drawing.Point(135, 20);
+            this.tCedula.MaxLength = 13;
+            this.tCedula.Name = "tCedula";
+            this.tCedula.Size = new System.Drawing.Size(100, 20);
+            this.tCedula.TabIndex = 1;
             // 
             // label1
             // 
@@ -111,13 +111,13 @@
             this.bsalir.Text = "Salir";
             this.bsalir.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // celdaResultados
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(34, 139);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(277, 150);
-            this.dataGridView1.TabIndex = 3;
+            this.celdaResultados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.celdaResultados.Location = new System.Drawing.Point(34, 139);
+            this.celdaResultados.Name = "celdaResultados";
+            this.celdaResultados.Size = new System.Drawing.Size(277, 150);
+            this.celdaResultados.TabIndex = 3;
             // 
             // bConsulta
             // 
@@ -136,12 +136,12 @@
             this.ClientSize = new System.Drawing.Size(374, 375);
             this.Controls.Add(this.panel1);
             this.Name = "ConsultarColaborador";
-            this.Text = "ConsultarColaborador";
+            this.Text = "Consultar Colaborador";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.celdaResultados)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -152,10 +152,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tCedula;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button bsalir;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView celdaResultados;
         private System.Windows.Forms.Button bConsulta;
     }
 }
