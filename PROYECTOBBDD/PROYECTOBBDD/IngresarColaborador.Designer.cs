@@ -36,7 +36,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tContrasena = new System.Windows.Forms.TextBox();
-            this.tUsuario = new System.Windows.Forms.TextBox();
             this.tTelefono = new System.Windows.Forms.TextBox();
             this.tCedula = new System.Windows.Forms.TextBox();
             this.tApellido = new System.Windows.Forms.TextBox();
@@ -61,7 +60,6 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.tContrasena);
-            this.panel1.Controls.Add(this.tUsuario);
             this.panel1.Controls.Add(this.tTelefono);
             this.panel1.Controls.Add(this.tCedula);
             this.panel1.Controls.Add(this.tApellido);
@@ -70,14 +68,14 @@
             this.panel1.Controls.Add(this.tNombre);
             this.panel1.Location = new System.Drawing.Point(13, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(315, 291);
+            this.panel1.Size = new System.Drawing.Size(315, 251);
             this.panel1.TabIndex = 0;
             // 
             // tCargo
             // 
             this.tCargo.FormattingEnabled = true;
             this.tCargo.Location = new System.Drawing.Point(104, 138);
-            this.tCargo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tCargo.Margin = new System.Windows.Forms.Padding(2);
             this.tCargo.Name = "tCargo";
             this.tCargo.Size = new System.Drawing.Size(183, 21);
             this.tCargo.TabIndex = 3;
@@ -86,7 +84,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(27, 246);
+            this.label7.Location = new System.Drawing.Point(27, 209);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(61, 13);
             this.label7.TabIndex = 10;
@@ -97,9 +95,8 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(27, 209);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(43, 13);
+            this.label6.Size = new System.Drawing.Size(0, 13);
             this.label6.TabIndex = 10;
-            this.label6.Text = "Usuario";
             // 
             // label5
             // 
@@ -130,23 +127,13 @@
             // 
             // tContrasena
             // 
-            this.tContrasena.Location = new System.Drawing.Point(104, 246);
+            this.tContrasena.Location = new System.Drawing.Point(104, 209);
             this.tContrasena.MaxLength = 16;
             this.tContrasena.Name = "tContrasena";
             this.tContrasena.PasswordChar = '*';
             this.tContrasena.Size = new System.Drawing.Size(183, 20);
             this.tContrasena.TabIndex = 6;
             this.tContrasena.TextChanged += new System.EventHandler(this.tContrasena_TextChanged);
-            // 
-            // tUsuario
-            // 
-            this.tUsuario.Location = new System.Drawing.Point(104, 209);
-            this.tUsuario.MaxLength = 10;
-            this.tUsuario.Name = "tUsuario";
-            this.tUsuario.Size = new System.Drawing.Size(183, 20);
-            this.tUsuario.TabIndex = 5;
-            this.tUsuario.TextChanged += new System.EventHandler(this.textBox6_TextChanged_1);
-            this.tUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox6_KeyPress);
             // 
             // tTelefono
             // 
@@ -266,7 +253,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tContrasena;
-        private System.Windows.Forms.TextBox tUsuario;
         private System.Windows.Forms.TextBox tTelefono;
         private System.Windows.Forms.TextBox tCedula;
         private System.Windows.Forms.TextBox tApellido;
