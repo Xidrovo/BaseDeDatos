@@ -30,19 +30,19 @@ namespace PROYECTOBBDD
             if (Principal.VerificaRucEmpresas(truc.Text) || Principal.VerificaRucPersonaNatural(truc.Text))
             {
                 //Consultar Query
-                MostrarDatosClientesPorRuc();
+                MostrarDatosEmpresasPorRuc();
             }
             else
             {
                 MessageBox.Show("Debe escribir un RUC valido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        public void MostrarDatosClientesPorRuc()
+        public void MostrarDatosEmpresasPorRuc()
         {
             //Colaborador conexion = new Colaborador();
             using (SqlConnection con = new SqlConnection("Data Source=25.22.77.136,49170;Initial Catalog=imp_isabelita;Integrated Security=False;User ID=sa;Password=imprentaisabelita;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
             {
-                using (SqlCommand cmd = new SqlCommand("spGetIdFromRUC", con))
+                using (SqlCommand cmd = new SqlCommand("spEmpresaPorRuc", con))
                 {
                     SqlDataAdapter da = new SqlDataAdapter();
                     DataTable dt = new DataTable();
@@ -56,8 +56,6 @@ namespace PROYECTOBBDD
                     con.Close();
                 }
             }
-
-
 
         }
 

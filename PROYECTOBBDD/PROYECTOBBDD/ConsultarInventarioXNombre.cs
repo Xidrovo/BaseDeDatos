@@ -100,5 +100,10 @@ namespace PROYECTOBBDD
             }
             this.mifiltro.RowFilter = salida_datos;
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -130,7 +130,7 @@ namespace PROYECTOBBDD
 
             if (desicion)
             {
-                guardarDatos(tNombre.Text, tApellido.Text, tCedula.Text, tCargo.Text, tTelefono.Text, tUsuario.Text, tContrasena.Text);
+                guardarDatos(tNombre.Text, tApellido.Text, tCedula.Text, tCargo.Text, tTelefono.Text, tContrasena.Text);
                 this.Close();
             }
         }
@@ -162,7 +162,6 @@ namespace PROYECTOBBDD
                                 !string.IsNullOrEmpty(tCedula.Text)&&
                                 tCargo.Text != "..." &&
                                 !string.IsNullOrEmpty(tTelefono.Text) &&
-                                !string.IsNullOrEmpty(tUsuario.Text) &&
                                 !string.IsNullOrEmpty(tContrasena.Text) &&
                                 tContrasena.TextLength >= 6 &&
                                 tContrasena.TextLength <= 16 &&
@@ -190,7 +189,7 @@ namespace PROYECTOBBDD
         {
             bloquearBoton();
         }
-        public void guardarDatos(String Nombre, String Apellido, String Cedula, String Cargo, String Telefono, String Usuario, String Contrasena)
+        public void guardarDatos(String Nombre, String Apellido, String Cedula, String Cargo, String Telefono, String Contrasena)
         {
             Colaborador conexion = new Colaborador();
             using (SqlConnection con = new SqlConnection("Data Source=25.22.77.136,49170;Database=imp_isabelita;Integrated Security=False;User ID=sa;Password=imprentaisabelita;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
@@ -203,7 +202,6 @@ namespace PROYECTOBBDD
                     cmd.Parameters.AddWithValue("@NCedula", Cedula);
                     cmd.Parameters.AddWithValue("@Cargo", Cargo);
                     cmd.Parameters.AddWithValue("@Telefono", Telefono);
-                    cmd.Parameters.AddWithValue("@Usuario", Usuario);
                     cmd.Parameters.AddWithValue("@Contraseña", Contrasena);
                     
                     con.Open();

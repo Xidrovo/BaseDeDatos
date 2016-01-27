@@ -20,7 +20,7 @@ namespace PROYECTOBBDD
 
         private void bConsulta_Click(object sender, EventArgs e)
         {
-
+            MostrarDatosClientesPorRuc();
         }
         public void MostrarDatosClientesPorRuc()
         {
@@ -42,9 +42,8 @@ namespace PROYECTOBBDD
                 }
             }
 
-
-
         }
+
     }
      
 }

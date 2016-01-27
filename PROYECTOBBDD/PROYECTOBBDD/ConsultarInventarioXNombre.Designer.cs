@@ -52,18 +52,16 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(16, 15);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(525, 498);
+            this.panel1.Size = new System.Drawing.Size(395, 405);
             this.panel1.TabIndex = 0;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(321, 444);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Location = new System.Drawing.Point(241, 361);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 28);
+            this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 6;
             this.button2.Text = "Consultar";
             this.button2.UseVisualStyleBackColor = true;
@@ -71,10 +69,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(87, 444);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(65, 361);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 28);
+            this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 5;
             this.button1.Text = "Cancelar";
             this.button1.UseVisualStyleBackColor = true;
@@ -83,29 +80,26 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(52, 191);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Location = new System.Drawing.Point(39, 155);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(427, 185);
+            this.dataGridView1.Size = new System.Drawing.Size(320, 150);
             this.dataGridView1.TabIndex = 4;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(33, 156);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(25, 127);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(171, 17);
+            this.label3.Size = new System.Drawing.Size(129, 13);
             this.label3.TabIndex = 3;
             this.label3.Text = "Resultados de la consulta";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(29, 22);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(22, 18);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(160, 17);
+            this.label2.Size = new System.Drawing.Size(119, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Parámetros de Consulta";
             // 
@@ -114,39 +108,36 @@
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.tnombreProducto);
-            this.panel2.Location = new System.Drawing.Point(21, 31);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Location = new System.Drawing.Point(16, 25);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(479, 79);
+            this.panel2.Size = new System.Drawing.Size(360, 65);
             this.panel2.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(27, 28);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(20, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 17);
+            this.label1.Size = new System.Drawing.Size(79, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "ID de Producto";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // tnombreProducto
             // 
-            this.tnombreProducto.Location = new System.Drawing.Point(201, 28);
-            this.tnombreProducto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tnombreProducto.Location = new System.Drawing.Point(151, 23);
             this.tnombreProducto.Name = "tnombreProducto";
-            this.tnombreProducto.Size = new System.Drawing.Size(255, 22);
+            this.tnombreProducto.Size = new System.Drawing.Size(192, 20);
             this.tnombreProducto.TabIndex = 1;
             this.tnombreProducto.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             this.tnombreProducto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // ConsultarInventarioXNombre
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(559, 528);
+            this.ClientSize = new System.Drawing.Size(419, 429);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ConsultarInventarioXNombre";
             this.Text = "Consultar Inventario por ID";
             this.panel1.ResumeLayout(false);
