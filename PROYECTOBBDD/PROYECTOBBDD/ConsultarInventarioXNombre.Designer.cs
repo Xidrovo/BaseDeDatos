@@ -36,7 +36,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tnombreProducto = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -107,7 +107,7 @@
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.tnombreProducto);
             this.panel2.Location = new System.Drawing.Point(16, 25);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(360, 65);
@@ -122,14 +122,14 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "ID de Producto";
             // 
-            // textBox1
+            // tnombreProducto
             // 
-            this.textBox1.Location = new System.Drawing.Point(151, 23);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(192, 20);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
-            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            this.tnombreProducto.Location = new System.Drawing.Point(151, 23);
+            this.tnombreProducto.Name = "tnombreProducto";
+            this.tnombreProducto.Size = new System.Drawing.Size(192, 20);
+            this.tnombreProducto.TabIndex = 1;
+            this.tnombreProducto.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
+            this.tnombreProducto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // ConsultarInventarioXNombre
             // 
@@ -153,7 +153,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tnombreProducto;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label3;
