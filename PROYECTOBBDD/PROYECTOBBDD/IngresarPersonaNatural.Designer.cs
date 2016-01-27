@@ -68,11 +68,12 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(342, 418);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // bQuitar
             // 
             this.bQuitar.Location = new System.Drawing.Point(231, 315);
-            this.bQuitar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bQuitar.Margin = new System.Windows.Forms.Padding(2);
             this.bQuitar.Name = "bQuitar";
             this.bQuitar.Size = new System.Drawing.Size(56, 23);
             this.bQuitar.TabIndex = 5;
