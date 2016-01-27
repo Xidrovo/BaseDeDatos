@@ -95,5 +95,15 @@ namespace PROYECTOBBDD
             }
             this.mifiltro.RowFilter = salida_datos;
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void tnombreProveedor_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
