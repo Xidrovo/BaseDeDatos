@@ -19,6 +19,7 @@ namespace PROYECTOBBDD
         public IngresarEmpresa()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
             lista.Add(textTelefono);
             labelList.Add(lTelefono);
             bQuitar.Enabled = false;
@@ -253,6 +254,11 @@ namespace PROYECTOBBDD
         }
 
         private void tdireccion_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

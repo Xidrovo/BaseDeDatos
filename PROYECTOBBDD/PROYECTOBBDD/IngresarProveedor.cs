@@ -20,6 +20,7 @@ namespace PROYECTOBBDD
         public IngresarProveedor()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
             lista.Add(this.lTelefono);
             labelList.Add(this.lteléfono);
             bGuardar.Enabled = false;
@@ -262,6 +263,11 @@ namespace PROYECTOBBDD
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void IngresarProveedor_Load(object sender, EventArgs e)
         {
 
         }

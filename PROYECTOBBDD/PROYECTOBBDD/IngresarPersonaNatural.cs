@@ -20,6 +20,7 @@ namespace PROYECTOBBDD
         public IngresarPersonaNatural()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
             lista.Add(this.textTelefono);
             labelList.Add(this.lTelefono);
 
@@ -254,6 +255,11 @@ namespace PROYECTOBBDD
         private void textTelefono_TextChanged_1(object sender, EventArgs e)
         {
             BloquearBoton();
+        }
+
+        private void IngresarPersonaNatural_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
