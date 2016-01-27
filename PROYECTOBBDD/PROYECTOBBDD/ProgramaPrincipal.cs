@@ -19,7 +19,20 @@ namespace PROYECTOBBDD
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            if (PracticaGui1.LogIn.Cargo != "JEFE")
+            {
+                reportesToolStripMenuItem.Enabled = false;
+                reportesToolStripMenuItem.Visible = false;
+            }
 
+            if (!(PracticaGui1.LogIn.Cargo == "JEFE" || PracticaGui1.LogIn.Cargo == "SECRETARIO"))
+            {
+                reportesToolStripMenuItem.Enabled = false;
+                reportesToolStripMenuItem.Visible = false;
+
+                colaboradoresToolStripMenuItem.Enabled = false;
+                colaboradoresToolStripMenuItem.Visible = false;
+            }
         }
 
         private void clientesPorRUcToolStripMenuItem_Click(object sender, EventArgs e)

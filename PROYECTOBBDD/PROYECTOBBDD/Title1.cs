@@ -50,9 +50,8 @@ namespace PracticaGui1
             else if ((this.Username.Text) != "" && (this.Contrasena.Text != ""))
             {
                 PROYECTOBBDD.Principal col = new PROYECTOBBDD.Principal();
-               // ObtenerCargo(Contrasena.Text, Username.Text);
-               //Esto es sól prueba par ausar login..  ya sirve~
-//                if (Cargo != "Ninguno")
+                ObtenerCargo(Contrasena.Text, Username.Text);
+                if (Cargo != "Ninguno")
                 {
                     col.Show();
                     this.Hide();
@@ -72,24 +71,33 @@ namespace PracticaGui1
         private void ObtenerCargo(string Password, string Login)
         {
             string log = "";
+            bool Error = false;
             SqlConnection MiConexion = new SqlConnection();
             MiConexion = new SqlConnection("Data Source=25.22.77.136,49170;Initial Catalog=imp_isabelita;Integrated Security=False;User ID=sa;Password=imprentaisabelita;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
             MiConexion.Open();
-            SqlCommand command = new SqlCommand("select Usuario, Cargo from Colaborador WHERE Colaborador.Contraseña = CONVERT(varbinary, '" + this.Contrasena.Text + "')", MiConexion);
+            SqlCommand command = new SqlCommand("select NCedula, Cargo from Colaborador WHERE Colaborador.Contraseña = CONVERT(varbinary, '" + this.Contrasena.Text + "')", MiConexion);
             SqlDataReader reader = command.ExecuteReader();
-            reader.Read();
-            if (reader.HasRows)
+            
+            while(reader.Read())
             {
                 log = reader.GetString(0);
                 if (log == Login)
                 {
                     Cargo = reader.GetString(1);
+                    Error = false;
+                    break;
                 }
                 else
-                    Cargo = "Ninguno";
+                {
+                    Error = true;
+                }
             }
-            else
+            if (Error)
+            {
                 Cargo = "Ninguno";
+                MessageBox.Show("USUARIO O CONTRASEÑA NO ENCONTRADO", "Error",
+                                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             MiConexion.Close();
             Console.Write(Cargo);
         }
