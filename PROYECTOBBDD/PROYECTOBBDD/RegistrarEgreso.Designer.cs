@@ -237,6 +237,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "RegistrarEgreso";
             this.Text = "Registrar Egreso";
+            this.Load += new System.EventHandler(this.RegistrarEgreso_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

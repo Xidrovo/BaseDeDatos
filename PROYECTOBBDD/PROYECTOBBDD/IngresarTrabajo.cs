@@ -27,6 +27,7 @@ namespace PROYECTOBBDD
         public IngresarTrabajo()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
             listaDesc.Add(tDescripcion);
             listaCant.Add(tcantidad);
             listaVal.Add(tvalor);
@@ -464,6 +465,11 @@ namespace PROYECTOBBDD
             {
                 bQuitar.Enabled = false;
             }
+        }
+
+        private void IngresarTrabajo_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

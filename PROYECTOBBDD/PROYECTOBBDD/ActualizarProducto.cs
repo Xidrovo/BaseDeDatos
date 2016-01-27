@@ -20,6 +20,8 @@ namespace PROYECTOBBDD
             groupBox1.Controls.Add(rAgregar);
             groupBox1.Controls.Add(rQuitar);
             bActualizar.Enabled = false;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+
         }
 
         private void Ingresar_KeyPress(object sender, KeyPressEventArgs e)

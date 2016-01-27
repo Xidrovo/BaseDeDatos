@@ -70,18 +70,18 @@
             this.contIngTra.Controls.Add(this.panel2);
             this.contIngTra.Controls.Add(this.EtiquetaDatos);
             this.contIngTra.Controls.Add(this.panel1);
-            this.contIngTra.Location = new System.Drawing.Point(16, 15);
-            this.contIngTra.Margin = new System.Windows.Forms.Padding(4);
+            this.contIngTra.Location = new System.Drawing.Point(12, 12);
             this.contIngTra.Name = "contIngTra";
-            this.contIngTra.Size = new System.Drawing.Size(692, 603);
+            this.contIngTra.Size = new System.Drawing.Size(520, 491);
             this.contIngTra.TabIndex = 0;
             this.contIngTra.Paint += new System.Windows.Forms.PaintEventHandler(this.contIngTra_Paint);
             // 
             // bQuitar
             // 
-            this.bQuitar.Location = new System.Drawing.Point(584, 462);
+            this.bQuitar.Location = new System.Drawing.Point(438, 375);
+            this.bQuitar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bQuitar.Name = "bQuitar";
-            this.bQuitar.Size = new System.Drawing.Size(75, 33);
+            this.bQuitar.Size = new System.Drawing.Size(56, 27);
             this.bQuitar.TabIndex = 12;
             this.bQuitar.Text = "Quitar";
             this.bQuitar.UseVisualStyleBackColor = true;
@@ -89,10 +89,10 @@
             // 
             // Agregar
             // 
-            this.Agregar.Location = new System.Drawing.Point(36, 463);
-            this.Agregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Agregar.Location = new System.Drawing.Point(27, 376);
+            this.Agregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Agregar.Name = "Agregar";
-            this.Agregar.Size = new System.Drawing.Size(133, 32);
+            this.Agregar.Size = new System.Drawing.Size(100, 26);
             this.Agregar.TabIndex = 11;
             this.Agregar.Text = "Agregar trabajo";
             this.Agregar.UseVisualStyleBackColor = true;
@@ -100,10 +100,9 @@
             // 
             // Guardar
             // 
-            this.Guardar.Location = new System.Drawing.Point(453, 548);
-            this.Guardar.Margin = new System.Windows.Forms.Padding(4);
+            this.Guardar.Location = new System.Drawing.Point(340, 445);
             this.Guardar.Name = "Guardar";
-            this.Guardar.Size = new System.Drawing.Size(100, 28);
+            this.Guardar.Size = new System.Drawing.Size(75, 23);
             this.Guardar.TabIndex = 10;
             this.Guardar.Text = "Guardar";
             this.Guardar.UseVisualStyleBackColor = true;
@@ -111,10 +110,9 @@
             // 
             // bCancelar
             // 
-            this.bCancelar.Location = new System.Drawing.Point(132, 548);
-            this.bCancelar.Margin = new System.Windows.Forms.Padding(4);
+            this.bCancelar.Location = new System.Drawing.Point(99, 445);
             this.bCancelar.Name = "bCancelar";
-            this.bCancelar.Size = new System.Drawing.Size(100, 28);
+            this.bCancelar.Size = new System.Drawing.Size(75, 23);
             this.bCancelar.TabIndex = 9;
             this.bCancelar.Text = "Cancelar";
             this.bCancelar.UseVisualStyleBackColor = true;
@@ -123,10 +121,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(64, 186);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(48, 151);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 17);
+            this.label1.Size = new System.Drawing.Size(45, 13);
             this.label1.TabIndex = 8;
             this.label1.Text = "Detalles";
             // 
@@ -141,19 +138,17 @@
             this.panel2.Controls.Add(this.tcantidad);
             this.panel2.Controls.Add(this.lvalor);
             this.panel2.Controls.Add(this.lcantidad);
-            this.panel2.Location = new System.Drawing.Point(27, 194);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Location = new System.Drawing.Point(20, 158);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(633, 245);
+            this.panel2.Size = new System.Drawing.Size(476, 200);
             this.panel2.TabIndex = 7;
             // 
             // tvalor
             // 
-            this.tvalor.Location = new System.Drawing.Point(459, 36);
-            this.tvalor.Margin = new System.Windows.Forms.Padding(4);
+            this.tvalor.Location = new System.Drawing.Point(344, 29);
             this.tvalor.MaxLength = 7;
             this.tvalor.Name = "tvalor";
-            this.tvalor.Size = new System.Drawing.Size(132, 22);
+            this.tvalor.Size = new System.Drawing.Size(100, 20);
             this.tvalor.TabIndex = 3;
             this.tvalor.TextChanged += new System.EventHandler(this.tvalor_TextChanged);
             this.tvalor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tvalor_KeyPress);
@@ -161,72 +156,66 @@
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(477, 46);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(358, 37);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(8, 7);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(6, 6);
             this.flowLayoutPanel1.TabIndex = 6;
             // 
             // lDescripcion
             // 
             this.lDescripcion.AutoSize = true;
-            this.lDescripcion.Location = new System.Drawing.Point(52, 97);
-            this.lDescripcion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lDescripcion.Location = new System.Drawing.Point(39, 79);
             this.lDescripcion.Name = "lDescripcion";
-            this.lDescripcion.Size = new System.Drawing.Size(82, 17);
+            this.lDescripcion.Size = new System.Drawing.Size(63, 13);
             this.lDescripcion.TabIndex = 5;
             this.lDescripcion.Text = "Descripción";
             this.lDescripcion.Click += new System.EventHandler(this.label2_Click);
             // 
             // tDescripcion
             // 
-            this.tDescripcion.Location = new System.Drawing.Point(196, 94);
-            this.tDescripcion.Margin = new System.Windows.Forms.Padding(4);
+            this.tDescripcion.Location = new System.Drawing.Point(147, 76);
             this.tDescripcion.MaxLength = 50;
             this.tDescripcion.Multiline = true;
             this.tDescripcion.Name = "tDescripcion";
             this.tDescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tDescripcion.Size = new System.Drawing.Size(395, 69);
+            this.tDescripcion.Size = new System.Drawing.Size(297, 57);
             this.tDescripcion.TabIndex = 4;
             this.tDescripcion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tDescripcion_KeyPress);
             // 
             // tcantidad
             // 
-            this.tcantidad.Location = new System.Drawing.Point(123, 37);
-            this.tcantidad.Margin = new System.Windows.Forms.Padding(4);
+            this.tcantidad.Location = new System.Drawing.Point(92, 30);
             this.tcantidad.MaxLength = 7;
             this.tcantidad.Name = "tcantidad";
-            this.tcantidad.Size = new System.Drawing.Size(132, 22);
+            this.tcantidad.Size = new System.Drawing.Size(100, 20);
             this.tcantidad.TabIndex = 2;
             this.tcantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tcantidad_KeyPress);
             // 
             // lvalor
             // 
             this.lvalor.AutoSize = true;
-            this.lvalor.Location = new System.Drawing.Point(363, 37);
-            this.lvalor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lvalor.Location = new System.Drawing.Point(272, 30);
             this.lvalor.Name = "lvalor";
-            this.lvalor.Size = new System.Drawing.Size(41, 17);
+            this.lvalor.Size = new System.Drawing.Size(31, 13);
             this.lvalor.TabIndex = 1;
             this.lvalor.Text = "Valor";
             // 
             // lcantidad
             // 
             this.lcantidad.AutoSize = true;
-            this.lcantidad.Location = new System.Drawing.Point(48, 37);
-            this.lcantidad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lcantidad.Location = new System.Drawing.Point(36, 30);
             this.lcantidad.Name = "lcantidad";
-            this.lcantidad.Size = new System.Drawing.Size(64, 17);
+            this.lcantidad.Size = new System.Drawing.Size(49, 13);
             this.lcantidad.TabIndex = 0;
             this.lcantidad.Text = "Cantidad";
             // 
             // EtiquetaDatos
             // 
             this.EtiquetaDatos.AutoSize = true;
-            this.EtiquetaDatos.Location = new System.Drawing.Point(53, 12);
-            this.EtiquetaDatos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.EtiquetaDatos.Location = new System.Drawing.Point(40, 10);
             this.EtiquetaDatos.Name = "EtiquetaDatos";
-            this.EtiquetaDatos.Size = new System.Drawing.Size(177, 17);
+            this.EtiquetaDatos.Size = new System.Drawing.Size(132, 13);
             this.EtiquetaDatos.TabIndex = 6;
             this.EtiquetaDatos.Text = "Datos de Orden de trabajo";
             // 
@@ -241,30 +230,27 @@
             this.panel1.Controls.Add(this.dfechaEntrega);
             this.panel1.Controls.Add(this.lFecPed);
             this.panel1.Controls.Add(this.dfechaPedido);
-            this.panel1.Location = new System.Drawing.Point(27, 26);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(20, 21);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(633, 139);
+            this.panel1.Size = new System.Drawing.Size(476, 114);
             this.panel1.TabIndex = 5;
             // 
             // tabono
             // 
-            this.tabono.Location = new System.Drawing.Point(459, 87);
-            this.tabono.Margin = new System.Windows.Forms.Padding(4);
+            this.tabono.Location = new System.Drawing.Point(344, 71);
             this.tabono.MaxLength = 6;
             this.tabono.Name = "tabono";
-            this.tabono.Size = new System.Drawing.Size(132, 22);
+            this.tabono.Size = new System.Drawing.Size(100, 20);
             this.tabono.TabIndex = 8;
             this.tabono.TextChanged += new System.EventHandler(this.tabono_TextChanged);
             this.tabono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tabono_KeyPress);
             // 
             // tidcliente
             // 
-            this.tidcliente.Location = new System.Drawing.Point(151, 87);
-            this.tidcliente.Margin = new System.Windows.Forms.Padding(4);
+            this.tidcliente.Location = new System.Drawing.Point(113, 71);
             this.tidcliente.MaxLength = 13;
             this.tidcliente.Name = "tidcliente";
-            this.tidcliente.Size = new System.Drawing.Size(132, 22);
+            this.tidcliente.Size = new System.Drawing.Size(100, 20);
             this.tidcliente.TabIndex = 7;
             this.tidcliente.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.tidcliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tidcliente_KeyPress);
@@ -272,20 +258,18 @@
             // labono
             // 
             this.labono.AutoSize = true;
-            this.labono.Location = new System.Drawing.Point(336, 87);
-            this.labono.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labono.Location = new System.Drawing.Point(252, 71);
             this.labono.Name = "labono";
-            this.labono.Size = new System.Drawing.Size(49, 17);
+            this.labono.Size = new System.Drawing.Size(38, 13);
             this.labono.TabIndex = 6;
             this.labono.Text = "Abono";
             // 
             // lIdcliente
             // 
             this.lIdcliente.AutoSize = true;
-            this.lIdcliente.Location = new System.Drawing.Point(23, 87);
-            this.lIdcliente.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lIdcliente.Location = new System.Drawing.Point(17, 71);
             this.lIdcliente.Name = "lIdcliente";
-            this.lIdcliente.Size = new System.Drawing.Size(105, 17);
+            this.lIdcliente.Size = new System.Drawing.Size(81, 13);
             this.lIdcliente.TabIndex = 5;
             this.lIdcliente.Text = "RUC del cliente";
             this.lIdcliente.Click += new System.EventHandler(this.lIdcliente_Click);
@@ -293,10 +277,9 @@
             // lFecha_entrega
             // 
             this.lFecha_entrega.AutoSize = true;
-            this.lFecha_entrega.Location = new System.Drawing.Point(332, 44);
-            this.lFecha_entrega.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lFecha_entrega.Location = new System.Drawing.Point(249, 36);
             this.lFecha_entrega.Name = "lFecha_entrega";
-            this.lFecha_entrega.Size = new System.Drawing.Size(101, 17);
+            this.lFecha_entrega.Size = new System.Drawing.Size(77, 13);
             this.lFecha_entrega.TabIndex = 1;
             this.lFecha_entrega.Text = "Fecha Entrega";
             this.lFecha_entrega.Click += new System.EventHandler(this.lFecha_entrega_Click);
@@ -305,10 +288,9 @@
             // 
             this.dfechaEntrega.CustomFormat = "yyyy-MM-dd";
             this.dfechaEntrega.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dfechaEntrega.Location = new System.Drawing.Point(459, 41);
-            this.dfechaEntrega.Margin = new System.Windows.Forms.Padding(4);
+            this.dfechaEntrega.Location = new System.Drawing.Point(344, 33);
             this.dfechaEntrega.Name = "dfechaEntrega";
-            this.dfechaEntrega.Size = new System.Drawing.Size(132, 22);
+            this.dfechaEntrega.Size = new System.Drawing.Size(100, 20);
             this.dfechaEntrega.TabIndex = 4;
             this.dfechaEntrega.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
             this.dfechaEntrega.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dfechaEntrega_KeyPress);
@@ -316,10 +298,9 @@
             // lFecPed
             // 
             this.lFecPed.AutoSize = true;
-            this.lFecPed.Location = new System.Drawing.Point(45, 43);
-            this.lFecPed.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lFecPed.Location = new System.Drawing.Point(34, 35);
             this.lFecPed.Name = "lFecPed";
-            this.lFecPed.Size = new System.Drawing.Size(95, 17);
+            this.lFecPed.Size = new System.Drawing.Size(73, 13);
             this.lFecPed.TabIndex = 0;
             this.lFecPed.Text = "Fecha Pedido";
             this.lFecPed.Click += new System.EventHandler(this.lFecPed_Click);
@@ -329,23 +310,22 @@
             this.dfechaPedido.CustomFormat = "yyyy-MM-dd";
             this.dfechaPedido.Enabled = false;
             this.dfechaPedido.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dfechaPedido.Location = new System.Drawing.Point(151, 37);
-            this.dfechaPedido.Margin = new System.Windows.Forms.Padding(4);
+            this.dfechaPedido.Location = new System.Drawing.Point(113, 30);
             this.dfechaPedido.Name = "dfechaPedido";
-            this.dfechaPedido.Size = new System.Drawing.Size(132, 22);
+            this.dfechaPedido.Size = new System.Drawing.Size(100, 20);
             this.dfechaPedido.TabIndex = 3;
             this.dfechaPedido.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // IngresarTrabajo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(725, 634);
+            this.ClientSize = new System.Drawing.Size(544, 515);
             this.Controls.Add(this.contIngTra);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "IngresarTrabajo";
             this.Text = "Ingresar Trabajo";
+            this.Load += new System.EventHandler(this.IngresarTrabajo_Load);
             this.contIngTra.ResumeLayout(false);
             this.contIngTra.PerformLayout();
             this.panel2.ResumeLayout(false);

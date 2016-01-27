@@ -17,6 +17,7 @@ namespace PROYECTOBBDD
         public RegistrarEgreso()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
             button2.Enabled = false;
         }
 
@@ -147,6 +148,11 @@ namespace PROYECTOBBDD
                      !string.IsNullOrEmpty(tValor.Text);
 
             button2.Enabled = bl;
+        }
+
+        private void RegistrarEgreso_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
