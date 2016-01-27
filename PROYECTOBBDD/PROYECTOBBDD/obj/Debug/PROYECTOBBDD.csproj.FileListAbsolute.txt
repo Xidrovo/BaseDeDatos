@@ -23,10 +23,8 @@ C:\Users\usuarios\Documents\ESPOL\2do Termino 2015 - 2016\Base de Datos\Proyecto
 C:\Users\usuarios\Documents\ESPOL\2do Termino 2015 - 2016\Base de Datos\Proyecto\BaseDeDatos\PROYECTOBBDD\PROYECTOBBDD\obj\Debug\PROYECTOBBDD.csproj.GenerateResource.Cache
 C:\Users\usuarios\Documents\ESPOL\2do Termino 2015 - 2016\Base de Datos\Proyecto\BaseDeDatos\PROYECTOBBDD\PROYECTOBBDD\obj\Debug\PROYECTOBBDD.exe
 C:\Users\usuarios\Documents\ESPOL\2do Termino 2015 - 2016\Base de Datos\Proyecto\BaseDeDatos\PROYECTOBBDD\PROYECTOBBDD\obj\Debug\PROYECTOBBDD.pdb
-<<<<<<< HEAD
 C:\Users\usuarios\Documents\ESPOL\2do Termino 2015 - 2016\Base de Datos\Proyecto\BaseDeDatos\PROYECTOBBDD\PROYECTOBBDD\obj\Debug\PROYECTOBBDD.csprojResolveAssemblyReference.cache
 C:\Users\usuarios\Documents\ESPOL\2do Termino 2015 - 2016\Base de Datos\Proyecto\BaseDeDatos\PROYECTOBBDD\PROYECTOBBDD\obj\Debug\PROYECTOBBDD.ConsultarColaborador.resources
-=======
 C:\Users\JORGE\Documents\GitHub\BaseDeDatos\PROYECTOBBDD\PROYECTOBBDD\bin\Debug\PROYECTOBBDD.exe.config
 C:\Users\JORGE\Documents\GitHub\BaseDeDatos\PROYECTOBBDD\PROYECTOBBDD\obj\Debug\PROYECTOBBDD.exe
 C:\Users\JORGE\Documents\GitHub\BaseDeDatos\PROYECTOBBDD\PROYECTOBBDD\obj\Debug\PROYECTOBBDD.pdb
@@ -57,7 +55,6 @@ C:\Users\Home\Documents\GitHub\BaseDeDatos\PROYECTOBBDD\PROYECTOBBDD\obj\Debug\P
 C:\Users\Home\Documents\GitHub\BaseDeDatos\PROYECTOBBDD\PROYECTOBBDD\bin\Debug\PROYECTOBBDD.exe.config
 C:\Users\Home\Documents\GitHub\BaseDeDatos\PROYECTOBBDD\PROYECTOBBDD\bin\Debug\PROYECTOBBDD.exe
 C:\Users\Home\Documents\GitHub\BaseDeDatos\PROYECTOBBDD\PROYECTOBBDD\bin\Debug\PROYECTOBBDD.pdb
->>>>>>> 88292b0164c4cd33837a5d481d74c0797193c74b
 D:\Documents\GitHub\BaseDeDatos\PROYECTOBBDD\PROYECTOBBDD\bin\Debug\PROYECTOBBDD.exe.config
 D:\Documents\GitHub\BaseDeDatos\PROYECTOBBDD\PROYECTOBBDD\obj\Debug\PROYECTOBBDD.exe
 D:\Documents\GitHub\BaseDeDatos\PROYECTOBBDD\PROYECTOBBDD\obj\Debug\PROYECTOBBDD.pdb
@@ -85,3 +82,4 @@ D:\Documents\GitHub\BaseDeDatos\PROYECTOBBDD\PROYECTOBBDD\obj\Debug\PracticaGui1
 D:\Documents\GitHub\BaseDeDatos\PROYECTOBBDD\PROYECTOBBDD\obj\Debug\PracticaGui1.LogIn.resources
 D:\Documents\GitHub\BaseDeDatos\PROYECTOBBDD\PROYECTOBBDD\obj\Debug\PROYECTOBBDD.TrabajosAEntregar.resources
 D:\Documents\GitHub\BaseDeDatos\PROYECTOBBDD\PROYECTOBBDD\obj\Debug\PROYECTOBBDD.csproj.GenerateResource.Cache
+D:\Documents\GitHub\BaseDeDatos\PROYECTOBBDD\PROYECTOBBDD\obj\Debug\PROYECTOBBDD.ConsultaCLientesCedula.resources

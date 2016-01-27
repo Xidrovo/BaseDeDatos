@@ -59,19 +59,17 @@
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.tDescripcion);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Location = new System.Drawing.Point(17, 16);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Location = new System.Drawing.Point(13, 13);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(649, 536);
+            this.panel1.Size = new System.Drawing.Size(488, 436);
             this.panel1.TabIndex = 0;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(57, 21);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(43, 17);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(161, 17);
+            this.label7.Size = new System.Drawing.Size(119, 13);
             this.label7.TabIndex = 12;
             this.label7.Text = "Parámetros del Registro";
             // 
@@ -87,19 +85,17 @@
             this.panel2.Controls.Add(this.tCedulaColab);
             this.panel2.Controls.Add(this.dateTimePicker1);
             this.panel2.Controls.Add(this.tNumFactura);
-            this.panel2.Location = new System.Drawing.Point(29, 31);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Location = new System.Drawing.Point(22, 25);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(595, 202);
+            this.panel2.Size = new System.Drawing.Size(446, 164);
             this.panel2.TabIndex = 14;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(28, 92);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(21, 75);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(126, 17);
+            this.label2.Size = new System.Drawing.Size(95, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Número de factura";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -107,10 +103,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 33);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(21, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 17);
+            this.label1.Size = new System.Drawing.Size(82, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Fecha Recibido";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -118,21 +113,19 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(313, 97);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(235, 79);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(134, 17);
+            this.label3.Size = new System.Drawing.Size(100, 13);
             this.label3.TabIndex = 2;
             this.label3.Text = "Cedula Colaborador";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // tValor
             // 
-            this.tValor.Location = new System.Drawing.Point(451, 149);
-            this.tValor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tValor.Location = new System.Drawing.Point(338, 121);
             this.tValor.MaxLength = 7;
             this.tValor.Name = "tValor";
-            this.tValor.Size = new System.Drawing.Size(132, 22);
+            this.tValor.Size = new System.Drawing.Size(100, 20);
             this.tValor.TabIndex = 11;
             this.tValor.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             this.tValor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox5_KeyPress);
@@ -140,21 +133,19 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(28, 153);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(21, 124);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(89, 17);
+            this.label4.Size = new System.Drawing.Size(68, 13);
             this.label4.TabIndex = 3;
             this.label4.Text = "Id Proveedor";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // tIdProveedor
             // 
-            this.tIdProveedor.Location = new System.Drawing.Point(177, 153);
-            this.tIdProveedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tIdProveedor.Location = new System.Drawing.Point(133, 124);
             this.tIdProveedor.MaxLength = 7;
             this.tIdProveedor.Name = "tIdProveedor";
-            this.tIdProveedor.Size = new System.Drawing.Size(132, 22);
+            this.tIdProveedor.Size = new System.Drawing.Size(100, 20);
             this.tIdProveedor.TabIndex = 10;
             this.tIdProveedor.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             this.tIdProveedor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
@@ -162,21 +153,19 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(341, 153);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(256, 124);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(41, 17);
+            this.label5.Size = new System.Drawing.Size(31, 13);
             this.label5.TabIndex = 4;
             this.label5.Text = "Valor";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // tCedulaColab
             // 
-            this.tCedulaColab.Location = new System.Drawing.Point(451, 94);
-            this.tCedulaColab.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tCedulaColab.Location = new System.Drawing.Point(338, 76);
             this.tCedulaColab.MaxLength = 10;
             this.tCedulaColab.Name = "tCedulaColab";
-            this.tCedulaColab.Size = new System.Drawing.Size(132, 22);
+            this.tCedulaColab.Size = new System.Drawing.Size(100, 20);
             this.tCedulaColab.TabIndex = 9;
             this.tCedulaColab.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             this.tCedulaColab.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
@@ -185,30 +174,27 @@
             // 
             this.dateTimePicker1.CustomFormat = "dd-MM-yyyy";
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(177, 33);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker1.Location = new System.Drawing.Point(133, 27);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(128, 22);
+            this.dateTimePicker1.Size = new System.Drawing.Size(97, 20);
             this.dateTimePicker1.TabIndex = 6;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // tNumFactura
             // 
-            this.tNumFactura.Location = new System.Drawing.Point(173, 92);
-            this.tNumFactura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tNumFactura.Location = new System.Drawing.Point(130, 75);
             this.tNumFactura.MaxLength = 7;
             this.tNumFactura.Name = "tNumFactura";
-            this.tNumFactura.Size = new System.Drawing.Size(132, 22);
+            this.tNumFactura.Size = new System.Drawing.Size(100, 20);
             this.tNumFactura.TabIndex = 8;
             this.tNumFactura.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             this.tNumFactura.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(392, 454);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Location = new System.Drawing.Point(294, 369);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 28);
+            this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 13;
             this.button2.Text = "Registrar";
             this.button2.UseVisualStyleBackColor = true;
@@ -216,10 +202,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(87, 454);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(65, 369);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 28);
+            this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 12;
             this.button1.Text = "Cancelar";
             this.button1.UseVisualStyleBackColor = true;
@@ -227,34 +212,31 @@
             // 
             // tDescripcion
             // 
-            this.tDescripcion.Location = new System.Drawing.Point(87, 282);
-            this.tDescripcion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tDescripcion.Location = new System.Drawing.Point(65, 229);
             this.tDescripcion.MaxLength = 50;
             this.tDescripcion.Multiline = true;
             this.tDescripcion.Name = "tDescripcion";
             this.tDescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tDescripcion.Size = new System.Drawing.Size(437, 96);
+            this.tDescripcion.Size = new System.Drawing.Size(329, 79);
             this.tDescripcion.TabIndex = 7;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(57, 249);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(43, 202);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(82, 17);
+            this.label6.Size = new System.Drawing.Size(63, 13);
             this.label6.TabIndex = 5;
             this.label6.Text = "Descripción";
             // 
             // RegistrarEgreso
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(684, 567);
+            this.ClientSize = new System.Drawing.Size(513, 461);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "RegistrarEgreso";
-            this.Text = "RegistrarEgreso";
+            this.Text = "Registrar Egreso";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

@@ -118,9 +118,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(20, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 13);
+            this.label1.Size = new System.Drawing.Size(79, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Nombre de Producto";
+            this.label1.Text = "ID de Producto";
             // 
             // textBox1
             // 
@@ -138,7 +138,7 @@
             this.ClientSize = new System.Drawing.Size(419, 429);
             this.Controls.Add(this.panel1);
             this.Name = "ConsultarInventarioXNombre";
-            this.Text = "Consultar Inventario por Nombre";
+            this.Text = "Consultar Inventario por ID";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

@@ -242,5 +242,12 @@ namespace PROYECTOBBDD
             cons.MdiParent = this;
             cons.Show();
         }
+
+        private void porCedulaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ConsultarColaborador consultarColaborador = new ConsultarColaborador();
+            consultarColaborador.MdiParent = this; //PAra que se ejecute ingresarTrabajo dentro de la pantalla de principal 
+            consultarColaborador.Show();
+        }
     }
 }

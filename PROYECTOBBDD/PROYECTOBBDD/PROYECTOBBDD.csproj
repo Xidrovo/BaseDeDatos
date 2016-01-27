@@ -173,6 +173,9 @@
     <EmbeddedResource Include="ActualizarProducto.resx">
       <DependentUpon>ActualizarProducto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaCLientesCedula.resx">
+      <DependentUpon>ConsultaCLientesCedula.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConsultaClientesXRUC.resx">
       <DependentUpon>ConsultaClientesXRUC.cs</DependentUpon>
     </EmbeddedResource>

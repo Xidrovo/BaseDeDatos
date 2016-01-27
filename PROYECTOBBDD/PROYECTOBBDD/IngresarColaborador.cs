@@ -23,11 +23,11 @@ namespace PROYECTOBBDD
 
         private void InstanciarCombobox()
         {
-            comboBox1.Items.Add("SECRETARIO");
-            comboBox1.Items.Add("DISEÑADOR");
-            comboBox1.Items.Add("GERENTE");
-            comboBox1.Items.Add("JEFE");
-            comboBox1.Text = "...";
+            tCargo.Items.Add("SECRETARIO");
+            tCargo.Items.Add("DISEÑADOR");
+            tCargo.Items.Add("GERENTE");
+            tCargo.Items.Add("JEFE");
+            tCargo.Text = "...";
             /*
                 ...
                 SECRETTARIO
@@ -108,29 +108,29 @@ namespace PROYECTOBBDD
         {
             //algoritmo cedula
             bool desicion = true;
-            if (textBox5.TextLength == 8)
+            if (tTelefono.TextLength == 8)
             {
-                textBox5.BackColor = Color.PaleVioletRed;
+                tTelefono.BackColor = Color.PaleVioletRed;
                 desicion = false;
                 MessageBox.Show("Debe escribir un telefono valido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                textBox5.BackColor = Color.White;
+                tTelefono.BackColor = Color.White;
             }
 
-            if (!Principal.VerificaCedula(textBox3.Text))
+            if (!Principal.VerificaCedula(tCedula.Text))
             {
-                textBox3.BackColor = Color.PaleVioletRed;
+                tCedula.BackColor = Color.PaleVioletRed;
                 desicion = false;
                 MessageBox.Show("Cedula ingresada no válida", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
-                textBox3.BackColor = Color.White;
+                tCedula.BackColor = Color.White;
 
             if (desicion)
             {
-                guardarDatos(textBox1.Text, textBox2.Text, textBox3.Text, comboBox1.Text, textBox5.Text, textBox6.Text, tContrasena.Text);
+                guardarDatos(tNombre.Text, tApellido.Text, tCedula.Text, tCargo.Text, tTelefono.Text, tUsuario.Text, tContrasena.Text);
                 this.Close();
             }
         }
@@ -157,16 +157,16 @@ namespace PROYECTOBBDD
 
         void bloquearBoton()
         {
-            var bl = !string.IsNullOrEmpty(textBox1.Text) &&
-                                !string.IsNullOrEmpty(textBox2.Text) &&
-                                !string.IsNullOrEmpty(textBox3.Text)&&
-                                comboBox1.Text != "..." &&
-                                !string.IsNullOrEmpty(textBox5.Text) &&
-                                !string.IsNullOrEmpty(textBox6.Text) &&
+            var bl = !string.IsNullOrEmpty(tNombre.Text) &&
+                                !string.IsNullOrEmpty(tApellido.Text) &&
+                                !string.IsNullOrEmpty(tCedula.Text)&&
+                                tCargo.Text != "..." &&
+                                !string.IsNullOrEmpty(tTelefono.Text) &&
+                                !string.IsNullOrEmpty(tUsuario.Text) &&
                                 !string.IsNullOrEmpty(tContrasena.Text) &&
                                 tContrasena.TextLength >= 6 &&
                                 tContrasena.TextLength <= 16 &&
-                                textBox5.TextLength >= 7;
+                                tTelefono.TextLength >= 7;
 
             button1.Enabled = bl;
         }
