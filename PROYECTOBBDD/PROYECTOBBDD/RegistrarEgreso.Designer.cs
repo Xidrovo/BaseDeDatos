@@ -36,7 +36,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.tValor = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.tIdProveedor = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.tCedulaColab = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -45,6 +44,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.tDescripcion = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -75,12 +75,12 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.comboBox1);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.tValor);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.tIdProveedor);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.tCedulaColab);
             this.panel2.Controls.Add(this.dateTimePicker1);
@@ -139,16 +139,6 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Id Proveedor";
             this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // tIdProveedor
-            // 
-            this.tIdProveedor.Location = new System.Drawing.Point(133, 124);
-            this.tIdProveedor.MaxLength = 7;
-            this.tIdProveedor.Name = "tIdProveedor";
-            this.tIdProveedor.Size = new System.Drawing.Size(100, 20);
-            this.tIdProveedor.TabIndex = 10;
-            this.tIdProveedor.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
-            this.tIdProveedor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
             // 
             // label5
             // 
@@ -229,6 +219,14 @@
             this.label6.TabIndex = 5;
             this.label6.Text = "Descripción";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(130, 120);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(100, 21);
+            this.comboBox1.TabIndex = 12;
+            // 
             // RegistrarEgreso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -237,6 +235,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "RegistrarEgreso";
             this.Text = "Registrar Egreso";
+            this.Load += new System.EventHandler(this.RegistrarEgreso_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -249,7 +248,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox tValor;
-        private System.Windows.Forms.TextBox tIdProveedor;
         private System.Windows.Forms.TextBox tCedulaColab;
         private System.Windows.Forms.TextBox tNumFactura;
         private System.Windows.Forms.TextBox tDescripcion;
@@ -264,5 +262,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

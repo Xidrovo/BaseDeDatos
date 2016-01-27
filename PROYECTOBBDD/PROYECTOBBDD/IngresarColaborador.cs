@@ -17,6 +17,7 @@ namespace PROYECTOBBDD
         public IngresarColaborador()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
             button1.Enabled = false;
             InstanciarCombobox();
             tCargo.DropDownStyle = ComboBoxStyle.DropDownList;

@@ -57,7 +57,7 @@
             this.panel1.Controls.Add(this.bConsulta);
             this.panel1.Location = new System.Drawing.Point(12, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(349, 358);
+            this.panel1.Size = new System.Drawing.Size(340, 347);
             this.panel1.TabIndex = 1;
             // 
             // label3
@@ -93,7 +93,7 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(34, 29);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(277, 57);
+            this.panel2.Size = new System.Drawing.Size(268, 57);
             this.panel2.TabIndex = 5;
             // 
             // tCedula
@@ -104,7 +104,7 @@
             this.tCedula.Location = new System.Drawing.Point(135, 20);
             this.tCedula.MaxLength = 13;
             this.tCedula.Name = "tCedula";
-            this.tCedula.Size = new System.Drawing.Size(100, 20);
+            this.tCedula.Size = new System.Drawing.Size(91, 20);
             this.tCedula.TabIndex = 1;
             // 
             // label1
@@ -119,7 +119,7 @@
             // bsalir
             // 
             this.bsalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.bsalir.Location = new System.Drawing.Point(84, 316);
+            this.bsalir.Location = new System.Drawing.Point(75, 305);
             this.bsalir.Name = "bsalir";
             this.bsalir.Size = new System.Drawing.Size(75, 23);
             this.bsalir.TabIndex = 4;
@@ -136,13 +136,13 @@
             this.celdaResultados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.celdaResultados.Location = new System.Drawing.Point(34, 139);
             this.celdaResultados.Name = "celdaResultados";
-            this.celdaResultados.Size = new System.Drawing.Size(277, 150);
+            this.celdaResultados.Size = new System.Drawing.Size(268, 139);
             this.celdaResultados.TabIndex = 3;
             // 
             // bConsulta
             // 
             this.bConsulta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.bConsulta.Location = new System.Drawing.Point(208, 316);
+            this.bConsulta.Location = new System.Drawing.Point(199, 305);
             this.bConsulta.Name = "bConsulta";
             this.bConsulta.Size = new System.Drawing.Size(75, 23);
             this.bConsulta.TabIndex = 2;
@@ -154,7 +154,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(374, 375);
+            this.ClientSize = new System.Drawing.Size(365, 364);
             this.Controls.Add(this.panel1);
             this.Name = "ConsultarColaborador";
             this.Text = "Consultar Colaborador";
