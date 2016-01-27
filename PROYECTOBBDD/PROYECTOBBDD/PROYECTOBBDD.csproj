@@ -119,6 +119,7 @@
     <Compile Include="IngresarProveedor.Designer.cs">
       <DependentUpon>IngresarProveedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Productos_Inventario.cs" />
     <Compile Include="ProgramaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +134,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proveedor.cs" />
     <Compile Include="RegistrarEgreso.cs">
       <SubType>Form</SubType>
     </Compile>
