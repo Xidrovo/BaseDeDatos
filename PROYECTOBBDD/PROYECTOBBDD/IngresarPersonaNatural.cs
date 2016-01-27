@@ -98,7 +98,7 @@ namespace PROYECTOBBDD
         public void guardarDatos(String Nombre, String Apellido, String Cedula, String Direccion)
         {
             Colaborador conexion = new Colaborador();
-            using (SqlConnection con = new SqlConnection("Data Source=172.18.115.243,49170;Database=imp_isabelita;Integrated Security=False;User ID=sa;Password=imprentaisabelita;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
+            using (SqlConnection con = new SqlConnection("Data Source=25.22.77.136,49170;Database=imp_isabelita;Integrated Security=False;User ID=sa;Password=imprentaisabelita;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
             {
                 using (SqlCommand cmd = new SqlCommand("spAgregarClienteNatural", con))
                 {
@@ -113,10 +113,10 @@ namespace PROYECTOBBDD
                 }
             }
 
-            using (SqlConnection con2 = new SqlConnection("Data Source=172.18.115.243,49170;Database=imp_isabelita;Integrated Security=False;User ID=sa;Password=imprentaisabelita;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
+            using (SqlConnection con2 = new SqlConnection("Data Source=25.22.77.136,49170;Database=imp_isabelita;Integrated Security=False;User ID=sa;Password=imprentaisabelita;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
             {
 
-                SqlConnection sqlConnection1 = new SqlConnection("Data Source=172.18.115.243,49170;Database=imp_isabelita;Integrated Security=False;User ID=sa;Password=imprentaisabelita;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+                SqlConnection sqlConnection1 = new SqlConnection("Data Source=25.22.77.136,49170;Database=imp_isabelita;Integrated Security=False;User ID=sa;Password=imprentaisabelita;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
                 SqlCommand cmd3 = new SqlCommand();
                 SqlDataReader reader;
                 cmd3.CommandText = "SELECT Id_Cliente FROM Persona_Natural where Ncedula='" + Cedula + "'";

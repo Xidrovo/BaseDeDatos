@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace PROYECTOBBDD
 {
@@ -26,14 +27,38 @@ namespace PROYECTOBBDD
 
         private void bConsulta_Click(object sender, EventArgs e)
         {
-            if (Principal.VerificaRucEmpresas(textBox1.Text) || Principal.VerificaRucPersonaNatural(textBox1.Text))
+            if (Principal.VerificaRucEmpresas(truc.Text) || Principal.VerificaRucPersonaNatural(truc.Text))
             {
                 //Consultar Query
+                MostrarDatosClientesPorRuc();
             }
             else
             {
                 MessageBox.Show("Debe escribir un RUC valido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+        public void MostrarDatosClientesPorRuc()
+        {
+            //Colaborador conexion = new Colaborador();
+            using (SqlConnection con = new SqlConnection("Data Source=25.22.77.136,49170;Initial Catalog=imp_isabelita;Integrated Security=False;User ID=sa;Password=imprentaisabelita;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
+            {
+                using (SqlCommand cmd = new SqlCommand("spGetIdFromRUC", con))
+                {
+                    SqlDataAdapter da = new SqlDataAdapter();
+                    DataTable dt = new DataTable();
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@RUC", truc.Text);
+                    da.SelectCommand = cmd;
+                    da.Fill(dt);
+                    celdaResultados.DataSource = dt;
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                }
+            }
+
+
+
         }
 
         private void bsalir_Click(object sender, EventArgs e)
@@ -57,7 +82,7 @@ namespace PROYECTOBBDD
         }
         private void BloquearBoton()
         {
-            var bl = !string.IsNullOrEmpty(textBox1.Text) && textBox1.TextLength == 13;
+            var bl = !string.IsNullOrEmpty(truc.Text) && truc.TextLength == 13;
 
             bConsulta.Enabled = bl;
         }

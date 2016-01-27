@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace PROYECTOBBDD
 {
@@ -99,9 +100,59 @@ namespace PROYECTOBBDD
             if (desicion)
             {
                 //sql stuff
+                guardarDatos(truc.Text, trazonsocial.Text, tdireccion.Text);
                 this.Close();
             }
         }
+
+        public void guardarDatos(String Ruc, String RazonSocial, String Direccion)
+        {
+            Colaborador conexion = new Colaborador();
+            using (SqlConnection con = new SqlConnection("Data Source=25.22.77.136,49170;Initial Catalog=imp_isabelita;Integrated Security=False;User ID=sa;Password=imprentaisabelita;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
+            {
+                using (SqlCommand cmd = new SqlCommand("spAgregarClienteEmpresa", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@RUC", Ruc);
+                    cmd.Parameters.AddWithValue("@Razon_Social", RazonSocial);
+                    cmd.Parameters.AddWithValue("@Direccion", Direccion);
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                }
+            }
+
+            using (SqlConnection con2 = new SqlConnection("Data Source=25.22.77.136,49170;Initial Catalog=imp_isabelita;Integrated Security=False;User ID=sa;Password=imprentaisabelita;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
+            {
+
+                SqlConnection sqlConnection1 = new SqlConnection("Data Source=25.22.77.136,49170;Initial Catalog=imp_isabelita;Integrated Security=False;User ID=sa;Password=imprentaisabelita;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+                SqlCommand cmd3 = new SqlCommand();
+                SqlDataReader reader;
+                cmd3.CommandText = "SELECT RUC FROM Empresas where RUC='" + Ruc + "'";
+                cmd3.CommandType = CommandType.Text;
+                cmd3.Connection = sqlConnection1;
+                sqlConnection1.Open();
+                reader = cmd3.ExecuteReader();
+                reader.Read();
+                int id = reader.GetInt32(0);
+                for (int i = 0; i < lista.Count(); i++)
+                {
+                    using (SqlCommand cmd2 = new SqlCommand("spAgregarTelefono", con2))
+                    {
+                        cmd2.CommandType = CommandType.StoredProcedure;
+                        cmd2.Parameters.AddWithValue("@RUC", Ruc);
+                        cmd2.Parameters.AddWithValue("@Telefono", lista.ElementAt(i).Text);
+                        con2.Open();
+                        cmd2.ExecuteNonQuery();
+                        con2.Close();
+
+                    }
+                }
+                sqlConnection1.Close();
+            }
+
+        }
+
 
         private void bagregar_Click(object sender, EventArgs e)
         {

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
-
+using System.Data.SqlClient;
 
 namespace PROYECTOBBDD
 {
@@ -20,12 +20,18 @@ namespace PROYECTOBBDD
         List<TextBox> listaDesc = new List<TextBox>();
         List<TextBox> listaCant = new List<TextBox>();
         List<TextBox> listaVal = new List<TextBox>();
+
+        List<Label> listaLabelDesc = new List<Label>();
+        List<Label> listaLabelCant = new List<Label>();
+        List<Label> listaLabelVal = new List<Label>();
         public IngresarTrabajo()
         {
             InitializeComponent();
             listaDesc.Add(tDescripcion);
             listaCant.Add(tcantidad);
             listaVal.Add(tvalor);
+
+
 
         }
 
@@ -140,11 +146,12 @@ namespace PROYECTOBBDD
             bool desicion = true;
             float abono = 0, total;
 
-            if (!Principal.VerificaCedula(tidcliente.Text))
+            if (!(Principal.VerificaRucPersonaNatural(tidcliente.Text) ||
+                                Principal.VerificaRucEmpresas(tidcliente.Text)))
             {
                 tidcliente.BackColor = Color.PaleVioletRed;
                 desicion = false;
-                MessageBox.Show("Cedula ingresada no válida", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("RUC ingresado no válida", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -170,14 +177,15 @@ namespace PROYECTOBBDD
             {
                 tabono.BackColor = Color.White;
             }
-            
+
             if (desicion)
             {
                 //Comunicarme con sql
+                AddTrabajo(tidcliente.Text, dfechaPedido.Text, dfechaEntrega.Text, float.Parse(tabono.Text));
                 this.Close();
             }
         }
-    
+
         private float sumaValores(List<TextBox> lista)
         {
             float resultado = 0;
@@ -276,8 +284,11 @@ namespace PROYECTOBBDD
             panel2.Controls.Add(textDescripcion);
 
             listaDesc.Add(textDescripcion);
+                listaLabelDesc.Add(descripcion);
             listaCant.Add(textCantidad);
+                listaLabelCant.Add(cantidad);
             listaVal.Add(textValor);
+                listaLabelVal.Add(valor);
 
         }
 
@@ -341,6 +352,97 @@ namespace PROYECTOBBDD
         private void tvalor_KeyUp(object sender, KeyEventArgs e)
         {
 
+        }
+    
+        //Dada una RUC, retorna el Id del mismo.
+        //Retorna '0' si el RUC no está en la base de datos.
+        private int GetIdFromRuc(string RUC)
+        {
+            int Numero = -1;
+            using (SqlConnection con = new SqlConnection("Data Source=25.22.77.136,49170;Database=imp_isabelita;Integrated Security=False;User ID=sa;Password=imprentaisabelita;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
+            {
+                using (SqlCommand cmd = new SqlCommand("spGetIdFromRUC", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@RUC", SqlDbType.VarChar).Value = RUC;
+                    con.Open();
+                    try
+                    {
+                        Numero = Convert.ToInt32(cmd.ExecuteScalar());
+                    }
+                    catch { }
+                    con.Close();
+                }
+            }
+            return Numero;
+        }
+
+        private void AddTrabajo(string RUC, string FechaPedido, string FechaEntrega, float Abono)
+        {
+            int Id;
+            Id = GetIdFromRuc(RUC);
+
+            using (SqlConnection con = new SqlConnection("Data Source=25.22.77.136,49170;Database=imp_isabelita;Integrated Security=False;User ID=sa;Password=imprentaisabelita;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
+            {
+                using (SqlCommand cmd = new SqlCommand("spCrearTrabajo", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@Fecha_pedido", FechaPedido);
+                    cmd.Parameters.AddWithValue("@Fecha_entrega", FechaEntrega);
+                    cmd.Parameters.AddWithValue("Abono", Abono);
+                    cmd.Parameters.AddWithValue("Id_Cliente", Id);
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                }
+            }
+
+            using (SqlConnection con2 = new SqlConnection("Data Source=25.22.77.136,49170;Database=imp_isabelita;Integrated Security=False;User ID=sa;Password=imprentaisabelita;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
+            {
+
+                SqlConnection sqlConnection1 = new SqlConnection("Data Source=25.22.77.136,49170;Database=imp_isabelita;Integrated Security=False;User ID=sa;Password=imprentaisabelita;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+                SqlCommand cmd3 = new SqlCommand();
+                SqlDataReader reader;
+                cmd3.CommandText = "SELECT MAX(Trabajo.Id_Trabajo) FROM Trabajo";
+                cmd3.CommandType = CommandType.Text;
+                cmd3.Connection = sqlConnection1;
+                sqlConnection1.Open();
+                reader = cmd3.ExecuteReader();
+                reader.Read();
+                int id_trabajo = reader.GetInt32(0);
+                for (int i = 0; i < listaDesc.Count(); i++)
+                {
+                    using (SqlCommand cmd2 = new SqlCommand("spCrearDescripcion_Trabajo", con2))
+                    {
+                        cmd2.CommandType = CommandType.StoredProcedure;
+                        cmd2.Parameters.AddWithValue("@Descripcion", listaDesc.ElementAt(i).Text);
+                        cmd2.Parameters.AddWithValue("@Cantidad", Convert.ToInt32(listaCant.ElementAt(i).Text));
+                        cmd2.Parameters.AddWithValue("@Valor", float.Parse(listaVal.ElementAt(i).Text));
+                        cmd2.Parameters.AddWithValue("@Id_Trabajo", id_trabajo);
+                        con2.Open();
+                        cmd2.ExecuteNonQuery();
+                        con2.Close();
+                    }
+                }
+                sqlConnection1.Close();
+            }
+
+        }
+
+        private void bQuitar_Click(object sender, EventArgs e)
+        {
+            this.Controls.Remove(listaCant[listaCant.Count - 1]);
+            listaCant[listaCant.Count - 1].Dispose();
+            listaCant.RemoveAt(listaCant.Count - 1);
+
+            this.Controls.Remove(listaLabelCant[listaLabelCant.Count - 1]);
+            listaLabelCant[listaLabelCant.Count - 1].Dispose();
+            listaLabelCant.RemoveAt(listaLabelCant.Count - 1);
+
+            if (listaCant.Count == 1)
+            {
+                bQuitar.Enabled = false;
+            }
         }
     }
 }

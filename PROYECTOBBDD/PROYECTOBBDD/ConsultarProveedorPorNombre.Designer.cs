@@ -35,7 +35,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tnombreProveedor = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -55,6 +55,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(393, 394);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // button2
             // 
@@ -105,20 +106,21 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.tnombreProveedor);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Location = new System.Drawing.Point(27, 23);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(336, 80);
             this.panel2.TabIndex = 0;
             // 
-            // textBox1
+            // tnombreProveedor
             // 
-            this.textBox1.Location = new System.Drawing.Point(142, 31);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(186, 20);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            this.tnombreProveedor.Location = new System.Drawing.Point(142, 31);
+            this.tnombreProveedor.Name = "tnombreProveedor";
+            this.tnombreProveedor.Size = new System.Drawing.Size(177, 20);
+            this.tnombreProveedor.TabIndex = 1;
+            this.tnombreProveedor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            this.tnombreProveedor.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tnombreProveedor_KeyUp);
             // 
             // label3
             // 
@@ -138,6 +140,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "ConsultarProveedorPorNombre";
             this.Text = "ConsultarProveedorPorNombre";
+            this.Load += new System.EventHandler(this.ConsultarProveedorPorNombre_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -153,7 +156,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tnombreProveedor;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;

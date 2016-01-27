@@ -51,6 +51,7 @@
             this.dfechaEntrega = new System.Windows.Forms.DateTimePicker();
             this.lFecPed = new System.Windows.Forms.Label();
             this.dfechaPedido = new System.Windows.Forms.DateTimePicker();
+            this.bQuitar = new System.Windows.Forms.Button();
             this.contIngTra.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -61,6 +62,7 @@
             this.contIngTra.AutoScroll = true;
             this.contIngTra.BackColor = System.Drawing.Color.White;
             this.contIngTra.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.contIngTra.Controls.Add(this.bQuitar);
             this.contIngTra.Controls.Add(this.Agregar);
             this.contIngTra.Controls.Add(this.Guardar);
             this.contIngTra.Controls.Add(this.bCancelar);
@@ -250,7 +252,7 @@
             // 
             this.tidcliente.Location = new System.Drawing.Point(151, 87);
             this.tidcliente.Margin = new System.Windows.Forms.Padding(4);
-            this.tidcliente.MaxLength = 10;
+            this.tidcliente.MaxLength = 13;
             this.tidcliente.Name = "tidcliente";
             this.tidcliente.Size = new System.Drawing.Size(132, 22);
             this.tidcliente.TabIndex = 7;
@@ -273,9 +275,9 @@
             this.lIdcliente.Location = new System.Drawing.Point(23, 87);
             this.lIdcliente.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lIdcliente.Name = "lIdcliente";
-            this.lIdcliente.Size = new System.Drawing.Size(120, 17);
+            this.lIdcliente.Size = new System.Drawing.Size(105, 17);
             this.lIdcliente.TabIndex = 5;
-            this.lIdcliente.Text = "Cedula del cliente";
+            this.lIdcliente.Text = "RUC del cliente";
             this.lIdcliente.Click += new System.EventHandler(this.lIdcliente_Click);
             // 
             // lFecha_entrega
@@ -291,7 +293,7 @@
             // 
             // dfechaEntrega
             // 
-            this.dfechaEntrega.CustomFormat = "dd-MM-yyyy";
+            this.dfechaEntrega.CustomFormat = "yyyy-MM-dd";
             this.dfechaEntrega.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dfechaEntrega.Location = new System.Drawing.Point(459, 41);
             this.dfechaEntrega.Margin = new System.Windows.Forms.Padding(4);
@@ -314,7 +316,7 @@
             // 
             // dfechaPedido
             // 
-            this.dfechaPedido.CustomFormat = "dd-MM-yyyy";
+            this.dfechaPedido.CustomFormat = "yyyy-MM-dd";
             this.dfechaPedido.Enabled = false;
             this.dfechaPedido.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dfechaPedido.Location = new System.Drawing.Point(151, 37);
@@ -323,6 +325,16 @@
             this.dfechaPedido.Size = new System.Drawing.Size(132, 22);
             this.dfechaPedido.TabIndex = 3;
             this.dfechaPedido.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
+            // bQuitar
+            // 
+            this.bQuitar.Location = new System.Drawing.Point(584, 462);
+            this.bQuitar.Name = "bQuitar";
+            this.bQuitar.Size = new System.Drawing.Size(75, 23);
+            this.bQuitar.TabIndex = 12;
+            this.bQuitar.Text = "Quitar";
+            this.bQuitar.UseVisualStyleBackColor = true;
+            this.bQuitar.Click += new System.EventHandler(this.bQuitar_Click);
             // 
             // IngresarTrabajo
             // 
@@ -369,5 +381,6 @@
         private System.Windows.Forms.Button bCancelar;
         private System.Windows.Forms.Button Agregar;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Button bQuitar;
     }
 }

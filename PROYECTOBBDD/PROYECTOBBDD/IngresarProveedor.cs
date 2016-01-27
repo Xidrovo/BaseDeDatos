@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace PROYECTOBBDD
 {
@@ -63,8 +64,60 @@ namespace PROYECTOBBDD
             if (desicion)
             {
                 //Comunicarme con el sql
+                guardarDatosProveedor(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, tdireccion.Text);
                 this.Close();
             }
+        }
+
+        public void guardarDatosProveedor(String Nombre, String Apellido, String Ruc, String Nombre_empresa, String Direccion)
+        {
+            Colaborador conexion = new Colaborador();
+            using (SqlConnection con = new SqlConnection("Data Source=25.22.77.136,49170;Initial Catalog=imp_isabelita;Integrated Security=False;User ID=sa;Password=imprentaisabelita;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
+            {
+                using (SqlCommand cmd = new SqlCommand("spAgregarProveedor", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@Nombre", Nombre);
+                    cmd.Parameters.AddWithValue("@Apellido", Apellido);
+                    cmd.Parameters.AddWithValue("@RUC", Ruc);
+                    cmd.Parameters.AddWithValue("@Direccion", Direccion);
+                    cmd.Parameters.AddWithValue("@Nombre_empresa", Nombre_empresa);
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                }
+            }
+
+            using (SqlConnection con2 = new SqlConnection("Data Source=25.22.77.136,49170;Initial Catalog=imp_isabelita;Integrated Security=False;User ID=sa;Password=imprentaisabelita;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
+            {
+
+                SqlConnection sqlConnection1 = new SqlConnection("Data Source=25.22.77.136,49170;Initial Catalog=imp_isabelita;Integrated Security=False;User ID=sa;Password=imprentaisabelita;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+                //SqlCommand cmd3 = new SqlCommand();
+                //SqlDataReader reader;
+                /*cmd3.CommandText = "SELECT RUC FROM Proveedor where RUC='" + Ruc + "';
+                cmd3.CommandType = CommandType.Text;
+                cmd3.Connection = sqlConnection1;
+                
+                reader = cmd3.ExecuteReader();
+                reader.Read();
+                int id = reader.GetInt32(0);*/
+                sqlConnection1.Open();
+                for (int i = 0; i < lista.Count(); i++)
+                {
+                    using (SqlCommand cmd2 = new SqlCommand("spAgregarTelefonoProveedor", con2))
+                    {
+                        cmd2.CommandType = CommandType.StoredProcedure;
+                        cmd2.Parameters.AddWithValue("@RUC", Ruc);
+                        cmd2.Parameters.AddWithValue("@Telefono", lista.ElementAt(i).Text);
+                        con2.Open();
+                        cmd2.ExecuteNonQuery();
+                        con2.Close();
+
+                    }
+                }
+                sqlConnection1.Close();
+            }
+
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
@@ -206,6 +259,11 @@ namespace PROYECTOBBDD
                 bQuitar.Enabled = false;
             }
             bloquear_Boton();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.bQuitar = new System.Windows.Forms.Button();
             this.lagreagar = new System.Windows.Forms.Button();
             this.bGuardar = new System.Windows.Forms.Button();
             this.bCancelar = new System.Windows.Forms.Button();
@@ -43,7 +44,8 @@
             this.lruc = new System.Windows.Forms.Label();
             this.lapellido = new System.Windows.Forms.Label();
             this.lNombre = new System.Windows.Forms.Label();
-            this.bQuitar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tdireccion = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -51,6 +53,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel1.Controls.Add(this.tdireccion);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.bQuitar);
             this.panel1.Controls.Add(this.lagreagar);
             this.panel1.Controls.Add(this.bGuardar);
@@ -65,26 +69,36 @@
             this.panel1.Controls.Add(this.lapellido);
             this.panel1.Controls.Add(this.lNombre);
             this.panel1.Location = new System.Drawing.Point(16, 15);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(457, 503);
+            this.panel1.Size = new System.Drawing.Size(457, 554);
             this.panel1.TabIndex = 0;
+            // 
+            // bQuitar
+            // 
+            this.bQuitar.Location = new System.Drawing.Point(299, 440);
+            this.bQuitar.Name = "bQuitar";
+            this.bQuitar.Size = new System.Drawing.Size(100, 28);
+            this.bQuitar.TabIndex = 12;
+            this.bQuitar.Text = "Quitar";
+            this.bQuitar.UseVisualStyleBackColor = true;
+            this.bQuitar.Click += new System.EventHandler(this.bQuitar_Click);
             // 
             // lagreagar
             // 
-            this.lagreagar.Location = new System.Drawing.Point(172, 378);
-            this.lagreagar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lagreagar.Location = new System.Drawing.Point(159, 440);
+            this.lagreagar.Margin = new System.Windows.Forms.Padding(4);
             this.lagreagar.Name = "lagreagar";
-            this.lagreagar.Size = new System.Drawing.Size(100, 28);
+            this.lagreagar.Size = new System.Drawing.Size(130, 28);
             this.lagreagar.TabIndex = 11;
-            this.lagreagar.Text = "Agregar";
+            this.lagreagar.Text = "Agregar Telefono";
             this.lagreagar.UseVisualStyleBackColor = true;
             this.lagreagar.Click += new System.EventHandler(this.lagreagar_Click_1);
             // 
             // bGuardar
             // 
-            this.bGuardar.Location = new System.Drawing.Point(300, 453);
-            this.bGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bGuardar.Location = new System.Drawing.Point(299, 515);
+            this.bGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.bGuardar.Name = "bGuardar";
             this.bGuardar.Size = new System.Drawing.Size(100, 28);
             this.bGuardar.TabIndex = 10;
@@ -94,8 +108,8 @@
             // 
             // bCancelar
             // 
-            this.bCancelar.Location = new System.Drawing.Point(61, 453);
-            this.bCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bCancelar.Location = new System.Drawing.Point(60, 515);
+            this.bCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.bCancelar.Name = "bCancelar";
             this.bCancelar.Size = new System.Drawing.Size(100, 28);
             this.bCancelar.TabIndex = 9;
@@ -108,8 +122,8 @@
             this.panel2.AutoScroll = true;
             this.panel2.Controls.Add(this.lTelefono);
             this.panel2.Controls.Add(this.lteléfono);
-            this.panel2.Location = new System.Drawing.Point(15, 249);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Location = new System.Drawing.Point(14, 311);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(438, 122);
             this.panel2.TabIndex = 8;
@@ -117,7 +131,7 @@
             // lTelefono
             // 
             this.lTelefono.Location = new System.Drawing.Point(157, 11);
-            this.lTelefono.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lTelefono.Margin = new System.Windows.Forms.Padding(4);
             this.lTelefono.MaxLength = 10;
             this.lTelefono.Name = "lTelefono";
             this.lTelefono.Size = new System.Drawing.Size(252, 22);
@@ -138,7 +152,7 @@
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(172, 210);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
             this.textBox4.MaxLength = 40;
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(252, 22);
@@ -149,7 +163,7 @@
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(172, 154);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.MaxLength = 13;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(252, 22);
@@ -160,7 +174,7 @@
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(172, 94);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.MaxLength = 40;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(252, 22);
@@ -171,7 +185,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(172, 39);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.MaxLength = 40;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(252, 22);
@@ -219,23 +233,31 @@
             this.lNombre.TabIndex = 0;
             this.lNombre.Text = "Nombre";
             // 
-            // bQuitar
+            // label1
             // 
-            this.bQuitar.Location = new System.Drawing.Point(300, 378);
-            this.bQuitar.Name = "bQuitar";
-            this.bQuitar.Size = new System.Drawing.Size(100, 28);
-            this.bQuitar.TabIndex = 12;
-            this.bQuitar.Text = "Quitar";
-            this.bQuitar.UseVisualStyleBackColor = true;
-            this.bQuitar.Click += new System.EventHandler(this.bQuitar_Click);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(29, 258);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(67, 17);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Dirección";
+            // 
+            // tdireccion
+            // 
+            this.tdireccion.Location = new System.Drawing.Point(172, 258);
+            this.tdireccion.Margin = new System.Windows.Forms.Padding(4);
+            this.tdireccion.MaxLength = 40;
+            this.tdireccion.Name = "tdireccion";
+            this.tdireccion.Size = new System.Drawing.Size(252, 22);
+            this.tdireccion.TabIndex = 14;
             // 
             // IngresarProveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(489, 533);
+            this.ClientSize = new System.Drawing.Size(489, 582);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "IngresarProveedor";
             this.Text = "Ingresar Proveedor";
             this.panel1.ResumeLayout(false);
@@ -264,5 +286,7 @@
         private System.Windows.Forms.Button bGuardar;
         private System.Windows.Forms.Button bCancelar;
         private System.Windows.Forms.Button bQuitar;
+        private System.Windows.Forms.TextBox tdireccion;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -235,5 +235,12 @@ namespace PROYECTOBBDD
             actProd.MdiParent = this;
             actProd.Show();
         }
+
+        private void clientesPorCédulaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ConsultaCLientesCedula cons = new ConsultaCLientesCedula();
+            cons.MdiParent = this;
+            cons.Show();
+        }
     }
 }
