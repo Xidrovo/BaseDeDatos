@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace PROYECTOBBDD
 {
@@ -47,7 +48,7 @@ namespace PROYECTOBBDD
         private void textBox5_KeyPress(object sender, KeyPressEventArgs e)
         {
             char ch = e.KeyChar;
-            if (ch == 46 && textBox5.Text.IndexOf('.') != -1)
+            if (ch == 46 && tValor.Text.IndexOf('.') != -1)
             {
                 e.Handled = true;
                 return;
@@ -65,6 +66,8 @@ namespace PROYECTOBBDD
 
         private void button2_Click(object sender, EventArgs e)
         {
+
+            guardarDatos(dateTimePicker1.Value.Date, float.Parse(tValor.Text), tNumFactura.Text, tCedulaColab.Text, tIdProveedor.Text, tDescripcion.Text);
             this.Close();
         }
 
@@ -80,6 +83,28 @@ namespace PROYECTOBBDD
 
         private void label4_Click(object sender, EventArgs e)
         {
+
+        }
+        public void guardarDatos(DateTime Fecha, float Valor, String NumFactura, String CedulaColab, String Id_Proveedor, String Descripcion)
+        {
+            Colaborador conexion = new Colaborador();
+            using (SqlConnection con = new SqlConnection("Data Source=25.22.77.136,49170;Database=imp_isabelita;Integrated Security=False;User ID=sa;Password=imprentaisabelita;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
+            {
+                using (SqlCommand cmd = new SqlCommand("spAgregarEgreso", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@Fecha", Fecha);
+                    cmd.Parameters.AddWithValue("@Valor", Valor);
+                    cmd.Parameters.AddWithValue("@NumFactura", NumFactura);
+                    cmd.Parameters.AddWithValue("@CedulaColab", CedulaColab);
+                    cmd.Parameters.AddWithValue("@Id_proveedor", Id_Proveedor);
+                    cmd.Parameters.AddWithValue("@Descripcion", Descripcion);
+
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                }
+            }
 
         }
 
@@ -114,11 +139,11 @@ namespace PROYECTOBBDD
         }
         private void BloquearBoton()
         {
-            var bl = !string.IsNullOrEmpty(textBox1.Text) &&
-                     !string.IsNullOrEmpty(textBox2.Text) &&
-                     !string.IsNullOrEmpty(textBox3.Text) &&
-                     !string.IsNullOrEmpty(textBox4.Text) &&
-                     !string.IsNullOrEmpty(textBox5.Text);
+            var bl = !string.IsNullOrEmpty(tDescripcion.Text) &&
+                     !string.IsNullOrEmpty(tNumFactura.Text) &&
+                     !string.IsNullOrEmpty(tCedulaColab.Text) &&
+                     !string.IsNullOrEmpty(tIdProveedor.Text) &&
+                     !string.IsNullOrEmpty(tValor.Text);
 
             button2.Enabled = bl;
         }
