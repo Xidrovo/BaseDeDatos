@@ -156,5 +156,10 @@ namespace PROYECTOBBDD
             texto = comboBox1.DisplayMember;
             comboBox1.DisplayMember = "Nombre_empresa";
         }
+
+        private void tDescripcion_TextChanged(object sender, EventArgs e)
+        {
+            BloquearBoton();
+        }
     }
 }

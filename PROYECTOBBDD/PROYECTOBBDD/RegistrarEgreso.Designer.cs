@@ -31,6 +31,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,7 +45,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.tDescripcion = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -89,6 +89,14 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(446, 164);
             this.panel2.TabIndex = 14;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(130, 120);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(100, 21);
+            this.comboBox1.TabIndex = 12;
             // 
             // label2
             // 
@@ -209,6 +217,7 @@
             this.tDescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.tDescripcion.Size = new System.Drawing.Size(329, 79);
             this.tDescripcion.TabIndex = 7;
+            this.tDescripcion.TextChanged += new System.EventHandler(this.tDescripcion_TextChanged);
             // 
             // label6
             // 
@@ -218,14 +227,6 @@
             this.label6.Size = new System.Drawing.Size(63, 13);
             this.label6.TabIndex = 5;
             this.label6.Text = "Descripción";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(130, 120);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(100, 21);
-            this.comboBox1.TabIndex = 12;
             // 
             // RegistrarEgreso
             // 
