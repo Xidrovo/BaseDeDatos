@@ -150,10 +150,7 @@ namespace PROYECTOBBDD
             bloquearBoton();
         }
 
-        private void textBox6_TextChanged(object sender, EventArgs e)
-        {
-            bloquearBoton();
-        }
+
 
         void bloquearBoton()
         {
@@ -175,10 +172,7 @@ namespace PROYECTOBBDD
             bloquearBoton();
         }
 
-        private void textBox6_TextChanged_1(object sender, EventArgs e)
-        {
-            bloquearBoton();
-        }
+
 
         private void tContrasena_TextChanged(object sender, EventArgs e)
         {
