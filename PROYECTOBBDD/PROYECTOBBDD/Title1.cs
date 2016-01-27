@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Data.SqlClient;
 
 namespace PracticaGui1
 {
@@ -15,6 +15,7 @@ namespace PracticaGui1
     {
         public const int LogIntSize = 635;
         SplashImage Splash = new SplashImage();
+        public static string Cargo = "";
         public LogIn()
         {
             InitializeComponent();
@@ -34,6 +35,7 @@ namespace PracticaGui1
         private void IngresarButton_Click(object sender, EventArgs e)
         {
             //Esto es solo para poder mostrar las ventanas (No se hará así en el proyecto final)
+
             if (this.Username.Text.Equals("admin"))
             {
                 //Se abre shona del administrador.
@@ -48,8 +50,13 @@ namespace PracticaGui1
             else if ((this.Username.Text) != "" && (this.Contrasena.Text != ""))
             {
                 PROYECTOBBDD.Principal col = new PROYECTOBBDD.Principal();
-                col.Show();
-                this.Hide();
+               // ObtenerCargo(Contrasena.Text, Username.Text);
+               //Esto es sól prueba par ausar login..  ya sirve~
+//                if (Cargo != "Ninguno")
+                {
+                    col.Show();
+                    this.Hide();
+                }
             }
             else
             {
@@ -61,6 +68,31 @@ namespace PracticaGui1
             this.Contrasena.Text = "";
         }
 
+
+        private void ObtenerCargo(string Password, string Login)
+        {
+            string log = "";
+            SqlConnection MiConexion = new SqlConnection();
+            MiConexion = new SqlConnection("Data Source=25.22.77.136,49170;Initial Catalog=imp_isabelita;Integrated Security=False;User ID=sa;Password=imprentaisabelita;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+            MiConexion.Open();
+            SqlCommand command = new SqlCommand("select Usuario, Cargo from Colaborador WHERE Colaborador.Contraseña = CONVERT(varbinary, '" + this.Contrasena.Text + "')", MiConexion);
+            SqlDataReader reader = command.ExecuteReader();
+            reader.Read();
+            if (reader.HasRows)
+            {
+                log = reader.GetString(0);
+                if (log == Login)
+                {
+                    Cargo = reader.GetString(1);
+                }
+                else
+                    Cargo = "Ninguno";
+            }
+            else
+                Cargo = "Ninguno";
+            MiConexion.Close();
+            Console.Write(Cargo);
+        }
         private void Username_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)13)
