@@ -67,8 +67,8 @@ namespace PROYECTOBBDD
         private void button2_Click(object sender, EventArgs e)
         {
 
-            guardarDatos(dateTimePicker1.Value.Date, float.Parse(tValor.Text), tNumFactura.Text, 
-                                    tCedulaColab.Text, comboBox1.Text, tDescripcion.Text);
+            guardarDatos(dateTimePicker1.Value.Date, float.Parse(tValor.Text), tNumFactura.Text,
+                                    tCedulaColab.Text, tDescripcion.Text);
             this.Close();
         }
 
@@ -86,7 +86,7 @@ namespace PROYECTOBBDD
         {
 
         }
-        public void guardarDatos(DateTime Fecha, float Valor, String NumFactura, String CedulaColab, String Id_Proveedor, String Descripcion)
+        public void guardarDatos(DateTime Fecha, float Valor, String NumFactura, String CedulaColab, String Descripcion)
         {
             Colaborador conexion = new Colaborador();
             using (SqlConnection con = new SqlConnection("Data Source=25.22.77.136,49170;Database=imp_isabelita;Integrated Security=False;User ID=sa;Password=imprentaisabelita;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
@@ -98,6 +98,7 @@ namespace PROYECTOBBDD
                     cmd.Parameters.AddWithValue("@Valor", Valor);
                     cmd.Parameters.AddWithValue("@NumFactura", NumFactura);
                     cmd.Parameters.AddWithValue("@CedulaColab", CedulaColab);
+                    cmd.Parameters.AddWithValue("@Id_proveedor", Convert.ToString(comboBox1.SelectedValue));
                     cmd.Parameters.AddWithValue("@Descripcion", Descripcion);
 
                     con.Open();
