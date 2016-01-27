@@ -234,8 +234,8 @@
             // porNombreToolStripMenuItem1
             // 
             this.porNombreToolStripMenuItem1.Name = "porNombreToolStripMenuItem1";
-            this.porNombreToolStripMenuItem1.Size = new System.Drawing.Size(139, 22);
-            this.porNombreToolStripMenuItem1.Text = "Por Nombre";
+            this.porNombreToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.porNombreToolStripMenuItem1.Text = "Por ID";
             this.porNombreToolStripMenuItem1.Click += new System.EventHandler(this.porNombreToolStripMenuItem1_Click);
             // 
             // actualizarToolStripMenuItem
@@ -257,14 +257,14 @@
             // ingresosDiariosToolStripMenuItem
             // 
             this.ingresosDiariosToolStripMenuItem.Name = "ingresosDiariosToolStripMenuItem";
-            this.ingresosDiariosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.ingresosDiariosToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.ingresosDiariosToolStripMenuItem.Text = "Ingresos";
             this.ingresosDiariosToolStripMenuItem.Click += new System.EventHandler(this.ingresosDiariosToolStripMenuItem_Click);
             // 
             // egresosToolStripMenuItem
             // 
             this.egresosToolStripMenuItem.Name = "egresosToolStripMenuItem";
-            this.egresosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.egresosToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.egresosToolStripMenuItem.Text = "Egresos";
             this.egresosToolStripMenuItem.Click += new System.EventHandler(this.egresosToolStripMenuItem_Click);
             // 
@@ -304,7 +304,7 @@
             // porCedulaToolStripMenuItem
             // 
             this.porCedulaToolStripMenuItem.Name = "porCedulaToolStripMenuItem";
-            this.porCedulaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.porCedulaToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.porCedulaToolStripMenuItem.Text = "Por Cedula";
             this.porCedulaToolStripMenuItem.Click += new System.EventHandler(this.porCedulaToolStripMenuItem_Click);
             // 
