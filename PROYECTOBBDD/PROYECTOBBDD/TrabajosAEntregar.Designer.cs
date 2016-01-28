@@ -38,10 +38,10 @@
             this.lFechaInicio = new System.Windows.Forms.Label();
             this.lFechaFinal = new System.Windows.Forms.Label();
             this.dFechaInicio = new System.Windows.Forms.DateTimePicker();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.celdaResultado = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.celdaResultado)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -56,7 +56,7 @@
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.celdaResultado);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(462, 358);
@@ -118,7 +118,7 @@
             // 
             // dFechaFinal
             // 
-            this.dFechaFinal.CustomFormat = "dd-MM-yyyy";
+            this.dFechaFinal.CustomFormat = "yyyy-MM-dd";
             this.dFechaFinal.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dFechaFinal.Location = new System.Drawing.Point(285, 16);
             this.dFechaFinal.Name = "dFechaFinal";
@@ -147,23 +147,23 @@
             // 
             // dFechaInicio
             // 
-            this.dFechaInicio.CustomFormat = "dd-MM-yyyy";
+            this.dFechaInicio.CustomFormat = "yyyy-MM-dd";
             this.dFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dFechaInicio.Location = new System.Drawing.Point(79, 15);
             this.dFechaInicio.Name = "dFechaInicio";
             this.dFechaInicio.Size = new System.Drawing.Size(119, 20);
             this.dFechaInicio.TabIndex = 3;
             // 
-            // dataGridView1
+            // celdaResultado
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.celdaResultado.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(28, 117);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(393, 150);
-            this.dataGridView1.TabIndex = 5;
+            this.celdaResultado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.celdaResultado.Location = new System.Drawing.Point(28, 117);
+            this.celdaResultado.Name = "celdaResultado";
+            this.celdaResultado.Size = new System.Drawing.Size(393, 150);
+            this.celdaResultado.TabIndex = 5;
             // 
             // TrabajosAEntregar
             // 
@@ -177,7 +177,7 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.celdaResultado)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -191,7 +191,7 @@
         private System.Windows.Forms.Label lFechaInicio;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView celdaResultado;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label4;

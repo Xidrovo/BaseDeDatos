@@ -31,7 +31,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.CeldaResultado = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -40,7 +40,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CeldaResultado)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,7 +53,7 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.CeldaResultado);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.panel2);
@@ -84,16 +84,16 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // dataGridView1
+            // CeldaResultado
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.CeldaResultado.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(57, 169);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(366, 150);
-            this.dataGridView1.TabIndex = 3;
+            this.CeldaResultado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.CeldaResultado.Location = new System.Drawing.Point(57, 169);
+            this.CeldaResultado.Name = "CeldaResultado";
+            this.CeldaResultado.Size = new System.Drawing.Size(366, 150);
+            this.CeldaResultado.TabIndex = 3;
             // 
             // label4
             // 
@@ -129,7 +129,7 @@
             // 
             // dFechaFinal
             // 
-            this.dFechaFinal.CustomFormat = "dd-MM-yyyy";
+            this.dFechaFinal.CustomFormat = "yyyy-MM-dd";
             this.dFechaFinal.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dFechaFinal.Location = new System.Drawing.Point(281, 44);
             this.dFechaFinal.Name = "dFechaFinal";
@@ -139,7 +139,7 @@
             // 
             // dFechaInicio
             // 
-            this.dFechaInicio.CustomFormat = "dd-MM-yyyy";
+            this.dFechaInicio.CustomFormat = "yyyy-MM-dd";
             this.dFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dFechaInicio.Location = new System.Drawing.Point(83, 42);
             this.dFechaInicio.Name = "dFechaInicio";
@@ -174,7 +174,7 @@
             this.Text = "Reporte Egresos";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CeldaResultado)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -186,7 +186,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView CeldaResultado;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
