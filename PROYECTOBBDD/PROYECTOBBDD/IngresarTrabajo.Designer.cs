@@ -45,13 +45,13 @@
             this.EtiquetaDatos = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabono = new System.Windows.Forms.TextBox();
-            this.tidcliente = new System.Windows.Forms.TextBox();
             this.labono = new System.Windows.Forms.Label();
             this.lIdcliente = new System.Windows.Forms.Label();
             this.lFecha_entrega = new System.Windows.Forms.Label();
             this.dfechaEntrega = new System.Windows.Forms.DateTimePicker();
             this.lFecPed = new System.Windows.Forms.Label();
             this.dfechaPedido = new System.Windows.Forms.DateTimePicker();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.contIngTra.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -79,7 +79,7 @@
             // bQuitar
             // 
             this.bQuitar.Location = new System.Drawing.Point(438, 375);
-            this.bQuitar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bQuitar.Margin = new System.Windows.Forms.Padding(2);
             this.bQuitar.Name = "bQuitar";
             this.bQuitar.Size = new System.Drawing.Size(56, 27);
             this.bQuitar.TabIndex = 12;
@@ -90,7 +90,7 @@
             // Agregar
             // 
             this.Agregar.Location = new System.Drawing.Point(27, 376);
-            this.Agregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Agregar.Margin = new System.Windows.Forms.Padding(2);
             this.Agregar.Name = "Agregar";
             this.Agregar.Size = new System.Drawing.Size(100, 26);
             this.Agregar.TabIndex = 11;
@@ -157,7 +157,7 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Location = new System.Drawing.Point(358, 37);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(6, 6);
             this.flowLayoutPanel1.TabIndex = 6;
@@ -222,8 +222,8 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.tabono);
-            this.panel1.Controls.Add(this.tidcliente);
             this.panel1.Controls.Add(this.labono);
             this.panel1.Controls.Add(this.lIdcliente);
             this.panel1.Controls.Add(this.lFecha_entrega);
@@ -245,16 +245,6 @@
             this.tabono.TextChanged += new System.EventHandler(this.tabono_TextChanged);
             this.tabono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tabono_KeyPress);
             // 
-            // tidcliente
-            // 
-            this.tidcliente.Location = new System.Drawing.Point(113, 71);
-            this.tidcliente.MaxLength = 13;
-            this.tidcliente.Name = "tidcliente";
-            this.tidcliente.Size = new System.Drawing.Size(100, 20);
-            this.tidcliente.TabIndex = 7;
-            this.tidcliente.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            this.tidcliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tidcliente_KeyPress);
-            // 
             // labono
             // 
             this.labono.AutoSize = true;
@@ -269,9 +259,9 @@
             this.lIdcliente.AutoSize = true;
             this.lIdcliente.Location = new System.Drawing.Point(17, 71);
             this.lIdcliente.Name = "lIdcliente";
-            this.lIdcliente.Size = new System.Drawing.Size(81, 13);
+            this.lIdcliente.Size = new System.Drawing.Size(95, 13);
             this.lIdcliente.TabIndex = 5;
-            this.lIdcliente.Text = "RUC del cliente";
+            this.lIdcliente.Text = "Nombre del cliente";
             this.lIdcliente.Click += new System.EventHandler(this.lIdcliente_Click);
             // 
             // lFecha_entrega
@@ -312,9 +302,17 @@
             this.dfechaPedido.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dfechaPedido.Location = new System.Drawing.Point(113, 30);
             this.dfechaPedido.Name = "dfechaPedido";
-            this.dfechaPedido.Size = new System.Drawing.Size(100, 20);
+            this.dfechaPedido.Size = new System.Drawing.Size(121, 20);
             this.dfechaPedido.TabIndex = 3;
             this.dfechaPedido.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(113, 62);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 9;
             // 
             // IngresarTrabajo
             // 
@@ -346,7 +344,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label EtiquetaDatos;
         private System.Windows.Forms.TextBox tabono;
-        private System.Windows.Forms.TextBox tidcliente;
         private System.Windows.Forms.Label labono;
         private System.Windows.Forms.Label lIdcliente;
         private System.Windows.Forms.Label label1;
@@ -362,5 +359,6 @@
         private System.Windows.Forms.Button Agregar;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button bQuitar;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
