@@ -148,7 +148,7 @@ namespace PROYECTOBBDD
             float abono = 0, total;
 
             if (!(Principal.VerificaRucPersonaNatural(tidcliente.Text) ||
-                                Principal.VerificaRucEmpresas(tidcliente.Text)))
+                                Principal.VerificaRucEmpresas(tidcliente.Text)) || Principal.VerificaCedula(tidcliente.Text))
             {
                 tidcliente.BackColor = Color.PaleVioletRed;
                 desicion = false;
@@ -397,17 +397,6 @@ namespace PROYECTOBBDD
                     con.Open();
                     cmd.ExecuteNonQuery();
                     con.Close();
-                }
-                using (SqlConnection con1 = new SqlConnection("Data Source=25.22.77.136,49170;Database=imp_isabelita;Integrated Security=False;User ID=sa;Password=imprentaisabelita;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
-                {
-                    using (SqlCommand cmd = new SqlCommand("spColTrab", con1))
-                    {
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.Add("@Id_Colaboradores", SqlDbType.VarChar).Value = PracticaGui1.LogIn.Cedula;
-                        con1.Open();
-                        cmd.ExecuteNonQuery();
-                        con1.Close();
-                    }
                 }
             }
 
