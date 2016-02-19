@@ -262,5 +262,12 @@ namespace PROYECTOBBDD
             consultarColaborador.MdiParent = this; //PAra que se ejecute ingresarTrabajo dentro de la pantalla de principal 
             consultarColaborador.Show();
         }
+
+        private void sustentarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Sustentacion sust = new Sustentacion();
+            sust.MdiParent = this;
+            sust.Show();
+        }
     }
 }

@@ -15,7 +15,8 @@ namespace PracticaGui1
     {
         public const int LogIntSize = 635;
         SplashImage Splash = new SplashImage();
-        public static string Cargo = "";
+        public static string Cargo = "Ninguno";
+        public static string Cedula;
         public LogIn()
         {
             InitializeComponent();
@@ -71,7 +72,7 @@ namespace PracticaGui1
         private void ObtenerCargo(string Password, string Login)
         {
             string log = "";
-            bool Error = false;
+            bool Error = true;
             SqlConnection MiConexion = new SqlConnection();
             MiConexion = new SqlConnection("Data Source=25.22.77.136,49170;Initial Catalog=imp_isabelita;Integrated Security=False;User ID=sa;Password=imprentaisabelita;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
             MiConexion.Open();
@@ -85,6 +86,7 @@ namespace PracticaGui1
                 {
                     Cargo = reader.GetString(1);
                     Error = false;
+                    Cedula = log;
                     break;
                 }
                 else
@@ -98,9 +100,7 @@ namespace PracticaGui1
                 MessageBox.Show("USUARIO O CONTRASEÑA NO ENCONTRADO", "Error",
                                         MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            MiConexion.Close();
-            Console.Write(Cargo);
-        }
+            MiConexion.Close();        }
         private void Username_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)13)

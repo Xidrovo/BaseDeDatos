@@ -159,6 +159,12 @@
     <Compile Include="SplashImage.designer.cs">
       <DependentUpon>SplashImage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sustentacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sustentacion.Designer.cs">
+      <DependentUpon>Sustentacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Title1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -234,6 +240,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SplashImage.resx">
       <DependentUpon>SplashImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sustentacion.resx">
+      <DependentUpon>Sustentacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Title1.resx">
       <DependentUpon>Title1.cs</DependentUpon>
