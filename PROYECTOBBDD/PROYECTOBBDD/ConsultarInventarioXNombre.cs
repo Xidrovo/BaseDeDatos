@@ -36,17 +36,37 @@ namespace PROYECTOBBDD
 
             }
 
-
+            /*
+                    public void MostrarMasTrabajosColaborador()
+        {
+            //Colaborador conexion = new Colaborador();
+            using (SqlConnection con = new SqlConnection("Data Source=25.22.77.136,49170;Initial Catalog=imp_isabelita;Integrated Security=False;User ID=sa;Password=imprentaisabelita;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
+            {
+                using (SqlCommand cmd = new SqlCommand("spTopClientesTrabajo", con))
+                {
+                    SqlDataAdapter da = new SqlDataAdapter();
+                    DataTable dt = new DataTable();
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    da.SelectCommand = cmd;
+                    da.Fill(dt);
+                    celdaResultados.DataSource = dt;
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                    
+                }
+            }
+        }
+            */
         }
         public ConsultarInventarioXNombre()
         {
             InitializeComponent();
-            button2.Enabled = false;
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            val.soloLetras(e);
+            val.soloNumeros(e);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -66,39 +86,35 @@ namespace PROYECTOBBDD
         private void BloquearBoton()
         {
             var bl = !string.IsNullOrEmpty(tnombreProducto.Text);
-            button2.Enabled = bl;
         }
 
         private void textBox1_TextChanged_1(object sender, EventArgs e)
         {
-
+            if (tnombreProducto.Text == "")
+            {
+                mifiltro = new DataView();
+                foreach (DataGridViewRow item in this.dataGridView1.SelectedRows)
+                {
+                    dataGridView1.Rows.RemoveAt(item.Index);
+                }
+                mifiltro = null;
+            }
+            else
+            {
+                this.leer_datos("SELECT * FROM Producto_inventario WHERE Id_producto_inv LIKE " + tnombreProducto.Text, ref resultados, "Producto_inventario");
+                this.mifiltro = ((DataTable)resultados.Tables["Producto_inventario"]).DefaultView;
+            }
+            this.dataGridView1.DataSource = mifiltro;
         }
 
         private void ConsultarInventarioXNombre_Load(object sender, EventArgs e)
         {
-            this.leer_datos("SELECT * FROM Producto_inventario", ref resultados, "Producto_inventario");
-            this.mifiltro = ((DataTable)resultados.Tables["Producto_inventario"]).DefaultView;
-            this.dataGridView1.DataSource = mifiltro;
+
         }
 
         private void textBox1_KeyUp(object sender, KeyEventArgs e)
         {
-            string salida_datos = " ";
-            string[] palabras_busqueda = this.tnombreProducto.Text.Split(' ');
-
-            foreach (string palabra in palabras_busqueda)
-            {
-                if (salida_datos.Length == 0)
-                {
-                    salida_datos = "(Nombre LIKE '%" + palabra + "%')";
-
-                }
-                else
-                {
-                    salida_datos += "  (Nombre LIKE '%" + palabra + "%')";
-                }
-            }
-            this.mifiltro.RowFilter = salida_datos;
+            
         }
 
         private void label1_Click(object sender, EventArgs e)

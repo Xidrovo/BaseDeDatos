@@ -101,8 +101,14 @@ namespace PROYECTOBBDD
             if (desicion)
             {
                 //sql stuff
-                guardarDatos(truc.Text, trazonsocial.Text, tdireccion.Text);
-                this.Close();
+                try
+                {
+                    guardarDatos(truc.Text, trazonsocial.Text, tdireccion.Text);
+                    this.Close();
+                } catch
+                {
+                    MessageBox.Show("Empresa ya existe en la base de datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 

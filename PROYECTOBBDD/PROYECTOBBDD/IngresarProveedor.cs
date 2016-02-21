@@ -65,8 +65,15 @@ namespace PROYECTOBBDD
             if (desicion)
             {
                 //Comunicarme con el sql
-                guardarDatosProveedor(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, tdireccion.Text);
-                this.Close();
+                try
+                {
+                    guardarDatosProveedor(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, tdireccion.Text);
+                    this.Close();
+                }
+                catch
+                {
+                    MessageBox.Show("Proveedor ya existe en la base de datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 

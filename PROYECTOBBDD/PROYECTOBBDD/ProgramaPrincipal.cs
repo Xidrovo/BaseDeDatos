@@ -10,8 +10,20 @@ using System.Windows.Forms;
 
 namespace PROYECTOBBDD
 {
+    
+
     public partial class Principal : Form
     {
+        public enum Estado
+        {
+            Cliente,
+            Proveedor,
+            Inventario,
+            Colaborador,
+            Defecto
+        }
+
+        public static int State = (int)Estado.Defecto;
         public Principal()
         {
             InitializeComponent();
@@ -268,6 +280,34 @@ namespace PROYECTOBBDD
             Sustentacion sust = new Sustentacion();
             sust.MdiParent = this;
             sust.Show();
+        }
+
+        private void editarClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Buscador busc = new Buscador();
+            Principal.State = (int)Principal.Estado.Cliente;
+            busc.Show();
+        }
+
+        private void editarProveedorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Buscador busc = new Buscador();
+            Principal.State = (int)Principal.Estado.Proveedor;
+            busc.Show();
+        }
+
+        private void editarColaboradorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Buscador busc = new Buscador();
+            Principal.State = (int)Principal.Estado.Colaborador;
+            busc.Show();
+        }
+
+        private void editarInventarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Buscador busc = new Buscador();
+            Principal.State = (int)Principal.Estado.Inventario;
+            busc.Show();
         }
     }
 }

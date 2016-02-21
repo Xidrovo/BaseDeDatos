@@ -27,3 +27,4 @@ C:\Users\usuarios\Documents\ESPOL\2do Termino 2015 - 2016\Base de Datos\Proyecto
 C:\Users\usuarios\Documents\ESPOL\2do Termino 2015 - 2016\Base de Datos\Proyecto\BaseDeDatos\PROYECTOBBDD\PROYECTOBBDD\obj\Debug\PROYECTOBBDD.exe
 C:\Users\usuarios\Documents\ESPOL\2do Termino 2015 - 2016\Base de Datos\Proyecto\BaseDeDatos\PROYECTOBBDD\PROYECTOBBDD\obj\Debug\PROYECTOBBDD.pdb
 C:\Users\usuarios\Documents\ESPOL\2do Termino 2015 - 2016\Base de Datos\Proyecto\BaseDeDatos\PROYECTOBBDD\PROYECTOBBDD\obj\Debug\PROYECTOBBDD.Sustentacion.resources
+C:\Users\usuarios\Documents\ESPOL\2do Termino 2015 - 2016\Base de Datos\Proyecto\BaseDeDatos\PROYECTOBBDD\PROYECTOBBDD\obj\Debug\PROYECTOBBDD.Buscador.resources

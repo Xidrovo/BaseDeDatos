@@ -26,6 +26,10 @@ namespace PROYECTOBBDD
 
             bQuitar.Enabled = false;
             BGuardar.Enabled = false;
+            if (Buscador.Actualizar == true)
+            {
+                BGuardar.Text = "Actualizar";
+            }
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
@@ -90,8 +94,15 @@ namespace PROYECTOBBDD
             if (desicion)
             {
                 //Comunicarme con el sql
-                guardarDatos(tnombres.Text, tapellido.Text, tcedula.Text, tdireccion.Text);
-                this.Close();
+                try
+                {
+                    guardarDatos(tnombres.Text, tapellido.Text, tcedula.Text, tdireccion.Text);
+                    this.Close();
+                }
+                catch
+                {
+                    MessageBox.Show("Persona ya existe en la base de datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
 
             }
         }
