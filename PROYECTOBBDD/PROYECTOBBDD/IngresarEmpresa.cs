@@ -24,6 +24,28 @@ namespace PROYECTOBBDD
             labelList.Add(lTelefono);
             bQuitar.Enabled = false;
             bguardar.Enabled = false;
+            if (Buscador.Actualizar)
+            {
+                #region
+                int ContTemp = 1;
+                //RUC   [0]
+                //RazonSocial    [1]
+                //Direccion  [2]
+                //Telefonos [3] .. [9]
+                truc.Text = Buscador.informacion[0];
+                truc.Enabled = false;
+                trazonsocial.Text = Buscador.informacion[1];
+                tdireccion.Text = Buscador.informacion[2];
+                lista[0].Text = Buscador.informacion[3];
+                while (Buscador.informacion[ContTemp + 3] != null)
+                {
+                    bagregar_Click(null, null);
+                    lista[ContTemp].Text = Buscador.informacion[ContTemp + 3];
+                    ContTemp++;
+                }
+                bguardar.Text = "Actualizar";
+                #endregion
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -69,6 +91,13 @@ namespace PROYECTOBBDD
 
         private void button2_Click(object sender, EventArgs e)
         {
+            if (Buscador.Actualizar)
+            {
+                //El botón funciona como update
+            }
+            //El botón funciona como inseert
+            else {
+            #region
             bool desicion = true;
 
             foreach (TextBox val in lista)
@@ -109,6 +138,8 @@ namespace PROYECTOBBDD
                 {
                     MessageBox.Show("Empresa ya existe en la base de datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+            }
+                #endregion
             }
         }
 

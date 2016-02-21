@@ -457,7 +457,7 @@ namespace PROYECTOBBDD
 
         private void IngresarTrabajo_Load(object sender, EventArgs e)
         {
-            comboBox1.DataSource = Clientes_Id.ObtenerProveedores();
+ //           comboBox1.DataSource = Clientes_Id.ObtenerProveedores();
             string texto;
             comboBox1.ValueMember = "Nombre";
             texto = comboBox1.DisplayMember;

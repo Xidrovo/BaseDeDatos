@@ -28,7 +28,28 @@ namespace PROYECTOBBDD
             BGuardar.Enabled = false;
             if (Buscador.Actualizar == true)
             {
+                #region
+                int ContTemp = 1;
+                //NCedula   [0]
+                //Nombre    [1]
+                //Apellido  [2]
+                //Direccion [3]
+                //Telefono  [4]...[9]
+                tcedula.Text = Buscador.informacion[0];
+                tcedula.Enabled = false;
+                tnombres.Text = Buscador.informacion[1];
+                tapellido.Text = Buscador.informacion[2];
+                tdireccion.Text = Buscador.informacion[3];
+                lista[0].Text = Buscador.informacion[4];
+
+                while (Buscador.informacion[ContTemp + 4] != null)
+                {
+                    bAgregar_Click(null, null);
+                    lista[ContTemp].Text = Buscador.informacion[ContTemp + 4];
+                    ContTemp++;
+                }
                 BGuardar.Text = "Actualizar";
+                #endregion
             }
         }
 
