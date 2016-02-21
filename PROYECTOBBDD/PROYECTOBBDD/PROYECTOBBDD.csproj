@@ -58,6 +58,8 @@
     <Compile Include="Buscador.Designer.cs">
       <DependentUpon>Buscador.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cliente.cs" />
+    <Compile Include="Clientes_Id.cs" />
     <Compile Include="Colaborador.cs" />
     <Compile Include="ConsultaCLientesCedula.cs">
       <SubType>Form</SubType>

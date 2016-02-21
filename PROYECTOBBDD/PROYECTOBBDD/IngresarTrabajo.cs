@@ -147,6 +147,7 @@ namespace PROYECTOBBDD
             bool desicion = true;
             float abono = 0, total;
 
+
             try
             {
                 abono = float.Parse(tabono.Text);
@@ -273,11 +274,11 @@ namespace PROYECTOBBDD
             panel2.Controls.Add(textDescripcion);
 
             listaDesc.Add(textDescripcion);
-                listaLabelDesc.Add(descripcion);
+            listaLabelDesc.Add(descripcion);
             listaCant.Add(textCantidad);
-                listaLabelCant.Add(cantidad);
+            listaLabelCant.Add(cantidad);
             listaVal.Add(textValor);
-                listaLabelVal.Add(valor);
+            listaLabelVal.Add(valor);
 
             bQuitar.Enabled = true;
 
@@ -344,7 +345,7 @@ namespace PROYECTOBBDD
         {
 
         }
-    
+
         //Dada una RUC, retorna el Id del mismo.
         //Retorna '0' si el RUC no está en la base de datos.
         private int GetIdFromRuc(string RUC)
@@ -370,9 +371,6 @@ namespace PROYECTOBBDD
 
         private void AddTrabajo(string RUC, string FechaPedido, string FechaEntrega, float Abono)
         {
-            int Id;
-            Id = GetIdFromRuc(RUC);
-
             using (SqlConnection con = new SqlConnection("Data Source=25.22.77.136,49170;Database=imp_isabelita;Integrated Security=False;User ID=sa;Password=imprentaisabelita;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
             {
                 using (SqlCommand cmd = new SqlCommand("spCrearTrabajo", con))
@@ -381,7 +379,7 @@ namespace PROYECTOBBDD
                     cmd.Parameters.AddWithValue("@Fecha_pedido", FechaPedido);
                     cmd.Parameters.AddWithValue("@Fecha_entrega", FechaEntrega);
                     cmd.Parameters.AddWithValue("Abono", Abono);
-                    cmd.Parameters.AddWithValue("Id_Cliente", Id);
+                    cmd.Parameters.AddWithValue("Id_Cliente", Convert.ToInt32(comboBox1.SelectedValue));
                     con.Open();
                     cmd.ExecuteNonQuery();
                     con.Close();
@@ -457,11 +455,11 @@ namespace PROYECTOBBDD
 
         private void IngresarTrabajo_Load(object sender, EventArgs e)
         {
- //           comboBox1.DataSource = Clientes_Id.ObtenerProveedores();
+            comboBox1.DataSource = Clientes_Id.ObtenerClientes();
             string texto;
-            comboBox1.ValueMember = "Nombre";
+            comboBox1.ValueMember = "Id";
             texto = comboBox1.DisplayMember;
-            comboBox1.DisplayMember = "Id";
+            comboBox1.DisplayMember = "Nombre";
         }
 
     }
