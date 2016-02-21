@@ -147,18 +147,6 @@ namespace PROYECTOBBDD
             bool desicion = true;
             float abono = 0, total;
 
-            if (!(Principal.VerificaRucPersonaNatural(tidcliente.Text) ||
-                                Principal.VerificaRucEmpresas(tidcliente.Text)) || Principal.VerificaCedula(tidcliente.Text))
-            {
-                tidcliente.BackColor = Color.PaleVioletRed;
-                desicion = false;
-                MessageBox.Show("RUC ingresado no válida", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                tidcliente.BackColor = Color.White;
-            }
-
             try
             {
                 abono = float.Parse(tabono.Text);
