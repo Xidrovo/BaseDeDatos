@@ -36,6 +36,7 @@
             this.bCancelar = new System.Windows.Forms.Button();
             this.rQuitar = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -124,11 +125,21 @@
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(241, 34);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 13);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Cantidad";
+            // 
             // ActualizarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(525, 128);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.bCancelar);
             this.Controls.Add(this.bActualizar);
             this.Controls.Add(this.Lid);
@@ -156,5 +167,6 @@
         private System.Windows.Forms.Button bCancelar;
         private System.Windows.Forms.RadioButton rQuitar;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label1;
     }
 }
