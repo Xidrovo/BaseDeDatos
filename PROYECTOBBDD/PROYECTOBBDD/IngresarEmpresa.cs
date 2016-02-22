@@ -95,6 +95,50 @@ namespace PROYECTOBBDD
             if (Buscador.Actualizar)
             {
                 //El botón funciona como update
+                #region
+                bool desicion = true;
+
+                foreach (TextBox val in lista)
+                {
+                    if (val.TextLength == 8)
+                    {
+                        desicion = false;
+                        val.BackColor = Color.PaleVioletRed;
+                    }
+                    else
+                        val.BackColor = Color.White;
+                }
+                if (!desicion)
+                {
+                    MessageBox.Show("Debe escribir un telefono valido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                if (!(Principal.VerificaRucPersonaNatural(truc.Text)
+                                                || Principal.VerificaRucEmpresas(truc.Text)))
+                {
+                    truc.BackColor = Color.PaleVioletRed;
+                    desicion = false;
+                    MessageBox.Show("Debe escribir un RUC valido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    truc.BackColor = Color.White;
+                }
+
+                if (desicion)
+                {
+                    //sql stuff
+                    try
+                    {
+                        ActualizarDatos(truc.Text, trazonsocial.Text, tdireccion.Text);
+                        this.Close();
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Empresa ya existe en la base de datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                #endregion
             }
             //El botón funciona como inseert
             else {
@@ -167,7 +211,7 @@ namespace PROYECTOBBDD
                 SqlConnection sqlConnection1 = new SqlConnection("Data Source=25.22.77.136,49170;Initial Catalog=imp_isabelita;Integrated Security=False;User ID=sa;Password=imprentaisabelita;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
                 SqlCommand cmd3 = new SqlCommand();
                 SqlDataReader reader;
-                cmd3.CommandText = "SELECT RUC FROM Empresas where RUC='" + Ruc + "'";
+                cmd3.CommandText = "SELECT Id_Cliente FROM Empresas where RUC='" + Ruc + "'";
                 cmd3.CommandType = CommandType.Text;
                 cmd3.Connection = sqlConnection1;
                 sqlConnection1.Open();
@@ -179,7 +223,63 @@ namespace PROYECTOBBDD
                     using (SqlCommand cmd2 = new SqlCommand("spAgregarTelefono", con2))
                     {
                         cmd2.CommandType = CommandType.StoredProcedure;
-                        cmd2.Parameters.AddWithValue("@RUC", Ruc);
+                        cmd2.Parameters.AddWithValue("@Id_Cliente", id);
+                        cmd2.Parameters.AddWithValue("@Telefono", lista.ElementAt(i).Text);
+                        con2.Open();
+                        cmd2.ExecuteNonQuery();
+                        con2.Close();
+
+                    }
+                }
+                sqlConnection1.Close();
+            }
+
+        }
+
+        public void ActualizarDatos(String Ruc, String RazonSocial, String Direccion)
+        {
+            Colaborador conexion = new Colaborador();
+            using (SqlConnection con = new SqlConnection("Data Source=25.22.77.136,49170;Initial Catalog=imp_isabelita;Integrated Security=False;User ID=sa;Password=imprentaisabelita;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
+            {
+                using (SqlCommand cmd = new SqlCommand("spActualizarClienteEmpresa", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@RUC", Ruc);
+                    cmd.Parameters.AddWithValue("@Razon_Social", RazonSocial);
+                    cmd.Parameters.AddWithValue("@Direccion", Direccion);
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                }
+            }
+
+            using (SqlConnection con2 = new SqlConnection("Data Source=25.22.77.136,49170;Initial Catalog=imp_isabelita;Integrated Security=False;User ID=sa;Password=imprentaisabelita;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
+            {
+
+                SqlConnection sqlConnection1 = new SqlConnection("Data Source=25.22.77.136,49170;Initial Catalog=imp_isabelita;Integrated Security=False;User ID=sa;Password=imprentaisabelita;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+                SqlCommand cmd3 = new SqlCommand();
+                SqlDataReader reader;
+                cmd3.CommandText = "SELECT Id_Cliente FROM Empresas where RUC='" + Ruc + "'";
+                cmd3.CommandType = CommandType.Text;
+                cmd3.Connection = sqlConnection1;
+                sqlConnection1.Open();
+                reader = cmd3.ExecuteReader();
+                reader.Read();
+                int id = reader.GetInt32(0);
+                using (SqlCommand cmdx = new SqlCommand("spEliminarTelefonos", con2))
+                {
+                    cmdx.CommandType = CommandType.StoredProcedure;
+                    cmdx.Parameters.AddWithValue("@Id_Cliente", id);
+                    con2.Open();
+                    cmdx.ExecuteNonQuery();
+                    con2.Close();
+                }
+                for (int i = 0; i < lista.Count(); i++)
+                {
+                    using (SqlCommand cmd2 = new SqlCommand("spAgregarTelefono", con2))
+                    {
+                        cmd2.CommandType = CommandType.StoredProcedure;
+                        cmd2.Parameters.AddWithValue("@Id_Cliente", id);
                         cmd2.Parameters.AddWithValue("@Telefono", lista.ElementAt(i).Text);
                         con2.Open();
                         cmd2.ExecuteNonQuery();

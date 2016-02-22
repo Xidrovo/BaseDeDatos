@@ -17,7 +17,10 @@ namespace PROYECTOBBDD
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
+        }
 
+        private void Eliminador_Load(object sender, EventArgs e)
+        {
             if (Principal.State == (int)Principal.Estado.Cliente)
             {
                 Texto.Text = "Escriba la identificación del cliente";
@@ -36,11 +39,6 @@ namespace PROYECTOBBDD
             }
         }
 
-        private void Eliminador_Load(object sender, EventArgs e)
-        {
-            
-        }
-
         private void Eliminar_Click(object sender, EventArgs e)
         {
             if (Principal.State == (int)Principal.Estado.Cliente)
@@ -49,51 +47,71 @@ namespace PROYECTOBBDD
                 {
                     if (textBox1.Text.Length == 10)
                     {
-                        int id = 0;
-                        SqlCommand cmd = new SqlCommand();
-                        SqlDataReader reader;
-                        cmd.CommandText = "spGetIdFromPersona_Natural";
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Connection = con;
-                        cmd.Parameters.AddWithValue("@Ncedula", textBox1.Text);
-                        con.Open();
-                        reader = cmd.ExecuteReader();
-                        reader.Read();
-                        id = reader.GetInt32(0);
-                        con.Close();
-                        SqlCommand cmd2 = new SqlCommand();
-                        cmd2.CommandText = "spEliminarCliente";
-                        cmd2.CommandType = CommandType.StoredProcedure;
-                        cmd2.Connection = con;
-                        con.Open();
-                        cmd2.Parameters.AddWithValue("@idCliente", id);
-                        con.Close();
+                        try
+                        {
+                            int id = 0;
+                            SqlCommand cmd = new SqlCommand();
+                            SqlDataReader reader;
+                            cmd.CommandText = "spGetIdFromPersona_Natural";
+                            cmd.CommandType = CommandType.StoredProcedure;
+                            cmd.Connection = con;
+                            cmd.Parameters.AddWithValue("@Ncedula", textBox1.Text);
+                            con.Open();
+                            reader = cmd.ExecuteReader();
+                            reader.Read();
+                            id = reader.GetInt32(0);
+                            con.Close();
+                            delete(id);
+                        }
+                        catch
+                        {
+                            MessageBox.Show("No se encontraron datos del cliente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                     if (textBox1.Text.Length == 13)
                     {
-                        int id = 0;
-                        SqlCommand cmd = new SqlCommand();
-                        SqlDataReader reader;
-                        cmd.CommandText = "spGetIdFromRUC";
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Connection = con;
-                        cmd.Parameters.AddWithValue("@RUC", textBox1.Text);
-                        con.Open();
-                        reader = cmd.ExecuteReader();
-                        reader.Read();
-                        id = reader.GetInt32(0);
-                        con.Close();
-                        SqlCommand cmd2 = new SqlCommand();
-                        cmd2.CommandText = "spEliminarCliente";
-                        cmd2.CommandType = CommandType.StoredProcedure;
-                        cmd2.Connection = con;
-                        con.Open();
-                        cmd2.Parameters.AddWithValue("@idCliente", id);
-                        con.Close();
+                        try
+                        {
+                            int id = 0;
+                            SqlCommand cmd = new SqlCommand();
+                            SqlDataReader reader;
+                            cmd.CommandText = "spGetIdFromRUC";
+                            cmd.CommandType = CommandType.StoredProcedure;
+                            cmd.Connection = con;
+                            cmd.Parameters.AddWithValue("@RUC", textBox1.Text);
+                            con.Open();
+                            reader = cmd.ExecuteReader();
+                            reader.Read();
+                            id = reader.GetInt32(0);
+                            con.Close();
+                            delete(id);
+                        }
+                        catch
+                        {
+                            MessageBox.Show("No se encontraron datos del cliente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
             }
         }
+
+        private void delete(int id)
+        {
+
+            using (SqlConnection con = new SqlConnection("Data Source=25.22.77.136,49170;Initial Catalog=imp_isabelita;Integrated Security=False;User ID=sa;Password=imprentaisabelita;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = "spEliminarCliente";
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Connection = con;
+                con.Open();
+                cmd.Parameters.AddWithValue("@idCliente", id);
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+
+
+            this.Dispose();
+        }
     }
 }
-
