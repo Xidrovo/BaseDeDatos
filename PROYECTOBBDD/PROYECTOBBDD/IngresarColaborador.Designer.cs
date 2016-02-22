@@ -67,7 +67,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.tNombre);
             this.panel1.Location = new System.Drawing.Point(17, 15);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(419, 308);
             this.panel1.TabIndex = 0;
@@ -134,7 +134,7 @@
             // tContrasena
             // 
             this.tContrasena.Location = new System.Drawing.Point(139, 257);
-            this.tContrasena.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tContrasena.Margin = new System.Windows.Forms.Padding(4);
             this.tContrasena.MaxLength = 16;
             this.tContrasena.Name = "tContrasena";
             this.tContrasena.PasswordChar = '*';
@@ -145,7 +145,7 @@
             // tTelefono
             // 
             this.tTelefono.Location = new System.Drawing.Point(139, 212);
-            this.tTelefono.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tTelefono.Margin = new System.Windows.Forms.Padding(4);
             this.tTelefono.MaxLength = 10;
             this.tTelefono.Name = "tTelefono";
             this.tTelefono.Size = new System.Drawing.Size(243, 22);
@@ -156,7 +156,7 @@
             // tCedula
             // 
             this.tCedula.Location = new System.Drawing.Point(139, 119);
-            this.tCedula.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tCedula.Margin = new System.Windows.Forms.Padding(4);
             this.tCedula.MaxLength = 10;
             this.tCedula.Name = "tCedula";
             this.tCedula.Size = new System.Drawing.Size(243, 22);
@@ -167,7 +167,7 @@
             // tApellido
             // 
             this.tApellido.Location = new System.Drawing.Point(139, 71);
-            this.tApellido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tApellido.Margin = new System.Windows.Forms.Padding(4);
             this.tApellido.MaxLength = 40;
             this.tApellido.Name = "tApellido";
             this.tApellido.Size = new System.Drawing.Size(243, 22);
@@ -200,7 +200,7 @@
             // tNombre
             // 
             this.tNombre.Location = new System.Drawing.Point(139, 23);
-            this.tNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tNombre.Margin = new System.Windows.Forms.Padding(4);
             this.tNombre.MaxLength = 40;
             this.tNombre.Name = "tNombre";
             this.tNombre.Size = new System.Drawing.Size(243, 22);
@@ -213,7 +213,7 @@
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Location = new System.Drawing.Point(17, 382);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(419, 80);
             this.panel2.TabIndex = 1;
@@ -221,7 +221,7 @@
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(43, 27);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(100, 28);
             this.button2.TabIndex = 1;
@@ -232,7 +232,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(264, 27);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 0;
@@ -247,9 +247,10 @@
             this.ClientSize = new System.Drawing.Size(452, 473);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "IngresarColaborador";
             this.Text = "Ingresar Colaborador";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.IngresarColaborador_FormClosed);
             this.Load += new System.EventHandler(this.IngresarColaborador_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

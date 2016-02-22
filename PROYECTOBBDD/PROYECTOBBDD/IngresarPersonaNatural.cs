@@ -131,6 +131,7 @@ namespace PROYECTOBBDD
                 }
                 catch
                 {
+
                     MessageBox.Show("Persona ya existe en la base de datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 

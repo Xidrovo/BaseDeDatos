@@ -17,12 +17,43 @@ namespace PROYECTOBBDD
         public IngresarColaborador()
         {
             InitializeComponent();
+            InstanciarCombobox();
+            if (Buscador.Actualizar)
+            {
+                this.Text = "Actualizar datos";
+                button1.Text = "Actualizar";
+                InstanciasActualizar();
+            }
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             button1.Enabled = false;
-            InstanciarCombobox();
             tCargo.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
+        private void InstanciasActualizar()
+        {
+            //Nombre [0]
+            //Apellido [1]
+            //Ncedula [2]
+            //Cargo [3]
+            //Telefono [4]
+            //Contraseña [5]
+            tNombre.Text = Buscador.informacion[0];
+            tApellido.Text = Buscador.informacion[1];
+            tCedula.Text = Buscador.informacion[2];
+
+            if (Buscador.informacion[3] == "SECRETARIO")
+                tCargo.Text = "SECRETARIO";
+            else if (Buscador.informacion[3] == "DISEÑADOR")
+                tCargo.Text = "DISEÑADOR";
+            else if (Buscador.informacion[3] == "GERENTE")
+                tCargo.Text = "GERENTE";
+            else
+                tCargo.Text = "JEFE";
+
+            tTelefono.Text = Buscador.informacion[4];
+            tContrasena.Text = Buscador.informacion[5];
+
+        }
         private void InstanciarCombobox()
         {
             tCargo.Items.Add("SECRETARIO");
@@ -132,18 +163,47 @@ namespace PROYECTOBBDD
 
             if (desicion)
             {
-                try
+                if (Buscador.Actualizar)
                 {
-                    guardarDatos(tNombre.Text, tApellido.Text, tCedula.Text, tCargo.Text, tTelefono.Text, tContrasena.Text);
+                    actualizarDatos();
+                    Buscador.Actualizar = false;
                     this.Close();
                 }
-                catch
+                else
                 {
-                    MessageBox.Show("Colaborador ya existe en la base de datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    try
+                    {
+                        guardarDatos(tNombre.Text, tApellido.Text, tCedula.Text, tCargo.Text, tTelefono.Text, tContrasena.Text);
+                        this.Close();
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Colaborador ya existe en la base de datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
         }
 
+        private void actualizarDatos()
+        {
+            Colaborador conexion = new Colaborador();
+            using (SqlConnection con = new SqlConnection("Data Source=25.22.77.136,49170;Database=imp_isabelita;Integrated Security=False;User ID=sa;Password=imprentaisabelita;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
+            {
+                using (SqlCommand cmd = new SqlCommand("spActualizarColaborador", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@Nombre", tNombre.Text);
+                    cmd.Parameters.AddWithValue("@Apellido", tApellido.Text);
+                    cmd.Parameters.AddWithValue("@Ncedula", tCedula.Text);
+                    cmd.Parameters.AddWithValue("@Cargo", tCargo.Text);
+                    cmd.Parameters.AddWithValue("@Telefono", tTelefono.Text);
+                    
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                }
+            }
+        }
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
             bloquearBoton();
@@ -213,6 +273,11 @@ namespace PROYECTOBBDD
                 }
             }
 
+        }
+
+        private void IngresarColaborador_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Buscador.Actualizar = false;
         }
     }
 }

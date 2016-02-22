@@ -46,13 +46,14 @@ namespace PROYECTOBBDD
             bool error = false;
             if (Principal.State == (int)Principal.Estado.Cliente)
             {
+                #region
                 //Abrir lo de editar cliente
                 //Buscar si existe el Id de lo que esté buscando.
                 //En caso de existir y tener una longitud de 10, abrir el "IngresarPersonaNatural"
                 //Caso contrario, y de existir, abrir "IngresarEmpresa"
                 //Nótese que en estos caso la celda de RUC/Cédula debe estar bloqueada.
-                    using (SqlConnection con = new SqlConnection("Data Source=25.22.77.136,49170;Initial Catalog=imp_isabelita;Integrated Security=False;User ID=sa;Password=imprentaisabelita;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
-                    {
+                using (SqlConnection con = new SqlConnection("Data Source=25.22.77.136,49170;Initial Catalog=imp_isabelita;Integrated Security=False;User ID=sa;Password=imprentaisabelita;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
+                {
                     if (textBox1.Text.Length == 10)
                     {
                         #region
@@ -134,16 +135,16 @@ namespace PROYECTOBBDD
                     {
                         error = true;
                     }
-                        /*
-                        cmd.CommandText = "buscarInfoPesonaNatural";
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Connection = con;
-                        cmd.Parameters.AddWithValue("@Cedula", textBox1.Text);
-                        sqlConnection1.Open();
+                    /*
+                    cmd.CommandText = "buscarInfoPesonaNatural";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Connection = con;
+                    cmd.Parameters.AddWithValue("@Cedula", textBox1.Text);
+                    sqlConnection1.Open();
 
-                        reader = cmd.ExecuteReader();
-                        */
-                    }
+                    reader = cmd.ExecuteReader();
+                    */
+                }
                 if (!error)
                 {
                     Buscador.Actualizar = true;
@@ -165,9 +166,11 @@ namespace PROYECTOBBDD
                 {
                     MessageBox.Show("No se encontraron datos del cliente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                #endregion
             }
             else if (Principal.State == (int)Principal.Estado.Colaborador)
             {
+                #region
                 //Abrir editar colaborador
                 using (SqlConnection con = new SqlConnection("Data Source=25.22.77.136,49170;Initial Catalog=imp_isabelita;Integrated Security=False;User ID=sa;Password=imprentaisabelita;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
                 {
@@ -182,17 +185,66 @@ namespace PROYECTOBBDD
                         con.Open();
                         reader = cmd.ExecuteReader();
                         reader.Read();
+
+                        //Nombre [0]
+                        //Apellido [1]
+                        //Ncedula [2]
+                        //Cargo [3]
+                        //Telefono [4]
+                        //Contraseña [5]
+                        try
+                        {
+                            informacion[0] = reader.GetString(0);
+                            informacion[1] = reader.GetString(1);
+                            informacion[2] = reader.GetString(2);
+                            informacion[3] = reader.GetString(3);
+                            informacion[4] = reader.GetString(4);
+                            informacion[5] = "******";
+
+                            Actualizar = true;
+                            IngresarColaborador ing = new IngresarColaborador();
+                            ing.Show();
+                            this.Dispose();
+                        }
+                        catch
+                        {
+                            MessageBox.Show("No se encontraron datos del colaborador", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        finally
+                        {
+                            con.Close();
+                        }
+
                     }
                 }
-
+                #endregion
             }
             else if (Principal.State == (int)Principal.Estado.Inventario)
             {
+                #region
                 //Abrir editar Inventario
+                #endregion
             }
             else
             {
+                #region
                 //Abrir proveedor
+                using (SqlConnection con = new SqlConnection("Data Source=25.22.77.136,49170;Initial Catalog=imp_isabelita;Integrated Security=False;User ID=sa;Password=imprentaisabelita;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
+                {
+                    if (textBox1.Text.Length == 10)
+                    {
+                        SqlCommand cmd = new SqlCommand();
+                        SqlDataReader reader;
+                        cmd.CommandText = "spConsultarColaborador";
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Connection = con;
+                        cmd.Parameters.AddWithValue("@ced", textBox1.Text);
+                        con.Open();
+                        reader = cmd.ExecuteReader();
+                        reader.Read();
+                        #endregion
+                    }
+                }
             }
         }
     }
