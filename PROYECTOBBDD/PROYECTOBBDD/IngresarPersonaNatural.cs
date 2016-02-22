@@ -369,6 +369,10 @@ namespace PROYECTOBBDD
         private void IngresarPersonaNatural_FormClosed(object sender, FormClosedEventArgs e)
         {
             Buscador.Actualizar = false;
+            for (int x = 0; x < 10; x++)
+            {
+                Buscador.informacion[x] = null;
+            }
         }
     }
 }
