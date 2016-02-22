@@ -43,10 +43,12 @@ namespace PROYECTOBBDD
         {
             if (Principal.State == (int)Principal.Estado.Cliente)
             {
+#region
                 using (SqlConnection con = new SqlConnection("Data Source=25.22.77.136,49170;Initial Catalog=imp_isabelita;Integrated Security=False;User ID=sa;Password=imprentaisabelita;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
                 {
                     if (textBox1.Text.Length == 10)
                     {
+
                         try
                         {
                             int id = 0;
@@ -67,9 +69,11 @@ namespace PROYECTOBBDD
                         {
                             MessageBox.Show("No se encontraron datos del cliente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
+
                     }
                     if (textBox1.Text.Length == 13)
-                    {
+                    { 
+                    
                         try
                         {
                             int id = 0;
@@ -90,9 +94,42 @@ namespace PROYECTOBBDD
                         {
                             MessageBox.Show("No se encontraron datos del cliente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
+                     
                     }
                 }
+                #endregion
             }
+
+            if (Principal.State == (int)Principal.Estado.Colaborador)
+            {
+                #region
+                using (SqlConnection con = new SqlConnection("Data Source=25.22.77.136,49170;Initial Catalog=imp_isabelita;Integrated Security=False;User ID=sa;Password=imprentaisabelita;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
+                {
+                    int encontrado = 0;
+                       
+                            SqlCommand cmd = new SqlCommand();
+                            cmd.CommandText = "spEliminarColaborador";
+                            cmd.CommandType = CommandType.StoredProcedure;
+                            cmd.Connection = con;
+                            cmd.Parameters.AddWithValue("@Cedula", textBox1.Text);
+                            con.Open();
+                            encontrado= cmd.ExecuteNonQuery();
+                            con.Close();
+                            if (encontrado == 0)
+                            {
+                                MessageBox.Show("No se encontraron datos del cliente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            else
+                            {
+                                this.Dispose();
+                            }
+                         
+
+                }
+                #endregion
+            }
+
+
         }
 
         private void delete(int id)

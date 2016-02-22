@@ -321,5 +321,13 @@ namespace PROYECTOBBDD
             Principal.State = (int)Principal.Estado.Cliente;
             elim.Show();
         }
+
+        private void eliminarColaboradorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Eliminador elim = new Eliminador();
+            elim.MdiParent = this;
+            Principal.State = (int)Principal.Estado.Colaborador;
+            elim.Show();
+        }
     }
 }
