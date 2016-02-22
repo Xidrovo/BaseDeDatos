@@ -92,19 +92,26 @@ namespace PROYECTOBBDD
         {
             if (tnombreProducto.Text == "")
             {
-                mifiltro = new DataView();
-                foreach (DataGridViewRow item in this.dataGridView1.SelectedRows)
-                {
-                    dataGridView1.Rows.RemoveAt(item.Index);
-                }
-                mifiltro = null;
+                tnombreProducto.BackColor = Color.White;
+                dataGridView1.DataSource = null;
+
+
             }
             else
             {
-                this.leer_datos("SELECT * FROM Producto_inventario WHERE Id_producto_inv LIKE " + tnombreProducto.Text, ref resultados, "Producto_inventario");
-                this.mifiltro = ((DataTable)resultados.Tables["Producto_inventario"]).DefaultView;
+                using (SqlConnection con = new SqlConnection("Data Source=25.22.77.136,49170;Database=imp_isabelita;Integrated Security=False;User ID=sa;Password=imprentaisabelita;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
+                {
+                    using (SqlCommand cmd = new SqlCommand("SELECT * FROM Producto_inventario WHERE Id_producto_inv LIKE" + " " + tnombreProducto.Text, con))
+                    {
+                        cmd.CommandType = CommandType.Text;
+                        con.Open();
+                        DataTable dt = new DataTable();
+                        dt.Load(cmd.ExecuteReader());
+                        dataGridView1.DataSource = dt;
+                        con.Close();
+                    }
+                }
             }
-            this.dataGridView1.DataSource = mifiltro;
         }
 
         private void ConsultarInventarioXNombre_Load(object sender, EventArgs e)

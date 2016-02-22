@@ -37,13 +37,9 @@ namespace PracticaGui1
         {
             //Esto es solo para poder mostrar las ventanas (No se hará así en el proyecto final)
 
-            if (this.Username.Text.Equals("0924970452"))
+            if (this.Username.Text.Equals("admin"))
             {
                 //Se abre shona del administrador.
-                PROYECTOBBDD.Principal col = new PROYECTOBBDD.Principal();
-                Cargo = "JEFE";
-                col.Show();
-                this.Hide();
             }
             else if (this.Username.Text.Equals("Jaminson"))
             {
