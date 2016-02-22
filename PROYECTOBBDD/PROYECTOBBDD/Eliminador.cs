@@ -17,10 +17,7 @@ namespace PROYECTOBBDD
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
-        }
 
-        private void Eliminador_Load(object sender, EventArgs e)
-        {
             if (Principal.State == (int)Principal.Estado.Cliente)
             {
                 Texto.Text = "Escriba la identificación del cliente";
@@ -37,6 +34,11 @@ namespace PROYECTOBBDD
             {
                 Texto.Text = "Ingrese nombre del proveedor";
             }
+        }
+
+        private void Eliminador_Load(object sender, EventArgs e)
+        {
+            
         }
 
         private void Eliminar_Click(object sender, EventArgs e)

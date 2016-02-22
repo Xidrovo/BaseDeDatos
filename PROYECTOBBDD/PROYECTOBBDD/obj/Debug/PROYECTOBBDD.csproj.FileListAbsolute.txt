@@ -119,3 +119,4 @@ C:\Users\usuarios\Documents\ESPOL\2do Termino 2015 - 2016\Base de Datos\Proyecto
 C:\Users\usuarios\Documents\ESPOL\2do Termino 2015 - 2016\Base de Datos\Proyecto\BaseDeDatos\BaseDeDatos\PROYECTOBBDD\PROYECTOBBDD\obj\Debug\PROYECTOBBDD.TrabajosAEntregar.resources
 C:\Users\usuarios\Documents\ESPOL\2do Termino 2015 - 2016\Base de Datos\Proyecto\BaseDeDatos\BaseDeDatos\PROYECTOBBDD\PROYECTOBBDD\obj\Debug\PROYECTOBBDD.csproj.GenerateResource.Cache
 D:\Documents\GitHub\BaseDeDatos\PROYECTOBBDD\PROYECTOBBDD\obj\Debug\PROYECTOBBDD.Eliminador.resources
+C:\Users\usuarios\Documents\ESPOL\2do Termino 2015 - 2016\Base de Datos\Proyecto\BaseDeDatos\BaseDeDatos\PROYECTOBBDD\PROYECTOBBDD\obj\Debug\PROYECTOBBDD.Eliminador.resources
