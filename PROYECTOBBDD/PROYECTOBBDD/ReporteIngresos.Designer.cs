@@ -129,7 +129,7 @@
             // 
             // dFechaFinal
             // 
-            this.dFechaFinal.CustomFormat = "dd-MM-yyyy";
+            this.dFechaFinal.CustomFormat = "yyyy-MM-dd";
             this.dFechaFinal.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dFechaFinal.Location = new System.Drawing.Point(311, 28);
             this.dFechaFinal.Name = "dFechaFinal";
@@ -148,7 +148,7 @@
             // 
             // dFechaInicio
             // 
-            this.dFechaInicio.CustomFormat = "dd-MM-yyyy";
+            this.dFechaInicio.CustomFormat = "yyyy-MM-dd";
             this.dFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dFechaInicio.Location = new System.Drawing.Point(98, 26);
             this.dFechaInicio.Name = "dFechaInicio";

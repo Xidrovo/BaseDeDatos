@@ -47,13 +47,13 @@ namespace PROYECTOBBDD
             //Colaborador conexion = new Colaborador();
             using (SqlConnection con = new SqlConnection("Data Source=25.22.77.136,49170;Initial Catalog=imp_isabelita;Integrated Security=False;User ID=sa;Password=imprentaisabelita;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
             {
-                using (SqlCommand cmd = new SqlCommand("spconsultarIngreso", con))
+                using (SqlCommand cmd = new SqlCommand("spConsultarIngreso", con))
                 {
                     SqlDataAdapter da = new SqlDataAdapter();
                     DataTable dt = new DataTable();
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@FechaInicio", dFechaInicio.Text);
-                    cmd.Parameters.AddWithValue("@FechaFinal", dFechaFinal.Text);
+                    cmd.Parameters.AddWithValue("@Fecha_Inicio", dFechaInicio.Text);
+                    cmd.Parameters.AddWithValue("@Fecha_Final", dFechaFinal.Text);
                     da.SelectCommand = cmd;
                     da.Fill(dt);
                     celdaResultado.DataSource = dt;
