@@ -17,6 +17,7 @@ namespace PROYECTOBBDD
         public Buscador()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
         private void Buscador_Load(object sender, EventArgs e)

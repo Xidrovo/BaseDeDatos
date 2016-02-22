@@ -25,6 +25,7 @@ namespace PROYECTOBBDD
             BGuardar.Enabled = false;
             if (Buscador.Actualizar == true)
             {
+                this.Text = "Actualizar Cliente";
                 #region
                 int ContTemp = 1;
                 //NCedula   [0]
@@ -363,6 +364,11 @@ namespace PROYECTOBBDD
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void IngresarPersonaNatural_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Buscador.Actualizar = false;
         }
     }
 }

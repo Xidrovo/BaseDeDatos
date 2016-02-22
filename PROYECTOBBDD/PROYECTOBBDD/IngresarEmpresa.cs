@@ -26,6 +26,7 @@ namespace PROYECTOBBDD
             bguardar.Enabled = false;
             if (Buscador.Actualizar)
             {
+                this.Text = "Actualizar Datos de la Empresa";
                 #region
                 int ContTemp = 1;
                 //RUC   [0]
@@ -298,6 +299,11 @@ namespace PROYECTOBBDD
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void IngresarEmpresa_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Buscador.Actualizar = false;
         }
     }
 }
