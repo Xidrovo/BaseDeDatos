@@ -60,3 +60,6 @@ D:\Documents\GitHub\BaseDeDatos\PROYECTOBBDD\PROYECTOBBDD\obj\Debug\PROYECTOBBDD
 D:\Documents\GitHub\BaseDeDatos\PROYECTOBBDD\PROYECTOBBDD\obj\Debug\PracticaGui1.LogIn.resources
 D:\Documents\GitHub\BaseDeDatos\PROYECTOBBDD\PROYECTOBBDD\obj\Debug\PROYECTOBBDD.TrabajosAEntregar.resources
 D:\Documents\GitHub\BaseDeDatos\PROYECTOBBDD\PROYECTOBBDD\obj\Debug\PROYECTOBBDD.csproj.GenerateResource.Cache
+C:\Users\JORGE\Documents\GitHub\BaseDeDatos\PROYECTOBBDD\PROYECTOBBDD\bin\Debug\PROYECTOBBDD.exe.config
+C:\Users\JORGE\Documents\GitHub\BaseDeDatos\PROYECTOBBDD\PROYECTOBBDD\obj\Debug\PROYECTOBBDD.exe
+C:\Users\JORGE\Documents\GitHub\BaseDeDatos\PROYECTOBBDD\PROYECTOBBDD\obj\Debug\PROYECTOBBDD.pdb

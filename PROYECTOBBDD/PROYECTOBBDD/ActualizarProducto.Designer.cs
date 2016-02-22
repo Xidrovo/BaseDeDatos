@@ -88,6 +88,7 @@
             this.bActualizar.TabIndex = 5;
             this.bActualizar.Text = "Actualizar";
             this.bActualizar.UseVisualStyleBackColor = true;
+            this.bActualizar.Click += new System.EventHandler(this.bActualizar_Click);
             // 
             // bCancelar
             // 
