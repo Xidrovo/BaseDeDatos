@@ -166,6 +166,22 @@ namespace PROYECTOBBDD
             else if (Principal.State == (int)Principal.Estado.Colaborador)
             {
                 //Abrir editar colaborador
+                using (SqlConnection con = new SqlConnection("Data Source=25.22.77.136,49170;Initial Catalog=imp_isabelita;Integrated Security=False;User ID=sa;Password=imprentaisabelita;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
+                {
+                    if (textBox1.Text.Length == 10)
+                    {
+                        SqlCommand cmd = new SqlCommand();
+                        SqlDataReader reader;
+                        cmd.CommandText = "spConsultarColaborador";
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Connection = con;
+                        cmd.Parameters.AddWithValue("@ced", textBox1.Text);
+                        con.Open();
+                        reader = cmd.ExecuteReader();
+                        reader.Read();
+                    }
+                }
+
             }
             else if (Principal.State == (int)Principal.Estado.Inventario)
             {

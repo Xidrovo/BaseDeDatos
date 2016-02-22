@@ -36,7 +36,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tvalor = new System.Windows.Forms.TextBox();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.lDescripcion = new System.Windows.Forms.Label();
             this.tDescripcion = new System.Windows.Forms.TextBox();
             this.tcantidad = new System.Windows.Forms.TextBox();
@@ -44,6 +43,7 @@
             this.lcantidad = new System.Windows.Forms.Label();
             this.EtiquetaDatos = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tabono = new System.Windows.Forms.TextBox();
             this.labono = new System.Windows.Forms.Label();
             this.lIdcliente = new System.Windows.Forms.Label();
@@ -51,7 +51,6 @@
             this.dfechaEntrega = new System.Windows.Forms.DateTimePicker();
             this.lFecPed = new System.Windows.Forms.Label();
             this.dfechaPedido = new System.Windows.Forms.DateTimePicker();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.contIngTra.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -72,13 +71,13 @@
             this.contIngTra.Controls.Add(this.panel1);
             this.contIngTra.Location = new System.Drawing.Point(12, 12);
             this.contIngTra.Name = "contIngTra";
-            this.contIngTra.Size = new System.Drawing.Size(520, 491);
+            this.contIngTra.Size = new System.Drawing.Size(619, 491);
             this.contIngTra.TabIndex = 0;
             this.contIngTra.Paint += new System.Windows.Forms.PaintEventHandler(this.contIngTra_Paint);
             // 
             // bQuitar
             // 
-            this.bQuitar.Location = new System.Drawing.Point(438, 375);
+            this.bQuitar.Location = new System.Drawing.Point(519, 375);
             this.bQuitar.Margin = new System.Windows.Forms.Padding(2);
             this.bQuitar.Name = "bQuitar";
             this.bQuitar.Size = new System.Drawing.Size(56, 27);
@@ -132,7 +131,6 @@
             this.panel2.AutoScroll = true;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.tvalor);
-            this.panel2.Controls.Add(this.flowLayoutPanel1);
             this.panel2.Controls.Add(this.lDescripcion);
             this.panel2.Controls.Add(this.tDescripcion);
             this.panel2.Controls.Add(this.tcantidad);
@@ -140,12 +138,12 @@
             this.panel2.Controls.Add(this.lcantidad);
             this.panel2.Location = new System.Drawing.Point(20, 158);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(476, 200);
+            this.panel2.Size = new System.Drawing.Size(577, 200);
             this.panel2.TabIndex = 7;
             // 
             // tvalor
             // 
-            this.tvalor.Location = new System.Drawing.Point(344, 29);
+            this.tvalor.Location = new System.Drawing.Point(453, 30);
             this.tvalor.MaxLength = 7;
             this.tvalor.Name = "tvalor";
             this.tvalor.Size = new System.Drawing.Size(100, 20);
@@ -153,14 +151,6 @@
             this.tvalor.TextChanged += new System.EventHandler(this.tvalor_TextChanged);
             this.tvalor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tvalor_KeyPress);
             this.tvalor.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tvalor_KeyUp);
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(358, 37);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(6, 6);
-            this.flowLayoutPanel1.TabIndex = 6;
             // 
             // lDescripcion
             // 
@@ -179,7 +169,7 @@
             this.tDescripcion.Multiline = true;
             this.tDescripcion.Name = "tDescripcion";
             this.tDescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tDescripcion.Size = new System.Drawing.Size(297, 57);
+            this.tDescripcion.Size = new System.Drawing.Size(386, 67);
             this.tDescripcion.TabIndex = 4;
             this.tDescripcion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tDescripcion_KeyPress);
             // 
@@ -195,7 +185,7 @@
             // lvalor
             // 
             this.lvalor.AutoSize = true;
-            this.lvalor.Location = new System.Drawing.Point(272, 30);
+            this.lvalor.Location = new System.Drawing.Point(413, 30);
             this.lvalor.Name = "lvalor";
             this.lvalor.Size = new System.Drawing.Size(31, 13);
             this.lvalor.TabIndex = 1;
@@ -232,12 +222,20 @@
             this.panel1.Controls.Add(this.dfechaPedido);
             this.panel1.Location = new System.Drawing.Point(20, 21);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(476, 114);
+            this.panel1.Size = new System.Drawing.Size(577, 114);
             this.panel1.TabIndex = 5;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(113, 62);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(192, 21);
+            this.comboBox1.TabIndex = 9;
             // 
             // tabono
             // 
-            this.tabono.Location = new System.Drawing.Point(344, 71);
+            this.tabono.Location = new System.Drawing.Point(453, 71);
             this.tabono.MaxLength = 6;
             this.tabono.Name = "tabono";
             this.tabono.Size = new System.Drawing.Size(100, 20);
@@ -248,7 +246,7 @@
             // labono
             // 
             this.labono.AutoSize = true;
-            this.labono.Location = new System.Drawing.Point(252, 71);
+            this.labono.Location = new System.Drawing.Point(344, 74);
             this.labono.Name = "labono";
             this.labono.Size = new System.Drawing.Size(38, 13);
             this.labono.TabIndex = 6;
@@ -267,7 +265,7 @@
             // lFecha_entrega
             // 
             this.lFecha_entrega.AutoSize = true;
-            this.lFecha_entrega.Location = new System.Drawing.Point(249, 36);
+            this.lFecha_entrega.Location = new System.Drawing.Point(344, 37);
             this.lFecha_entrega.Name = "lFecha_entrega";
             this.lFecha_entrega.Size = new System.Drawing.Size(77, 13);
             this.lFecha_entrega.TabIndex = 1;
@@ -278,7 +276,7 @@
             // 
             this.dfechaEntrega.CustomFormat = "yyyy-MM-dd";
             this.dfechaEntrega.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dfechaEntrega.Location = new System.Drawing.Point(344, 33);
+            this.dfechaEntrega.Location = new System.Drawing.Point(453, 35);
             this.dfechaEntrega.Name = "dfechaEntrega";
             this.dfechaEntrega.Size = new System.Drawing.Size(100, 20);
             this.dfechaEntrega.TabIndex = 4;
@@ -302,24 +300,16 @@
             this.dfechaPedido.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dfechaPedido.Location = new System.Drawing.Point(113, 30);
             this.dfechaPedido.Name = "dfechaPedido";
-            this.dfechaPedido.Size = new System.Drawing.Size(121, 20);
+            this.dfechaPedido.Size = new System.Drawing.Size(192, 20);
             this.dfechaPedido.TabIndex = 3;
             this.dfechaPedido.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(113, 62);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 9;
             // 
             // IngresarTrabajo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(544, 515);
+            this.ClientSize = new System.Drawing.Size(643, 515);
             this.Controls.Add(this.contIngTra);
             this.Name = "IngresarTrabajo";
             this.Text = "Ingresar Trabajo";
@@ -357,7 +347,6 @@
         private System.Windows.Forms.Button Guardar;
         private System.Windows.Forms.Button bCancelar;
         private System.Windows.Forms.Button Agregar;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button bQuitar;
         private System.Windows.Forms.ComboBox comboBox1;
     }
