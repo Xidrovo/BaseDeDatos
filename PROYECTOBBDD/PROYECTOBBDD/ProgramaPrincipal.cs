@@ -285,6 +285,7 @@ namespace PROYECTOBBDD
         private void editarClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Buscador busc = new Buscador();
+            busc.MdiParent = this;
             Principal.State = (int)Principal.Estado.Cliente;
             busc.Show();
         }
@@ -292,6 +293,7 @@ namespace PROYECTOBBDD
         private void editarProveedorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Buscador busc = new Buscador();
+            busc.MdiParent = this;
             Principal.State = (int)Principal.Estado.Proveedor;
             busc.Show();
         }
@@ -299,6 +301,7 @@ namespace PROYECTOBBDD
         private void editarColaboradorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Buscador busc = new Buscador();
+            busc.MdiParent = this;
             Principal.State = (int)Principal.Estado.Colaborador;
             busc.Show();
         }
@@ -306,6 +309,7 @@ namespace PROYECTOBBDD
         private void editarInventarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Buscador busc = new Buscador();
+            busc.MdiParent = this;
             Principal.State = (int)Principal.Estado.Inventario;
             busc.Show();
         }
