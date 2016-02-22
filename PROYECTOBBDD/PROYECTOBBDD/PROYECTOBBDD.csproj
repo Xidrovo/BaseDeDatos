@@ -91,6 +91,12 @@
     <Compile Include="ConsultarProveedorPorNombre.Designer.cs">
       <DependentUpon>ConsultarProveedorPorNombre.cs</DependentUpon>
     </Compile>
+    <Compile Include="Eliminador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Eliminador.Designer.cs">
+      <DependentUpon>Eliminador.cs</DependentUpon>
+    </Compile>
     <Compile Include="Facturar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -206,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultarProveedorPorNombre.resx">
       <DependentUpon>ConsultarProveedorPorNombre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Eliminador.resx">
+      <DependentUpon>Eliminador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Facturar.resx">
       <DependentUpon>Facturar.cs</DependentUpon>
