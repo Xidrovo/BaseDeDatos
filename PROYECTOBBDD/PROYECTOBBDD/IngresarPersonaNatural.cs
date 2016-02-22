@@ -141,6 +141,7 @@ namespace PROYECTOBBDD
         public void guardarDatos(String Nombre, String Apellido, String Cedula, String Direccion)
         {
             Colaborador conexion = new Colaborador();
+            int ingresado = 0;
             using (SqlConnection con = new SqlConnection("Data Source=25.22.77.136,49170;Database=imp_isabelita;Integrated Security=False;User ID=sa;Password=imprentaisabelita;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
             {
                 using (SqlCommand cmd = new SqlCommand("spAgregarClienteNatural", con))
@@ -177,11 +178,15 @@ namespace PROYECTOBBDD
                         cmd2.Parameters.AddWithValue("@Id_Cliente", id);
                         cmd2.Parameters.AddWithValue("@Telefono", lista.ElementAt(i).Text);
                         con2.Open();
-                        cmd2.ExecuteNonQuery();
+                        ingresado= cmd2.ExecuteNonQuery();
                         con2.Close();
                     }
                 }
                 sqlConnection1.Close();
+            }
+            if (ingresado > 0)
+            {
+                MessageBox.Show("Cliente Ingresado Satisfactoriamente", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
         }
@@ -189,6 +194,7 @@ namespace PROYECTOBBDD
         public void ActualizarDatos(String Nombre, String Apellido, String Cedula, String Direccion)
         {
             Colaborador conexion = new Colaborador();
+            int ingresado = 0;
             using (SqlConnection con = new SqlConnection("Data Source=25.22.77.136,49170;Database=imp_isabelita;Integrated Security=False;User ID=sa;Password=imprentaisabelita;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
             {
                 using (SqlCommand cmd = new SqlCommand("spActualizarClienteNatural", con))
@@ -235,13 +241,16 @@ namespace PROYECTOBBDD
                         cmd2.Parameters.AddWithValue("@Id_Cliente", id);
                         cmd2.Parameters.AddWithValue("@Telefono", lista.ElementAt(i).Text);
                         con2.Open();
-                        cmd2.ExecuteNonQuery();
+                        ingresado=cmd2.ExecuteNonQuery();
                         con2.Close();
                     }
                 }
                 sqlConnection1.Close();
             }
-
+            if (ingresado > 0)
+            {
+                MessageBox.Show("Cliente Actualizado Satisfactoriamente", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
 
         public static bool HasSomething(List<TextBox> lista)

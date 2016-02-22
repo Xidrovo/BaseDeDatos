@@ -187,6 +187,7 @@ namespace PROYECTOBBDD
         private void actualizarDatos()
         {
             Colaborador conexion = new Colaborador();
+            int ingresado = 0;
             using (SqlConnection con = new SqlConnection("Data Source=25.22.77.136,49170;Database=imp_isabelita;Integrated Security=False;User ID=sa;Password=imprentaisabelita;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
             {
                 using (SqlCommand cmd = new SqlCommand("spActualizarColaborador", con))
@@ -199,9 +200,13 @@ namespace PROYECTOBBDD
                     cmd.Parameters.AddWithValue("@Telefono", tTelefono.Text);
                     
                     con.Open();
-                    cmd.ExecuteNonQuery();
+                    ingresado= cmd.ExecuteNonQuery();
                     con.Close();
                 }
+            }
+            if (ingresado > 0)
+            {
+                MessageBox.Show("Colaborador Actualizado Satisfactoriamente", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
         private void textBox3_TextChanged(object sender, EventArgs e)
@@ -255,6 +260,7 @@ namespace PROYECTOBBDD
         public void guardarDatos(String Nombre, String Apellido, String Cedula, String Cargo, String Telefono, String Contrasena)
         {
             Colaborador conexion = new Colaborador();
+            int ingresado = 0;
             using (SqlConnection con = new SqlConnection("Data Source=25.22.77.136,49170;Database=imp_isabelita;Integrated Security=False;User ID=sa;Password=imprentaisabelita;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
             {
                 using (SqlCommand cmd = new SqlCommand("spAñadirColaborador", con))
@@ -268,9 +274,13 @@ namespace PROYECTOBBDD
                     cmd.Parameters.AddWithValue("@Contraseña", Contrasena);
                     
                     con.Open();
-                    cmd.ExecuteNonQuery();
+                    ingresado=cmd.ExecuteNonQuery();
                     con.Close();
                 }
+            }
+            if (ingresado > 0)
+            {
+                MessageBox.Show("Colaborador Ingresado Satisfactoriamente", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
         }

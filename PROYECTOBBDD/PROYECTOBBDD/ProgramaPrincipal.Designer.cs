@@ -51,7 +51,6 @@
             this.porNombreToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.actualizarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editarInventarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.desconectarseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.colaboradoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ingresarColaboradoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarEgresoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -62,6 +61,7 @@
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ingresosDiariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.egresosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.desconectarseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -100,9 +100,6 @@
             this.ingresarTrabajoToolStripMenuItem.Text = "Ingresar Trabajo";
             this.ingresarTrabajoToolStripMenuItem.Click += new System.EventHandler(this.ingresarTrabajoToolStripMenuItem_Click);
             // 
-            // facturarToolStripMenuItem
-            // 
-            // 
             // consultarToolStripMenuItem
             // 
             this.consultarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -123,6 +120,7 @@
             this.editarTrabajoToolStripMenuItem.Name = "editarTrabajoToolStripMenuItem";
             this.editarTrabajoToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.editarTrabajoToolStripMenuItem.Text = "Editar Trabajo";
+            this.editarTrabajoToolStripMenuItem.Click += new System.EventHandler(this.editarTrabajoToolStripMenuItem_Click);
             // 
             // clienteToolStripMenuItem
             // 
@@ -258,13 +256,6 @@
             this.editarInventarioToolStripMenuItem.Text = "Editar Inventario";
             this.editarInventarioToolStripMenuItem.Click += new System.EventHandler(this.editarInventarioToolStripMenuItem_Click);
             // 
-            // desconectarseToolStripMenuItem
-            // 
-            this.desconectarseToolStripMenuItem.Name = "desconectarseToolStripMenuItem";
-            this.desconectarseToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
-            this.desconectarseToolStripMenuItem.Text = "Desconectarse";
-            this.desconectarseToolStripMenuItem.Click += new System.EventHandler(this.desconectarseToolStripMenuItem_Click);
-            // 
             // colaboradoresToolStripMenuItem
             // 
             this.colaboradoresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -333,7 +324,6 @@
             // ingresosDiariosToolStripMenuItem
             // 
             this.ingresosDiariosToolStripMenuItem.Name = "ingresosDiariosToolStripMenuItem";
-            this.ingresosDiariosToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.ingresosDiariosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.ingresosDiariosToolStripMenuItem.Text = "Ingresos";
             this.ingresosDiariosToolStripMenuItem.Click += new System.EventHandler(this.ingresosDiariosToolStripMenuItem_Click);
@@ -341,16 +331,16 @@
             // egresosToolStripMenuItem
             // 
             this.egresosToolStripMenuItem.Name = "egresosToolStripMenuItem";
-            this.egresosToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
-            this.egresosToolStripMenuItem.Text = "Egresos";
-            this.egresosToolStripMenuItem.Click += new System.EventHandler(this.egresosToolStripMenuItem_Click);
-            // 
-            // sustentarToolStripMenuItem
-            //  
-            // 
             this.egresosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.egresosToolStripMenuItem.Text = "Egresos";
             this.egresosToolStripMenuItem.Click += new System.EventHandler(this.egresosToolStripMenuItem_Click);
+            // 
+            // desconectarseToolStripMenuItem
+            // 
+            this.desconectarseToolStripMenuItem.Name = "desconectarseToolStripMenuItem";
+            this.desconectarseToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
+            this.desconectarseToolStripMenuItem.Text = "Desconectarse";
+            this.desconectarseToolStripMenuItem.Click += new System.EventHandler(this.desconectarseToolStripMenuItem_Click);
             // 
             // Principal
             // 

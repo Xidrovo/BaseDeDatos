@@ -122,6 +122,7 @@ namespace PROYECTOBBDD
         public void actualizarDatos()
         {
             Colaborador conexion = new Colaborador();
+            int ingresado = 0;
             using (SqlConnection con = new SqlConnection("Data Source=25.22.77.136,49170;Database=imp_isabelita;Integrated Security=False;User ID=sa;Password=imprentaisabelita;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
             {
                 using (SqlCommand cmd = new SqlCommand("spActualizarProveedor", con))
@@ -154,16 +155,21 @@ namespace PROYECTOBBDD
                         cmd.Parameters.AddWithValue("@RUC", textBox3.Text);
                         cmd.Parameters.AddWithValue("@Telefono", lista[i].Text);
                         con.Open();
-                        cmd.ExecuteNonQuery();
+                        ingresado=cmd.ExecuteNonQuery();
                         con.Close();
                     }
                 }              
+            }
+            if (ingresado > 0)
+            {
+                MessageBox.Show("Proveedor Actualizado Satisfactoriamente", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
         public void guardarDatosProveedor(String Nombre, String Apellido, String Ruc, String Nombre_empresa, String Direccion)
         {
             Colaborador conexion = new Colaborador();
+            int ingresado = 0;
             using (SqlConnection con = new SqlConnection("Data Source=25.22.77.136,49170;Initial Catalog=imp_isabelita;Integrated Security=False;User ID=sa;Password=imprentaisabelita;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
             {
                 using (SqlCommand cmd = new SqlCommand("spAgregarProveedor", con))
@@ -202,14 +208,17 @@ namespace PROYECTOBBDD
                         cmd2.Parameters.AddWithValue("@RUC", Ruc);
                         cmd2.Parameters.AddWithValue("@Telefono", lista.ElementAt(i).Text);
                         con2.Open();
-                        cmd2.ExecuteNonQuery();
+                        ingresado=cmd2.ExecuteNonQuery();
                         con2.Close();
 
                     }
                 }
                 sqlConnection1.Close();
             }
-
+            if (ingresado > 0)
+            {
+                MessageBox.Show("Proveedor Guardado Satisfactoriamente", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
