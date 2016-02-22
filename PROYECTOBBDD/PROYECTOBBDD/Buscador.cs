@@ -231,20 +231,48 @@ namespace PROYECTOBBDD
                 //Abrir proveedor
                 using (SqlConnection con = new SqlConnection("Data Source=25.22.77.136,49170;Initial Catalog=imp_isabelita;Integrated Security=False;User ID=sa;Password=imprentaisabelita;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
                 {
-                    if (textBox1.Text.Length == 10)
+                    SqlCommand cmd = new SqlCommand();
+                    SqlDataReader reader;
+                    cmd.CommandText = "spConsultarProveedor";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Connection = con;
+                    cmd.Parameters.AddWithValue("@RUC", textBox1.Text);
+                    con.Open();
+                    reader = cmd.ExecuteReader();
+                    reader.Read();
+
+                    try
                     {
-                        SqlCommand cmd = new SqlCommand();
-                        SqlDataReader reader;
-                        cmd.CommandText = "spConsultarColaborador";
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Connection = con;
-                        cmd.Parameters.AddWithValue("@ced", textBox1.Text);
-                        con.Open();
-                        reader = cmd.ExecuteReader();
-                        reader.Read();
-                        #endregion
+                        //Nombre            [0]
+                        //Apellid           [1]
+                        //RUC               [2]
+                        //DIRECCION         [3]
+                        //NOMBRE_EMPRESA    [4]
+                        //TELEFONO          [5]...[9]
+                        int ContTmp = 6;
+                        informacion[0] = reader.GetString(0);
+                        informacion[1] = reader.GetString(1);
+                        informacion[2] = reader.GetString(2);
+                        informacion[3] = reader.GetString(3);
+                        informacion[4] = reader.GetString(4);
+                        informacion[5] = reader.GetString(5);
+                            
+                        while (reader.Read())
+                        {
+                            informacion[ContTmp] = reader.GetString(5);
+                            ContTmp++;
+                        }
+                        Actualizar = true;
+                        IngresarProveedor ing4 = new IngresarProveedor();
+                        ing4.Show();
+                        this.Dispose();
+                    }
+                    catch
+                    {
+                        MessageBox.Show("No se encontraron datos del proveedor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
+                #endregion
             }
         }
     }
