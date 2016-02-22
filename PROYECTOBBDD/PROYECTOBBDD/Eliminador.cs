@@ -117,10 +117,11 @@ namespace PROYECTOBBDD
                             con.Close();
                             if (encontrado == 0)
                             {
-                                MessageBox.Show("No se encontraron datos del cliente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                MessageBox.Show("No se encontraron datos del Colaborador", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
-                            else
+                            if (encontrado > 0)
                             {
+                                MessageBox.Show("Colaborador Eliminado Satisfactoriamente", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                                 this.Dispose();
                             }
                          
@@ -134,7 +135,7 @@ namespace PROYECTOBBDD
 
         private void delete(int id)
         {
-
+            int ingresado = 0;
             using (SqlConnection con = new SqlConnection("Data Source=25.22.77.136,49170;Initial Catalog=imp_isabelita;Integrated Security=False;User ID=sa;Password=imprentaisabelita;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
             {
                 SqlCommand cmd = new SqlCommand();
@@ -143,12 +144,16 @@ namespace PROYECTOBBDD
                 cmd.Connection = con;
                 con.Open();
                 cmd.Parameters.AddWithValue("@idCliente", id);
-                cmd.ExecuteNonQuery();
+                ingresado= cmd.ExecuteNonQuery();
                 con.Close();
             }
+            if (ingresado > 0)
+            {
+                MessageBox.Show("Cliente Eliminado Satisfactoriamente", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                this.Dispose();
+            }
 
-
-            this.Dispose();
+            
         }
     }
 }

@@ -371,6 +371,7 @@ namespace PROYECTOBBDD
 
         private void AddTrabajo(string RUC, string FechaPedido, string FechaEntrega, float Abono)
         {
+            int ingresado = 0;
             using (SqlConnection con = new SqlConnection("Data Source=25.22.77.136,49170;Database=imp_isabelita;Integrated Security=False;User ID=sa;Password=imprentaisabelita;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
             {
                 using (SqlCommand cmd = new SqlCommand("spCrearTrabajo", con))
@@ -409,11 +410,15 @@ namespace PROYECTOBBDD
                         cmd2.Parameters.AddWithValue("@Valor", float.Parse(listaVal.ElementAt(i).Text));
                         cmd2.Parameters.AddWithValue("@Id_Trabajo", id_trabajo);
                         con2.Open();
-                        cmd2.ExecuteNonQuery();
+                        ingresado=cmd2.ExecuteNonQuery();
                         con2.Close();
                     }
                 }
                 sqlConnection1.Close();
+            }
+            if (ingresado > 0)
+            {
+                MessageBox.Show("Trabajo Ingresado Satisfactoriamente", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
         }

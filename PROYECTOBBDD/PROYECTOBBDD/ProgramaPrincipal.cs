@@ -330,5 +330,10 @@ namespace PROYECTOBBDD
             Principal.State = (int)Principal.Estado.Colaborador;
             elim.Show();
         }
+
+        private void editarTrabajoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

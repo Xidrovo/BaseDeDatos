@@ -89,6 +89,7 @@ namespace PROYECTOBBDD
         public void guardarDatos(DateTime Fecha, float Valor, String NumFactura, String CedulaColab, String Descripcion)
         {
             Colaborador conexion = new Colaborador();
+            int ingresado = 0;
             using (SqlConnection con = new SqlConnection("Data Source=25.22.77.136,49170;Database=imp_isabelita;Integrated Security=False;User ID=sa;Password=imprentaisabelita;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
             {
                 using (SqlCommand cmd = new SqlCommand("spAgregarEgreso", con))
@@ -102,9 +103,13 @@ namespace PROYECTOBBDD
                     cmd.Parameters.AddWithValue("@Descripcion", Descripcion);
 
                     con.Open();
-                    cmd.ExecuteNonQuery();
+                    ingresado=cmd.ExecuteNonQuery();
                     con.Close();
                 }
+            }
+            if (ingresado > 0)
+            {
+                MessageBox.Show("Egreso Registrado Satisfactoriamente", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
         }
