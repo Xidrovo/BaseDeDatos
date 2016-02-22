@@ -54,6 +54,7 @@ namespace PROYECTOBBDD
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@FechaInicio", dFechaInicio.Text);
                     cmd.Parameters.AddWithValue("@FechaFinal", dFechaFinal.Text);
+                    cmd.Parameters.AddWithValue("Id", Convert.ToInt32(comboBox1.SelectedValue));
                     da.SelectCommand = cmd;
                     da.Fill(dt);
                     celdaResultado.DataSource = dt;
@@ -64,6 +65,20 @@ namespace PROYECTOBBDD
             }
 
 
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TrabajosAEntregar_Load(object sender, EventArgs e)
+        {
+            comboBox1.DataSource = Clientes_Id.ObtenerClientes();
+            string texto;
+            comboBox1.ValueMember = "Id";
+            texto = comboBox1.DisplayMember;
+            comboBox1.DisplayMember = "Nombre";
         }
     }
 }

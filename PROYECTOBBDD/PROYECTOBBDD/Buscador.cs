@@ -34,6 +34,10 @@ namespace PROYECTOBBDD
             {
                 Texto.Text = "Escriba la Id del inventario";
             }
+            else if (Principal.State == (int)Principal.Estado.Trabajo)
+            {
+                Texto.Text = "Escriba la Id del inventario";
+            }
             else
             {
                 Texto.Text = "Ingrese nombre del proveedor";

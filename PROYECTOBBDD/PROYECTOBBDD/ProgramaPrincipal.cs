@@ -20,6 +20,7 @@ namespace PROYECTOBBDD
             Proveedor,
             Inventario,
             Colaborador,
+            Trabajo,
             Defecto
         }
 
@@ -321,5 +322,7 @@ namespace PROYECTOBBDD
             Principal.State = (int)Principal.Estado.Cliente;
             elim.Show();
         }
+
+
     }
 }

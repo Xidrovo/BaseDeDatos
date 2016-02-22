@@ -462,5 +462,9 @@ namespace PROYECTOBBDD
             comboBox1.DisplayMember = "Nombre";
         }
 
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

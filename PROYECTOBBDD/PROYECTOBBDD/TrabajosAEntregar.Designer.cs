@@ -34,6 +34,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.dFechaFinal = new System.Windows.Forms.DateTimePicker();
             this.lFechaInicio = new System.Windows.Forms.Label();
             this.lFechaFinal = new System.Windows.Forms.Label();
@@ -59,13 +61,13 @@
             this.panel1.Controls.Add(this.celdaResultado);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(462, 358);
+            this.panel1.Size = new System.Drawing.Size(623, 358);
             this.panel1.TabIndex = 0;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(165, 101);
+            this.label4.Location = new System.Drawing.Point(163, 132);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(130, 13);
             this.label4.TabIndex = 10;
@@ -74,7 +76,7 @@
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(261, 315);
+            this.button2.Location = new System.Drawing.Point(484, 315);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 9;
@@ -85,7 +87,7 @@
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(96, 315);
+            this.button1.Location = new System.Drawing.Point(49, 315);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 8;
@@ -107,20 +109,40 @@
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.comboBox1);
+            this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.dFechaFinal);
             this.panel2.Controls.Add(this.lFechaInicio);
             this.panel2.Controls.Add(this.lFechaFinal);
             this.panel2.Controls.Add(this.dFechaInicio);
             this.panel2.Location = new System.Drawing.Point(15, 28);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(422, 50);
+            this.panel2.Size = new System.Drawing.Size(583, 101);
             this.panel2.TabIndex = 7;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(63, 59);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(490, 21);
+            this.comboBox1.TabIndex = 6;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(8, 67);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(39, 13);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Cliente";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // dFechaFinal
             // 
             this.dFechaFinal.CustomFormat = "yyyy-MM-dd";
             this.dFechaFinal.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dFechaFinal.Location = new System.Drawing.Point(285, 16);
+            this.dFechaFinal.Location = new System.Drawing.Point(434, 15);
             this.dFechaFinal.Name = "dFechaFinal";
             this.dFechaFinal.Size = new System.Drawing.Size(119, 20);
             this.dFechaFinal.TabIndex = 4;
@@ -138,7 +160,7 @@
             // lFechaFinal
             // 
             this.lFechaFinal.AutoSize = true;
-            this.lFechaFinal.Location = new System.Drawing.Point(214, 19);
+            this.lFechaFinal.Location = new System.Drawing.Point(356, 21);
             this.lFechaFinal.Name = "lFechaFinal";
             this.lFechaFinal.Size = new System.Drawing.Size(62, 13);
             this.lFechaFinal.TabIndex = 2;
@@ -160,19 +182,20 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.celdaResultado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.celdaResultado.Location = new System.Drawing.Point(28, 117);
+            this.celdaResultado.Location = new System.Drawing.Point(28, 148);
             this.celdaResultado.Name = "celdaResultado";
-            this.celdaResultado.Size = new System.Drawing.Size(393, 150);
+            this.celdaResultado.Size = new System.Drawing.Size(554, 150);
             this.celdaResultado.TabIndex = 5;
             // 
             // TrabajosAEntregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(486, 382);
+            this.ClientSize = new System.Drawing.Size(647, 382);
             this.Controls.Add(this.panel1);
             this.Name = "TrabajosAEntregar";
             this.Text = "Trabajos a Entregar";
+            this.Load += new System.EventHandler(this.TrabajosAEntregar_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -195,5 +218,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
