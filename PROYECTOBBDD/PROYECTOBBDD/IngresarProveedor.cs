@@ -17,6 +17,7 @@ namespace PROYECTOBBDD
         Validacion val = new Validacion();
         List<TextBox> lista = new List<TextBox>();
         private List<Label> labelList = new List<Label>();
+
         public IngresarProveedor()
         {
             InitializeComponent();
@@ -25,6 +26,38 @@ namespace PROYECTOBBDD
             labelList.Add(this.lteléfono);
             bGuardar.Enabled = false;
             bQuitar.Enabled = false;
+            if (Buscador.Actualizar)
+            {
+                this.Text = "Actualizar proveedor";
+                bGuardar.Text = "Actualizar";
+                iniciarActualizador();
+            }
+        }
+
+        private void iniciarActualizador()
+        {
+            //0902669274001
+            //Nombre            [0]
+            //Apellid           [1]
+            //RUC               [2]
+            //DIRECCION         [3]
+            //NOMBRE_EMPRESA    [4]
+            //TELEFONO          [5]...[9]
+            int TempCont = 1;
+            textBox1.Text = Buscador.informacion[0];
+            textBox2.Text = Buscador.informacion[1];
+            textBox3.Text = Buscador.informacion[2];
+            textBox3.Enabled = false;
+            tdireccion.Text = Buscador.informacion[3];
+            textBox4.Text = Buscador.informacion[4];
+            lista[0].Text = Buscador.informacion[5];
+
+            while (Buscador.informacion[TempCont + 5] != null)
+            {
+                lagreagar_Click_1(null, null);
+                lista[TempCont].Text = Buscador.informacion[TempCont + 5];
+                TempCont++;
+            }
         }
 
         private void bCancelar_Click(object sender, EventArgs e)
@@ -65,15 +98,66 @@ namespace PROYECTOBBDD
             if (desicion)
             {
                 //Comunicarme con el sql
-                try
+                if (Buscador.Actualizar)
                 {
-                    guardarDatosProveedor(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, tdireccion.Text);
-                    this.Close();
+                        actualizarDatos();
+                        Buscador.Actualizar = false;
+                        this.Close();
                 }
-                catch
+                else
                 {
-                    MessageBox.Show("Proveedor ya existe en la base de datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    try
+                    {
+                        guardarDatosProveedor(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, tdireccion.Text);
+                        this.Close();
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Proveedor ya existe en la base de datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
+            }
+        }
+
+        public void actualizarDatos()
+        {
+            Colaborador conexion = new Colaborador();
+            using (SqlConnection con = new SqlConnection("Data Source=25.22.77.136,49170;Database=imp_isabelita;Integrated Security=False;User ID=sa;Password=imprentaisabelita;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
+            {
+                using (SqlCommand cmd = new SqlCommand("spActualizarProveedor", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@Nombre", textBox1.Text);
+                    cmd.Parameters.AddWithValue("@Apellido", textBox2.Text);
+                    cmd.Parameters.AddWithValue("@RUC", textBox3.Text);
+                    cmd.Parameters.AddWithValue("@Nombre_empresa", textBox4.Text);
+                    cmd.Parameters.AddWithValue("@Direccion", tdireccion.Text);
+
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                }
+
+                using (SqlCommand cmd = new SqlCommand("spBorrarTelProveedor", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@RUC", textBox3.Text);
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                }
+                for (int i = 0; i < lista.Count(); i++)
+                {
+                    using (SqlCommand cmd = new SqlCommand("spAgregarTelefonoProveedor", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@RUC", textBox3.Text);
+                        cmd.Parameters.AddWithValue("@Telefono", lista[i].Text);
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                    }
+                }              
             }
         }
 
@@ -277,6 +361,15 @@ namespace PROYECTOBBDD
         private void IngresarProveedor_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void IngresarProveedor_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Buscador.Actualizar = false;
+            for (int i = 0; i < 10; i++)
+            {
+                Buscador.informacion[i] = null;
+            }
         }
     }
 }
