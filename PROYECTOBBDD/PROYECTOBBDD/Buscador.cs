@@ -150,11 +150,13 @@ namespace PROYECTOBBDD
                     if (textBox1.Text.Length == 10)
                     {
                         IngresarPersonaNatural ing = new IngresarPersonaNatural();
+                        ing.MdiParent = this.MdiParent;
                         ing.Show();
                     }
                     else
                     {
                         IngresarEmpresa ing2 = new IngresarEmpresa();
+                        ing2.MdiParent = this.MdiParent;
                         ing2.Show();
                     }
                     this.Dispose();
