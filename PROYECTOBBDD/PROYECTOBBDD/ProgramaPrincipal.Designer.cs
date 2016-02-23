@@ -96,7 +96,7 @@
             // ingresarTrabajoToolStripMenuItem
             // 
             this.ingresarTrabajoToolStripMenuItem.Name = "ingresarTrabajoToolStripMenuItem";
-            this.ingresarTrabajoToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.ingresarTrabajoToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.ingresarTrabajoToolStripMenuItem.Text = "Ingresar Trabajo";
             this.ingresarTrabajoToolStripMenuItem.Click += new System.EventHandler(this.ingresarTrabajoToolStripMenuItem_Click);
             // 
@@ -105,7 +105,7 @@
             this.consultarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.trabajosAEntregarToolStripMenuItem});
             this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
-            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.consultarToolStripMenuItem.Text = "Consultar";
             // 
             // trabajosAEntregarToolStripMenuItem
@@ -118,8 +118,8 @@
             // editarTrabajoToolStripMenuItem
             // 
             this.editarTrabajoToolStripMenuItem.Name = "editarTrabajoToolStripMenuItem";
-            this.editarTrabajoToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
-            this.editarTrabajoToolStripMenuItem.Text = "Editar Trabajo";
+            this.editarTrabajoToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.editarTrabajoToolStripMenuItem.Text = "Terminar Trabajo";
             this.editarTrabajoToolStripMenuItem.Click += new System.EventHandler(this.editarTrabajoToolStripMenuItem_Click);
             // 
             // clienteToolStripMenuItem
@@ -324,14 +324,14 @@
             // ingresosDiariosToolStripMenuItem
             // 
             this.ingresosDiariosToolStripMenuItem.Name = "ingresosDiariosToolStripMenuItem";
-            this.ingresosDiariosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.ingresosDiariosToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.ingresosDiariosToolStripMenuItem.Text = "Ingresos";
             this.ingresosDiariosToolStripMenuItem.Click += new System.EventHandler(this.ingresosDiariosToolStripMenuItem_Click);
             // 
             // egresosToolStripMenuItem
             // 
             this.egresosToolStripMenuItem.Name = "egresosToolStripMenuItem";
-            this.egresosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.egresosToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.egresosToolStripMenuItem.Text = "Egresos";
             this.egresosToolStripMenuItem.Click += new System.EventHandler(this.egresosToolStripMenuItem_Click);
             // 

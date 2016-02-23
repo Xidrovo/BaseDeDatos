@@ -333,7 +333,10 @@ namespace PROYECTOBBDD
 
         private void editarTrabajoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Buscador busc = new Buscador();
+            busc.MdiParent = this;
+            Principal.State = (int)Principal.Estado.Trabajo;
+            busc.Show();
         }
     }
 }

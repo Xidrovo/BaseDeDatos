@@ -25,22 +25,27 @@ namespace PROYECTOBBDD
             if (Principal.State == (int)Principal.Estado.Cliente)
             {
                 Texto.Text = "Escriba la identificación del cliente";
+                Buscar.Text = "Buscar";
             }
             else if (Principal.State == (int)Principal.Estado.Colaborador)
             {
                 Texto.Text = "Escriba la cedula del colaborador";
+                Buscar.Text = "Buscar";
             }
             else if (Principal.State == (int)Principal.Estado.Inventario)
             {
                 Texto.Text = "Escriba la Id del inventario";
+                Buscar.Text = "Buscar";
             }
             else if (Principal.State == (int)Principal.Estado.Trabajo)
             {
-                Texto.Text = "Escriba la Id del inventario";
+                Texto.Text = "Escriba la Id del Trabajo";
+                Buscar.Text = "Terminar";
             }
             else
             {
                 Texto.Text = "Ingrese nombre del proveedor";
+                Buscar.Text = "Buscar";
             }
         }
 
@@ -229,6 +234,30 @@ namespace PROYECTOBBDD
                 //Abrir editar Inventario
                 #endregion
             }
+            else if ((Principal.State == (int)Principal.Estado.Trabajo))
+            {
+                int x=0;
+                using (SqlConnection con = new SqlConnection("Data Source=25.22.77.136,49170;Initial Catalog=imp_isabelita;Integrated Security=False;User ID=sa;Password=imprentaisabelita;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
+                {
+                    SqlCommand cmd = new SqlCommand();
+                    
+                    cmd.CommandText = "spEntregarTrabajo";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Connection = con;
+                    cmd.Parameters.AddWithValue("@Id", textBox1.Text);
+                    con.Open();
+                    x = cmd.ExecuteNonQuery();
+                    con.Close();
+                }
+                if ( x > 0)
+                {
+                    MessageBox.Show("Trabajo Entregado Satisfactoriamente", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else
+                {
+                    MessageBox.Show("Trabajo No Encontrado", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+            }
             else
             {
                 #region
@@ -260,7 +289,7 @@ namespace PROYECTOBBDD
                         informacion[3] = reader.GetString(3);
                         informacion[4] = reader.GetString(4);
                         informacion[5] = reader.GetString(5);
-                            
+
                         while (reader.Read())
                         {
                             informacion[ContTmp] = reader.GetString(5);
